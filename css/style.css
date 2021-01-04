@@ -638,9 +638,13 @@ header video{
     background-color: var(--thirdColor);
 }
 
-#price table tr:nth-last-of-type(2) td, tr:nth-last-of-type(1) td{
+#price table tr:nth-last-of-type(2) td{
     flex-basis: 50%;
 }
+#price table tr:nth-last-of-type(1) td{
+    flex-basis: 50%;
+}
+
 #price table tr:nth-last-of-type(2) td{
     margin-top: var(--elementMargin);
     background-color: var(--thirdColor);
