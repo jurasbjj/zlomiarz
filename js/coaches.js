@@ -12,26 +12,6 @@ $(window).load(function() {
 // KONIEC PRELOADER ###############################################################################
 
 
-
-
-// SCROLL #########################################################################################
- $('nav img').click(function(){
-     $('html, body').animate({
-     scrollTop: $('body').offset().top
- }, 800);})
-
- //scroll
-//  $('nav li a').click(function(){
-//     $('html, body').animate({
-//     scrollTop: ($('.'+$(this).attr('id')).offset().top - 63)
-// }, 800);})
-
-$('nav li a').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
-
-
-
 //BURGER
 $('.burger, fade').click(function(){
     $('nav.mobile, .fade').toggleClass('active')
@@ -40,9 +20,16 @@ $('.burger, fade').click(function(){
 $('.fade').click(function(){
     $('nav.mobile, .fade').removeClass('active')
 })
+$('nav li a').click(function(){
+    $('nav.mobile, .fade').removeClass('active')
+})
 
+// SCROLL ########################################################################################################
 
-
+$('nav img').click(function(){
+    $('html, body').animate({
+    scrollTop: $('body').offset().top
+}, 800);})
 
 
 $(document).ready(function () {
@@ -59,58 +46,49 @@ $(document).ready(function () {
       });
   });
 });
+// KONIEC SCROLL ########################################################################################################
 
+
+// ################################# SLAJDER #################################################################
 
 left = 0
 i = 0
 a = 0
 
-// $("button").click(function(){
-//     left = left - 632
-//     $("#coaches img").animate({left: left+'px'});
-
-//     if(i === 0){
-//         $('$coaches img').toggleClass('active')
-
-//         i++
-//     }
-
-//   }); 
-
-$('button.nxt').click(function(){
+$('.nxt').click(function(){
     left = left - 544
     
     i++
     a++
     if(i === 1){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(2)').addClass('active');
-        $('#coaches img:nth-of-type(1)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(2)').addClass('active');
+        $('#coaches .slider img:nth-of-type(1)').removeClass('active');
     }
     if(i === 2){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(3)').addClass('active');
-        $('#coaches img:nth-of-type(2)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(3)').addClass('active');
+        $('#coaches .slider img:nth-of-type(2)').removeClass('active');
     }
     if(i === 3){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(4)').addClass('active');
-        $('#coaches img:nth-of-type(3)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(4)').addClass('active');
+        $('#coaches .slider img:nth-of-type(3)').removeClass('active');
     }
     if(i === 4){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(5)').addClass('active');
-        $('#coaches img:nth-of-type(4)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(5)').addClass('active');
+        $('#coaches .slider img:nth-of-type(4)').removeClass('active');
     }
     if(i === 5){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(6)').addClass('active');
-        $('#coaches img:nth-of-type(5)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(6)').addClass('active');
+        $('#coaches .slider img:nth-of-type(5)').removeClass('active');
     }
     if(i === 6){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(7)').addClass('active');
-        $('#coaches img:nth-of-type(6)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(7)').addClass('active');
+        $('#coaches .slider img:nth-of-type(6)').removeClass('active');
     }
     if(i === 7){
         i = 6
@@ -118,58 +96,64 @@ $('button.nxt').click(function(){
     if(a === 7){
         a = 6
     }
+    if (left < -3264){
+        left = -3264
+    }
 })
-$('button.prev').click(function(){
+$('.prev').click(function(){
     left = left + 544
     
     i--
 
     if(a === 1){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(1)').addClass('active');
-        $('#coaches img:nth-of-type(2)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(1)').addClass('active');
+        $('#coaches .slider img:nth-of-type(2)').removeClass('active');
         a--
     }
     
     if(a === 2){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(2)').addClass('active');
-        $('#coaches img:nth-of-type(3)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(2)').addClass('active');
+        $('#coaches .slider img:nth-of-type(3)').removeClass('active');
         a--
 
     }
     if(a === 3){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(3)').addClass('active');
-        $('#coaches img:nth-of-type(4)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(3)').addClass('active');
+        $('#coaches .slider img:nth-of-type(4)').removeClass('active');
         a--
     }
     if(a === 4){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(4)').addClass('active');
-        $('#coaches img:nth-of-type(5)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(4)').addClass('active');
+        $('#coaches .slider img:nth-of-type(5)').removeClass('active');
         a--
 
     }
     if(a === 5){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(5)').addClass('active');
-        $('#coaches img:nth-of-type(6)').removeClass('active');
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(5)').addClass('active');
+        $('#coaches .slider img:nth-of-type(6)').removeClass('active');
         a--
 
     }
     if(a === 6){
-        $("#coaches img").animate({left: left+'px'});
-        $('#coaches img:nth-of-type(6)').addClass('active');
-        $('#coaches img:nth-of-type(7)').removeClass('active');
-
+        $("#coaches .slider img").animate({left: left+'px'});
+        $('#coaches .slider img:nth-of-type(6)').addClass('active');
+        $('#coaches .slider img:nth-of-type(7)').removeClass('active');
         a--
-
     }
-    if(i === 0){
+    if(i < 0){
         i = 0
     }
-    if (a === 0){
-        a = 1
+    if (a < 0){
+        a = 0
+    }
+    if (left > 0){
+        left = 0
     }
 })
+
+// ################################# KONIEC SLAJDER #################################################################
