@@ -506,6 +506,7 @@ header video{
 
 #about_us .post .arrows .slide-number{
     padding: 32px 16px;
+    opacity: 60%;
 }
 
 /* Zębatka tło */
@@ -595,6 +596,9 @@ header video{
     text-align: center;
 }
 
+#schedule h2 b{
+    font-size: 1.6rem;
+}
 @media (max-width: 800px){
     #schedule img{
         margin-top: 24px;

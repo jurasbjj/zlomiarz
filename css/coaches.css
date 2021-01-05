@@ -1,0 +1,81 @@
+@media(max-width: 800px){
+    body{
+        margin-top: 63px;
+    }
+}
+
+@media(max-width: 800px){
+    .loader-wrapper{
+        margin-top: -63px;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#coaches .content{
+    display: flex;
+    flex-direction: column;
+}
+#coaches .content .text h3{
+    letter-spacing: 0.2rem;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+}
+#coaches .content .text p{
+    line-height: 30px;
+}
+
+#coaches .slider{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0;
+    align-items: center;
+}
+#coaches img{
+    height: 384px;
+    opacity: 60%;
+    position: relative;
+    margin-right: 32px;
+    transition: 0.5s;
+}
+#coaches img.active{
+    height: 450px;
+    opacity: 100%;
+}
+
+#coaches img{
+    left: 0;
+}
+
+@media (max-width: 800px){
+    footer{
+        padding: 16px 0 0 0;
+    }
+    footer .content{
+        border: none;
+        background-color: var(--secondaryColor);
+    }
+
+    footer .social-link{
+        padding: 0 0 16px 0;
+    }
+    footer .social-link::before{
+        display: block;
+        content: '';
+        height: 1px;
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-bottom: 16px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer .social-link{
+        display: block;
+    }
+    footer .social-link img{
+        padding: 0 8px;
+    }
+}

@@ -31,7 +31,7 @@ header img.active{
     opacity: 100%;
 }
 
-.content{
+.arrows-content{
     max-width: var(--maxWidth);
     margin: 0 auto;
 }
@@ -46,6 +46,7 @@ header img.active{
 
 .arrows .slide-number{
     padding: 0 16px;
+    opacity: 60%;
 }
 .arrows .slider-arrow{
     width: 32px;
@@ -54,6 +55,11 @@ header img.active{
 .arrows .slider-arrow:hover{
     cursor: pointer;
     opacity: 60%;
+}
+@media (max-width: 800px){
+    .arrows-content{
+        display: none;
+    }
 }
 
 /* ################### KONIEC HEADER ################################*/
