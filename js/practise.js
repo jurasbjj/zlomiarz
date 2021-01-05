@@ -166,5 +166,19 @@ classes[10].addEventListener('click', function(){
 
 // KONIEC CLASS KICK
 //KONIEC CLASSES #########################################################################################
-// MOBILE TEXT CONTENT
+i = 0
+$('.right').click(function(){
+    if (i == 0){
+        $('header img').toggleClass('active')
+        i++
+        $('.slide-number').text('0'+(i+1) + ' / 02')
+    }
+})
+$('.left').click(function(){
+    if (i == 1){
+        $('header img').toggleClass('active')
+        i--
+        $('.slide-number').text('0'+(i+1) + ' / 02')
+    }
+})
 

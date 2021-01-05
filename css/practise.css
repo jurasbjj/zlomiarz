@@ -1,10 +1,3 @@
-header{
-    height: 60vh;
-    background-image: url('../img/practise/kick.png');
-    background-position: center;
-    background-size: cover;
-}
-
 @media(max-width: 800px){
     body{
         margin-top: 63px;
@@ -16,8 +9,60 @@ header{
         margin-top: -63px;
     }
 }
+/* ################### HEADER ################################*/
+header{
+    height: 80vh;
+}
+header .bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+    transition: opacity 1.2s;
+}
+header img.active{
+    opacity: 100%;
+}
+
+.content{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+.arrows{
+    height: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 18px 0 32px 0;
+}
+
+.arrows .slide-number{
+    padding: 0 16px;
+}
+.arrows .slider-arrow{
+    width: 32px;
+    opacity: 40%;
+}
+.arrows .slider-arrow:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+
+/* ################### KONIEC HEADER ################################*/
 
 /* ################### PRACTISE ################################*/
+.practise{
+    padding-top: 0;
+    background-color: var(--primaryColor) !important;
+}
 /* HEAD */
 .practise .head{
     display: flex;
@@ -171,9 +216,10 @@ header{
 /* ########################################### CLEAN ################################################*/
 .clean{
     padding: 40px 0;
+    background-color: var(--secondaryColor) !important;
 }
 .clean .content{
-    max-width: 1000px;
+    max-width: var(--maxWidth);
     margin: 0 auto;
     text-align: center;
 }
