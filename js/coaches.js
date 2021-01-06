@@ -56,6 +56,7 @@ const coachesIMG = document.querySelectorAll('#coaches .slider img')
 const coachesH1 = ['Daniel Wrześniewski', 'Adam Górny', 'Anrzej Iwat', 'Marcin Soszyński', 'Joanna Zabulewicz', 'Michał Miranowski', 'Mateusz Kowalski']
 const coachesH3 = ['BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU KIDS', 'BRAZYLIJSKIE JIU-JITSU', 'KICKBOXING']
 const coachesP = ['Współzałożyciel klubu Złomiarz Team. Czarny pas bjj od 2012 roku pod Vagner „Boca” Guimaraes. Ze sportem związany od 7 roku życia, zaś z samym BJJ od 15 lat. Doświadczony trener i zawodnik. Multimedalista polskiej jak i zagranicznej sceny BJJ. Na co dzień nauczyciel wychowania fizycznego oraz trener grupy zaawansowanej w naszym klubie. Ceni sobie wytrwałość i ciężką pracę.', 'Czarny pas w Brazylijskim Jiu Jitsu od 2014 roku. BJJ uprawia od stycznia 2002 roku. Siedmiokrotny medalista Mistrzostw Polski BJJ, medalista Pucharu Polski BJJ (dwukrotny); medalista Mistrzostw Polski ADCC (dwukrotny). Prowadzi zajęcia grupy porannej bjj i początkującej.', 'Zawodnik klubu Złomiarz Team Gdańsk oraz trener sekcji No-Gi. Swoją przygodę z BJJ rozpoczął w 2009 roku. Wielokrotny medalista Mistrzostw Polski, Pucharu Polski w Gi i NoGi oraz złoty medalista Mistrzostw Polski Grapplingu. Jego poczynania można śledzić na profilu facebookowym - PsujJitsu.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet felis et ante suscipit aliquam. Donec ultrices eros sit amet sapien elementum, vitae pulvinar neque dignissim. Sed hendrerit egestas justo, vel vulputate sem porttitor at. Etiam libero lacus, finibus at enim et, ornare tristique orci. Praesent faucibus ut lacus vitae pretium. Fusce porttitor turpis sed lectus sollicitudin cursus. Duis auctor eu ex et finibus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in auctor felis. Maecenas rutrum urna condimentum dolor hendrerit, at suscipit elit porttitor. Maecenas vestibulum neque nec euismod convallis. Aenean egestas justo vel porta scelerisque. Quisque suscipit metus a leo commodo, sit amet venenatis massa iaculis. Morbi elementum mauris tellus, vitae iaculis lacus interdum tristique. Nam at nisl aliquam, rutrum ligula in, ultrices neque. Cras vulputate malesuada mi, nec auctor mauris congue eget. Nulla vitae lorem nec tellus pulvinar aliquam at eget orci. Integer at leo dictum, egestas odio sit amet, lobortis nisi. Integer at turpis ut lorem consequat pulvinar ut sit amet velit.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et dolor quis purus dignissim vestibulum quis ac purus. Suspendisse justo metus, molestie ut ultricies et, dapibus vitae leo. Donec auctor orci non iaculis aliquam. Curabitur commodo libero quis enim mattis, vitae egestas augue vulputate. Duis ac lectus ut dolor sagittis feugiat. Mauris nec odio posuere, euismod justo quis, pretium nunc. Maecenas lacus erat, lacinia at massa ac, sodales porttitor dolor. Donec congue pellentesque lectus vitae porta.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet pretium risus. Etiam vel ullamcorper nunc, ac tempus tellus. Integer suscipit, tortor pretium consectetur varius, risus ligula aliquam ante, at aliquet eros arcu quis turpis. Fusce vel ultricies erat, vel ultricies justo. Proin dignissim justo ut est eleifend pretium ac in ']
+const socialF = [+'<img class="social" src="img/svg/facebook.svg" alt="">']
 
 
 left = 0
@@ -74,6 +75,8 @@ $('.right').click(function(){
     }
     if(i < 6){
     $("#coaches .slider img").css({left: left+'px'});
+    $('#coaches .text span:nth-of-type(1)').hide().text(socialF[0]).fadeIn(1000);
+    $('#coaches .text span:nth-of-type(2)').hide().text(socialF[0]).fadeIn(1000);
     $('#coaches .text h1').hide().text(coachesH1[i+1]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i+1]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i+1]).fadeIn(1000);
@@ -98,6 +101,8 @@ $('.left').click(function(){
     i--
     if (i > -1){
     $("#coaches .slider img").css({left: left+'px'});
+    $('#coaches .text span:nth-of-type(1)').hide().text(socialF[0]).fadeIn(1000);
+    $('#coaches .text span:nth-of-type(2)').hide().text(socialF[0]).fadeIn(1000);
     $('#coaches .text h1').hide().text(coachesH1[i]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i]).fadeIn(1000);
