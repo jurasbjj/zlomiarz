@@ -135,7 +135,7 @@
 
 @media (max-width: 800px){
     #coaches{
-        padding: 32px 0;
+        padding: 0 0 32px 0;
     }
     #coaches .text{
         width: 100%;
