@@ -69,24 +69,30 @@ a = 0
 
 $('.right').click(function(){
     
-    
-    left = left - 544
-    if (left < -3264){
-        left = -3264
+    if(mediaQueryDesktop.matches){
+        left = left - 53
+        if (left < -378){
+            left = -378
+        }
+    }
+    if(mediaQueryMobile.matches){
+        left = left - 73
+        if (left < -438){
+            left = -438
+        }
     }
     
     if(i > 6){
         i = 6
     }
     if(i < 6){
+    $("#coaches .slider img").css({left: left+'%'});
     $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i+1]).fadeIn(1000);
     $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i+1]).fadeIn(1000);
     $('#coaches .text span.coach-social img').hide().fadeIn(1000);
     $('#coaches .text h1').hide().text(coachesH1[i+1]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i+1]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i+1]).fadeIn(1000);
-
-    $("#coaches .slider img").css({left: left+'px'});
     coachesIMG[i+1].classList.add('active');
     coachesIMG[i].classList.add('inactive');
     coachesIMG[i].classList.remove('active');
@@ -100,13 +106,21 @@ $('.right').click(function(){
 
 $('.left').click(function(){
     
-    left = left + 544
-
-    if (left > 0){
-        left = 0
+    if(mediaQueryDesktop.matches){
+        left = left + 53
+        if (left > 0){
+            left = 0
+        }
+    }
+    if(mediaQueryMobile.matches){
+        left = left + 73
+        if (left > 0){
+            left = 0
+        }
     }
     i--
     if (i > -1){
+    $("#coaches .slider img").css({left: left+'%'});
     $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i]).fadeIn(1000);
     $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i]).fadeIn(1000);
     $('#coaches .text span.coach-social img').hide().fadeIn(1000);
@@ -114,8 +128,6 @@ $('.left').click(function(){
     $('#coaches .text h1').hide().text(coachesH1[i]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i]).fadeIn(1000);
-
-    $("#coaches .slider img").css({left: left+'px'});
     coachesIMG[i].classList.add('active');
     coachesIMG[i+1].classList.remove('inactive');
     coachesIMG[i+1].classList.remove('active');
