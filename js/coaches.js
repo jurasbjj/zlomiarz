@@ -100,7 +100,7 @@ $('.right').click(function(){
     a++
     }
      
-     $('.slide-number').text('0'+(i+1) + ' / 07')
+     $('.slide-number').text('0'+(i+1) + ' / 08')
 })
 
 
@@ -137,7 +137,7 @@ $('.left').click(function(){
         i = 0
     }
      
-    $('.slide-number').text('0'+(i+1) + ' / 07')
+    $('.slide-number').text('0'+(i+1) + ' / 08')
 
 })
 
