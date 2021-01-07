@@ -143,6 +143,17 @@ $('.left').click(function(){
 
 
 
+const mediaQuery = window.matchMedia('(max-width: 800px')
+const h2 = document.querySelectorAll('h2')
+const h1 = document.querySelectorAll('h1')
+const footerText = document.querySelectorAll('footer span')
+
+if (mediaQuery.matches){
+    h2[0].textContent = "Kilka słów o dyscyplinach, treningach"
+    footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
+    footerText[1].textContent = "";
+}
+
 
 
 // $('.right').click(function(){
