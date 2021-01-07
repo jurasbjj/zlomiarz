@@ -15,11 +15,13 @@ body{
 }
 #coaches{
     background-color: var(--primaryColor);
+    overflow: hidden;
 }
 #coaches .content{
     display: flex;
     flex-direction: column;
 }
+/* TEXT */
 #coaches .text{
    width: 60%;
    display: flex;
@@ -56,7 +58,9 @@ body{
     height: 18px;
     margin: 0 16px 0 0;
 }
+/* KONIEC TEKST */
 
+/* SLIDER */
 #coaches .slider{
     height: 450px;
     display: flex;
@@ -88,7 +92,9 @@ body{
 #coaches .slider img{
     left: 0;
 }
+/* KONIEC SLIDER */
 
+/* ARROWS */
 .head1{
     width: 100%;
     display: flex;
@@ -116,6 +122,23 @@ body{
 #coaches .text span.slide-number:hover{
     opacity: 60%;
     cursor: auto;
+}
+/* KONIEC ARROWS */
+
+@media (max-width: 800px){
+    #coaches{
+        padding: 32px 0;
+    }
+    #coaches .text{
+        width: 100%;
+        padding: 0 16px;
+    }
+    #coaches .text h1{
+        font-size: 28px;
+    }
+    #coaches .head{
+        padding: 0 16px;
+    }
 }
 
 @media (max-width: 800px){

@@ -59,12 +59,16 @@ const coachesP = ['Współzałożyciel klubu Złomiarz Team. Czarny pas bjj od 2
 const socialFB = ['Daniel Wrześniewski BJJ', 'Adam Górny BJJ', 'Psuj jitsu', 'Marcin Soszyński BJJ', 'Dżoana', 'Mirnelius', 'Mateusz Kowalski' ]
 const socialIG = ['danielwrzesniewskibjj', 'kleszczbjj', 'psuj_jitsu', 'marcinsoszynski_bjj', 'asia_zabulewicz', 'miranov_bjj', 'kowalkick']
 
+const mediaQueryMobile = window.matchMedia('(max-width: 800px')
+const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
+
 
 left = 0
 i = 0
 a = 0
 
 $('.right').click(function(){
+    
     
     left = left - 544
     if (left < -3264){
@@ -75,13 +79,14 @@ $('.right').click(function(){
         i = 6
     }
     if(i < 6){
-    $("#coaches .slider img").css({left: left+'px'});
     $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i+1]).fadeIn(1000);
     $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i+1]).fadeIn(1000);
     $('#coaches .text span.coach-social img').hide().fadeIn(1000);
     $('#coaches .text h1').hide().text(coachesH1[i+1]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i+1]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i+1]).fadeIn(1000);
+
+    $("#coaches .slider img").css({left: left+'px'});
     coachesIMG[i+1].classList.add('active');
     coachesIMG[i].classList.add('inactive');
     coachesIMG[i].classList.remove('active');
@@ -102,7 +107,6 @@ $('.left').click(function(){
     }
     i--
     if (i > -1){
-    $("#coaches .slider img").css({left: left+'px'});
     $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i]).fadeIn(1000);
     $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i]).fadeIn(1000);
     $('#coaches .text span.coach-social img').hide().fadeIn(1000);
@@ -110,6 +114,8 @@ $('.left').click(function(){
     $('#coaches .text h1').hide().text(coachesH1[i]).fadeIn(1000);
     $('#coaches .text h3').hide().text(coachesH3[i]).fadeIn(1000);
     $('#coaches .text p').hide().text(coachesP[i]).fadeIn(1000);
+
+    $("#coaches .slider img").css({left: left+'px'});
     coachesIMG[i].classList.add('active');
     coachesIMG[i+1].classList.remove('inactive');
     coachesIMG[i+1].classList.remove('active');
