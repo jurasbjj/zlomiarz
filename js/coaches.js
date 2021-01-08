@@ -76,9 +76,9 @@ $('.right').click(function(){
         }
     }
     if(mediaQueryMobile.matches){
-        left = left - 73
-        if (left < -511){
-            left = -511
+        left = left - 83
+        if (left < -581){
+            left = -581
         }
     }
     
@@ -113,7 +113,7 @@ $('.left').click(function(){
         }
     }
     if(mediaQueryMobile.matches){
-        left = left + 73
+        left = left + 83
         if (left > 0){
             left = 0
         }

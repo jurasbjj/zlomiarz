@@ -294,6 +294,10 @@ header img.active{
     }
     footer .social-link{
         display: block;
+        margin-bottom: -4px;
+    }
+    footer a{
+        position: relative;
     }
     footer .social-link img{
         padding: 0 8px;

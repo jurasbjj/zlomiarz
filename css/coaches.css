@@ -25,13 +25,14 @@
    width: 60%;
    display: flex;
    flex-direction: column;
-   min-height: 308px;
+   min-height: 500px;
 }
 #coaches .text h3{
     letter-spacing: 0.2rem;
     color: rgba(0, 0, 0, 0.5);
     line-height: 30px;
     margin: 8px 0;
+    font-weight: 400;
 }
 #coaches .text p{
     line-height: 30px;
@@ -142,10 +143,11 @@
         padding: 0 16px;
     }
     #coaches .text h1{
-        font-size: 18px;
+        font-size: 1.47rem;
     }
     #coaches .text h3{
-        font-size: 15px;
+        font-size: 1.2rem;
+        font-weight: 400;
     }
     #coaches .head{
         padding: 16px;
@@ -168,6 +170,7 @@
         transition: 1s;
         left: 0;
         top: 0;
+        
     }
     #coaches .post .slider img.active{
         height: auto;
@@ -178,6 +181,7 @@
     #coaches .slider img.inactive{
         opacity: 0%;
         top: -20%;
+        width: 80%;
     
     }
     #coaches .slider img{
@@ -198,6 +202,17 @@
         padding: 15px 16px;
     }
 
+}
+
+.bgC .bgLogo{
+    position: absolute;
+    opacity: 5%;
+    top: 70%;
+    right: -15%;
+}
+.bgC{
+    position: relative;
+    overflow: hidden;
 }
 
 footer{
@@ -228,6 +243,7 @@ footer{
     }
     footer .social-link{
         display: block;
+        margin-bottom: -4px;
     }
     footer .social-link img{
         padding: 0 8px;

@@ -249,10 +249,10 @@ $('#about_us button').click(function(){
     $('.wrap-text').toggleClass('active')
     $('#about_us button').toggleClass('active');
     if ($("#about_us button").hasClass("active")) {
-        $("#about_us button").text('Czytaj mniej >');
+        $("#about_us button span").text('Czytaj mniej');
       }
     else {
-        $('#about_us button').text('Czytaj więcej >')
+        $('#about_us button span').text('Czytaj więcej')
     }
 })
 

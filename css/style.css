@@ -431,21 +431,35 @@ header video{
 /* BUTTON */
 #about_us button{
     background-color: white;
-    border: 1px solid black;
-    line-height: 30px;
-    padding: 2px 44px;
+    border: none;
+    line-height: 20px;
+    /* padding: 2px 44px; */
     outline: none;
     position: relative;
-    top: -48px;
-    transition: top 1.5s, opacity 0.2s;
+    top: -148px;
+    opacity: 60%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+#about_us button span{
+    margin-right: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+#about_us button .arrow{
+    font-size: 12px;
 }
 
 #about_us button:hover{
-    opacity: 60%;
     cursor: pointer;
 }
 #about_us button.active{
     top: 0;
+}
+#about_us button.active .arrow{
+    transform: rotate(180deg);
 }
 
 
@@ -519,8 +533,18 @@ header video{
     position: absolute;
     opacity: 5%;
     transform: translate(-50%, -60%);
-    z-index: -1;
 }
+
+.bg .bgLogo{
+    position: absolute;
+    opacity: 5%;
+    transform: translate(-50%, 40%);
+}
+.bg{
+    position: relative;
+    overflow: hidden;
+}
+
 #about_us .mobile{
     display: none;
 }
@@ -698,7 +722,8 @@ header video{
 #price .bgLogo{
     opacity: 5%;
     position: absolute;
-    transform: translate(150%, -60%);
+    top: -45%;
+    right: -20%;
 }
 
 @media (max-width: 800px){
@@ -919,10 +944,12 @@ footer .social-link{
 @media (max-width: 800px){
     footer{
         padding: 16px 0 0 0;
+        /* background-color: var(--secondaryColor); */
     }
     footer .content{
         display: block;
         padding: 16px;
+        background-color: var(--secondaryColor);
 
     }
 
