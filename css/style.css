@@ -550,6 +550,9 @@ header video{
 }
 /* about_us mobile */
 @media (max-width: 800px){
+    .bgLogo{
+        display: none;
+    }
     #about_us{
         padding: 40px 0 21px 0;
     }

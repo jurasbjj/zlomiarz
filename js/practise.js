@@ -12,16 +12,20 @@ $(window).load(function() {
 // KONIEC PRELOADER ###############################################################################
 
 // SCROLL #########################################################################################
- $('nav img').click(function(){
-     $('html, body').animate({
-     scrollTop: $('body').offset().top
- }, 800);})
+//  $('nav img').click(function(){
+//      $('html, body').animate({
+//      scrollTop: $('body').offset().top
+//  }, 800);})
 
  //scroll
 //  $('nav li a').click(function(){
 //     $('html, body').animate({
 //     scrollTop: ($('.'+$(this).attr('id')).offset().top - 63)
 // }, 800);})
+
+$("nav img").click(function() {
+    window.location.href = 'index.html'
+  });
 
 $('nav li a').click(function(){
     $('nav.mobile, .fade').removeClass('active')

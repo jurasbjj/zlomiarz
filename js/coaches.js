@@ -26,10 +26,14 @@ $('nav li a').click(function(){
 
 // SCROLL ########################################################################################################
 
-$('nav img').click(function(){
-    $('html, body').animate({
-    scrollTop: $('body').offset().top
-}, 800);})
+// $('nav img').click(function(){
+//     $('html, body').animate({
+//     scrollTop: $('body').offset().top
+// }, 800);})
+
+$("nav img").click(function() {
+    window.location.href = 'index.html'
+  });
 
 
 $(document).ready(function () {
