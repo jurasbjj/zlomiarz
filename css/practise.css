@@ -197,11 +197,12 @@ header img.active{
     }
     .practise .bjj h1, .practise .kick h1{
         padding: 32px 16px 0 16px;
+        z-index: 1;
     }
 
     .practise .bjj .bg, .practise .kick .bg{
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         opacity: 0.05;
         height: 120px;
         left: 30%;
@@ -210,6 +211,7 @@ header img.active{
     .practise .bjj p, .practise .kick p{
         padding: 0 16px 16px 16px;
         margin: 0;
+        z-index: 1;
     }
 
 }
