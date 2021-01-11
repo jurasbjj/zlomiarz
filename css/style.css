@@ -529,6 +529,7 @@ header.page-header video{
     position: absolute;
     transition: 1s;
     width: 80%;
+    top: 0%;
 }
 #about_us .post .slider img.slider.active{
     position: absolute;
@@ -544,7 +545,7 @@ header.page-header video{
 }
 #about_us .post .slider img.slider.far{
     position: absolute;
-    left: 1000px;
+    left: 920px;
     opacity: 20%;
     top: 10%;
 }

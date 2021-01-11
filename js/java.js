@@ -267,12 +267,13 @@ $('#about_us button').click(function(){
 
 
 //  ###################################################### MOBILE TEXT CONTENT ###################################################
-const mediaQuery = window.matchMedia('(max-width: 800px')
+const mediaQueryMobile = window.matchMedia('(max-width: 800px')
+const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 const h2 = document.querySelectorAll('h2')
 const h1 = document.querySelectorAll('h1')
 const footerText = document.querySelectorAll('footer span')
 
-if (mediaQuery.matches){
+if (mediaQueryMobile.matches){
     h2[0].textContent = "Kim jesteśmy? Kilka słów o klubie Złomiarz Team Gdańsk."
     h2[1].textContent = "Sprawdź aktualny rozkład treningów."
     h1[1].textContent = "Grafik zajęć"
@@ -281,6 +282,16 @@ if (mediaQuery.matches){
     h2[4].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
+
+    $('.slider img.static, .slider img.active').attr('src','img/about_us/mobile/onas1.jpg')
+    $('.slider img.inactive').attr('src','img/about_us/mobile/onas2.png')
+    $('.slider img.far').attr('src','img/about_us/mobile/onas3.jpg')
+}
+
+if(mediaQueryDesktop.matches){
+    $('.slider img.static, .slider img.active').attr('src','img/about_us/onas1.jpg')
+    $('.slider img.inactive').attr('src','img/about_us/onas2.png')
+    $('.slider img.far').attr('src','img/about_us/onas3.jpg')
 }
 
 //  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
@@ -290,3 +301,20 @@ if (mediaQuery.matches){
 const contactContent = document.querySelectorAll('.contact .card')
 
 
+// RE-SIZE REFRESH
+var ww = $(window).width();
+var limit = 800;
+function refresh() {
+   ww = $(window).width();
+   var w =  ww<limit ? (location.reload(true)) :  ( ww>limit ? (location.reload(true)) : ww=limit );
+}
+var tOut;
+$(window).resize(function() {
+    var resW = $(window).width();
+    clearTimeout(tOut);
+    if ( (ww>limit && resW<limit) || (ww<limit && resW>limit) ) {
+        tOut = setTimeout(refresh, 10);
+    }
+});
+
+// KONIEC RE-SIZE REFRESH

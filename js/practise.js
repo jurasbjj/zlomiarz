@@ -12,6 +12,8 @@ $(window).load(function() {
 // ###################################################### KONIEC PRELOADER ####################################################
 
 
+
+
 // ###################################################### SCROLL ###################################################### 
     // IMG powrót
 $("nav img").click(function() {
@@ -64,10 +66,17 @@ const h2 = document.querySelectorAll('h2')
 const h1 = document.querySelectorAll('h1')
 const footerText = document.querySelectorAll('footer span')
 
+const mediaQueryMobile = window.matchMedia('(max-width: 800px')
+const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
+
 if (mediaQuery.matches){
     h2[0].textContent = "Kilka słów o dyscyplinach, treningach"
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
+}
+if (mediaQueryDesktop.matches){
+    $('header img.kick').attr('src', 'img/practise/kick.jpg')
+    $('header img.bjj').attr('src', 'img/practise/bjj.jpg')
 }
 // ###################################################### KONIEC MOBILE TEXT CONTENT ############################################# 
 
@@ -181,3 +190,21 @@ $('.left').click(function(){
 
 // ###################################################### KONIEC SLIDER ##########################################################
 
+
+// RE-SIZE REFRESH
+var ww = $(window).width();
+var limit = 800;
+function refresh() {
+   ww = $(window).width();
+   var w =  ww<limit ? (location.reload(true)) :  ( ww>limit ? (location.reload(true)) : ww=limit );
+}
+var tOut;
+$(window).resize(function() {
+    var resW = $(window).width();
+    clearTimeout(tOut);
+    if ( (ww>limit && resW<limit) || (ww<limit && resW>limit) ) {
+        tOut = setTimeout(refresh, 10);
+    }
+});
+
+// KONIEC RE-SIZE REFRESH
