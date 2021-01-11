@@ -758,6 +758,7 @@ header.page-header video{
     }
     #price .wraper{
         flex-direction: column;
+        margin-top: 16px;
     }
 
     #price header{
