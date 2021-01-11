@@ -123,6 +123,7 @@
 #coaches .text span.slide-number{
     padding: 0 16px;
     margin: 0;
+    opacity: 60%;
 }
 
 @media (min-width: 800px){
@@ -200,6 +201,7 @@
     }
     #coaches .arrows.mobile span.slide-number{
         padding: 15px 16px;
+        opacity: 60%;
     }
 
 }
@@ -231,13 +233,13 @@ footer{
     }
 
     footer .social-link{
-        padding: 0 0 16px 0;
+        padding: 0 16px 16px 16px;
     }
     footer .social-link::before{
         display: block;
         content: '';
         height: 1px;
-        width: 80%;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.1);
         margin-bottom: 16px;
         position: relative;
