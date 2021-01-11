@@ -832,7 +832,7 @@ header.page-header video{
     font-size: 20px;
 }
 
-#faq ion-icon.active{
+#faq .question.active ion-icon{
     transform: rotate(180deg);
 }
 
@@ -851,14 +851,14 @@ header.page-header video{
     height: 16px;
 }
 
-.answer.active{
+.question.active .answer{
     max-height: 150px;
     opacity: 1;
 }
 
 
 @media(max-width: 800px){
-    .answer.active{
+    .question.active .answer{
         max-height: 250px;
     }
     .tasks{

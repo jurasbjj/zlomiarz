@@ -64,134 +64,18 @@ $('.burger, fade').click(function(){
 
 // ###################################################### FAQ ######################################################
 const quests = document.querySelectorAll('.question')
-const answers = document.querySelectorAll('.answer')
-const arrows = document.querySelectorAll('.arrow')
 
-quests[0].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[0].classList.toggle('active');
-        arrows[0].classList.toggle('active');
-        if (i === 0) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
+ quests.forEach(function(quest){
+     quest.addEventListener('click', function(){
+         console.log(this.dataset.id)
+         quests[this.dataset.id].classList.toggle('active');
+         for (i = 0; i < quests.length; i++){
+             if (i == this.dataset.id) continue;
+             quests[i].classList.remove('active');
+         }
+     })
+ })
 
-quests[1].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[1].classList.toggle('active');
-        arrows[1].classList.toggle('active');
-        if (i === 1) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[2].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[2].classList.toggle('active');
-        arrows[2].classList.toggle('active');
-        if (i === 2) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[3].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[3].classList.toggle('active');
-        arrows[3].classList.toggle('active');
-        if (i === 3) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[4].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[4].classList.toggle('active');
-        arrows[4].classList.toggle('active');
-        if (i === 4) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[5].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[5].classList.toggle('active');
-        arrows[5].classList.toggle('active');
-        if (i === 5) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[6].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[6].classList.toggle('active');
-        arrows[6].classList.toggle('active');
-        if (i === 6) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[7].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[7].classList.toggle('active');
-        arrows[7].classList.toggle('active');
-        if (i === 7) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-
-quests[8].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[8].classList.toggle('active');
-        arrows[8].classList.toggle('active');
-        if (i === 8) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-quests[9].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[9].classList.toggle('active');
-        arrows[9].classList.toggle('active');
-        if (i === 9) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-quests[10].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[10].classList.toggle('active');
-        arrows[10].classList.toggle('active');
-        if (i === 10) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-quests[11].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[11].classList.toggle('active');
-        arrows[11].classList.toggle('active');
-        if (i === 11) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
-quests[12].addEventListener('click', function(){
-    for (i = 0; i < quests.length; i++){
-        answers[12].classList.toggle('active');
-        arrows[12].classList.toggle('active');
-        if (i === 12) continue;
-        answers[i].classList.remove('active');
-        arrows[i].classList.remove('active');
-    }
-})
 // ###################################################### KONIEC FAQ ######################################################
 
 // ###################################################### SLIDER ABOUT_US ######################################################
