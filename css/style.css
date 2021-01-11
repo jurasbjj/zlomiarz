@@ -617,7 +617,7 @@ header.page-header video{
         padding: 0 16px;
     }
         #about_us .content .post .wrap-text.active{
-            max-height: 1000px;
+            max-height: 1200px;
         }
         #about_us .content .post .wrap-text::after{ /* MARGIN WRAP */
             display: none;
@@ -633,6 +633,11 @@ header.page-header video{
         position: static;
     }
 
+    @media(max-width: 350px){
+        #about_us .content .post .wrap-text.active{
+            max-height: 1350px;
+        }
+    }
 }
 
 
@@ -854,7 +859,7 @@ header.page-header video{
 
 @media(max-width: 800px){
     .answer.active{
-        max-height: 200px;
+        max-height: 250px;
     }
     .tasks{
         margin-top: 4px;

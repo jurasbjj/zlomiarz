@@ -216,6 +216,15 @@ header img.active{
         margin: 0;
         z-index: 1;
     }
+    .practise .activity.active .description{
+        max-height: 330px;
+    }
+
+    @media(max-width: 350px){
+        .practise .activity.active .description{
+            max-height: 400px;
+        }
+    }
 
 }
 
