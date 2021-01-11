@@ -83,90 +83,17 @@ if (mediaQueryDesktop.matches){
 
 //###################################################### CLASSES #############################################################
 const activitys = document.querySelectorAll('.activity')
-const classes = document.querySelectorAll('.class')
+const practices = document.querySelectorAll('.class')
 
-// CLASS BJJ 
-classes[0].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[0].classList.toggle('active');
-        if (i === 0) continue;
-        activitys[i].classList.remove('active');
-    }
+practices.forEach(function(practice){
+    practice.addEventListener('click', function(){
+        for (i = 0; i < activitys.length; i++){
+            activitys[this.dataset.id].classList.toggle('active');
+            if (i == this.dataset.id) continue;
+            activitys[i].classList.remove('active');
+        }
+    })
 })
-classes[1].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[1].classList.toggle('active');
-        if (i === 1) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[2].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[2].classList.toggle('active');
-        if (i === 2) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[3].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[3].classList.toggle('active');
-        if (i === 3) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[4].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[4].classList.toggle('active');
-        if (i === 4) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[5].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[5].classList.toggle('active');
-        if (i === 5) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[6].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[6].classList.toggle('active');
-        if (i === 6) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-// KONIEC CLASS BJJ
-
-// CLASS KICK
-classes[7].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[7].classList.toggle('active');
-        if (i === 7) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[8].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[8].classList.toggle('active');
-        if (i === 8) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[9].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[9].classList.toggle('active');
-        if (i === 9) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-classes[10].addEventListener('click', function(){
-    for (i = 0; i < activitys.length; i++){
-        activitys[10].classList.toggle('active');
-        if (i === 10) continue;
-        activitys[i].classList.remove('active');
-    }
-})
-// KONIEC CLASS KICK
 
 // ###################################################### KONIEC CLASSES #####################################################
 

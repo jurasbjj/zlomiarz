@@ -16,7 +16,9 @@ $(window).load(function() {
 $('nav img').click(function(){
     $('html, body').animate({
     scrollTop: $('body').offset().top
-}, 0);})
+}, 0);
+$('nav.mobile, .fade').removeClass('active')
+})
 
 // scroll sekcji 
 $(document).ready(function () {
