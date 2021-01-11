@@ -199,7 +199,7 @@ header img.active{
         overflow-x: hidden;
     }
     .practise .bjj h1, .practise .kick h1{
-        padding: 32px 16px 0 16px;
+        padding: 32px 16px 16px 16px;
         z-index: 1;
     }
 
