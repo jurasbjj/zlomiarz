@@ -1,4 +1,4 @@
-// PRELOADER #####################################################################################
+// ###################################################### PRELOADER ###################################################
 const preload = document.querySelector('.loader-wrapper');
 
 preload.classList.add('show-preloader');
@@ -9,29 +9,38 @@ $(window).load(function() {
           $(".loader-wrapper").fadeOut();
       }, 500);
 });
-// KONIEC PRELOADER ###############################################################################
+// ###################################################### KONIEC PRELOADER ####################################################
 
-// SCROLL #########################################################################################
-//  $('nav img').click(function(){
-//      $('html, body').animate({
-//      scrollTop: $('body').offset().top
-//  }, 800);})
 
- //scroll
-//  $('nav li a').click(function(){
-//     $('html, body').animate({
-//     scrollTop: ($('.'+$(this).attr('id')).offset().top - 63)
-// }, 800);})
-
+// ###################################################### SCROLL ###################################################### 
+    // IMG powrót
 $("nav img").click(function() {
     window.location.href = 'index.html'
   });
 
-$('nav li a').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
+   // SCROLL NAWIGACJA AKTYWACJA
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 64) {
+       $('nav.desktop').addClass('active');
+    } else {
+       $('nav.desktop').removeClass('active');
+    }
+});
+    // SCROLL 
+$(document).ready(function () {
+  $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
 
+      var target = this.hash,
+          $target = $(target);
 
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top - 67
+      }, 800, 'swing', function () { // czas scrolowania
+          // window.location.hash = target;
+      });
+  });
+});
 
 //BURGER
 $('.burger, fade').click(function(){
@@ -42,17 +51,14 @@ $('.fade').click(function(){
     $('nav.mobile, .fade').removeClass('active')
 })
 
- // SCROLL NAWIGACJA
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 64) {
-       $('nav.desktop').addClass('active');
-    } else {
-       $('nav.desktop').removeClass('active');
-    }
-});
+$('nav li a').click(function(){
+    $('nav.mobile, .fade').removeClass('active')
+})
+
+// ###################################################### KONIEC SCROLL ###################################################### 
 
 
-// MOBILE TEXT CONTENT
+// ######################################################  MOBILE TEXT CONTENT ################################################ 
 const mediaQuery = window.matchMedia('(max-width: 800px')
 const h2 = document.querySelectorAll('h2')
 const h1 = document.querySelectorAll('h1')
@@ -63,26 +69,10 @@ if (mediaQuery.matches){
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
 }
+// ###################################################### KONIEC MOBILE TEXT CONTENT ############################################# 
 
 
-$(document).ready(function () {
-  $('a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-
-      var target = this.hash,
-          $target = $(target);
-
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top - 67
-      }, 800, 'swing', function () {
-          // window.location.hash = target;
-      });
-  });
-});
-
-
-
-//CLASSES #########################################################################################
+//###################################################### CLASSES #############################################################
 const activitys = document.querySelectorAll('.activity')
 const classes = document.querySelectorAll('.class')
 
@@ -167,9 +157,12 @@ classes[10].addEventListener('click', function(){
         activitys[i].classList.remove('active');
     }
 })
-
 // KONIEC CLASS KICK
-//KONIEC CLASSES #########################################################################################
+
+// ###################################################### KONIEC CLASSES #####################################################
+
+
+// ###################################################### SLIDER ################################################################
 i = 0
 $('.right').click(function(){
     if (i == 0){
@@ -185,4 +178,6 @@ $('.left').click(function(){
         $('.slide-number').text('0'+(i+1) + ' / 02')
     }
 })
+
+// ###################################################### KONIEC SLIDER ##########################################################
 

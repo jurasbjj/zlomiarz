@@ -127,8 +127,49 @@ h3{
 }
 /* KONIEC PRELOADER */
 
+/* ZĘBATKA TŁO */
+.bg{
+    position: relative;
+    overflow: hidden;
+}
+.bg .bg-logo{
+    position: absolute;
+    opacity: 5%;
+    transform: translate(-50%, 40%);
 
-/* ###########  NAWIGACJA ##########   */
+}
+#about_us, #contact, #price{
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-logo{
+    position: absolute;
+    opacity: 5%;
+}
+
+#about_us .bg-logo{
+    transform: translate(-50%, -60%);
+}
+
+#price .bg-logo{
+    top: -45%;
+    right: -20%;
+}
+#contact .bg-logo{
+    transform: translate(-50%, 10%);
+    z-index: -1;
+}
+
+@media(max-width: 800px){
+    .bg-logo{
+        display: none;
+    }
+}
+/* KONIEC ZĘBATKA TŁO */
+
+
+/* ############################################ NAWIGACJA ######################################################   */
 @media (max-width: 800px){
     nav.desktop{
         display: none;
@@ -327,16 +368,16 @@ nav.desktop.active img{
     height: 80%;
     opacity: 100%;
 }
-/* ########### KONIEC NAWIGACJA ##########   */
+/* ####################################################### KONIEC NAWIGACJA ######################################################   */
 
 
-/* ########### HEADER ##########   */
+/* ####################################################### HEADER #################################################################   */
 @media (max-width: 800px){
-    header{
+    header.page-header{
         display: none;
     }
 }
-header{
+header.page-header{
     /* position: relative; */
     top: -67px;
     left: 0;
@@ -344,7 +385,7 @@ header{
     height: 90vh;
     overflow: hidden;
 }
-header video{
+header.page-header video{
     display: block;
     position: relative;
     width: 100%;
@@ -354,6 +395,8 @@ header video{
     z-index: -1; 
 }
 
+
+/* KOMUNIKAT */ 
 .attention{
     width: var(--maxWidth);
     display: flex;
@@ -374,18 +417,23 @@ header video{
     font-size: 2rem;
     margin: 0 20% 0 5%;
 }
-/* ########### KONIEC HEADER ##########   */
+/* ####################################################### KONIEC HEADER ###########################################   */
 
 
 
-/* ########### O NAS ##########   */
+/* ####################################################### O NAS ######################################################   */
+
+#about_us{
+    padding: 40px 16px;
+
+}
 
 #about_us .content{
     max-width: var(--maxWidth);
     margin: 0 auto;
 }
 
-#about_us .content .head{
+#about_us .content header{
     margin-bottom: var(--headerMargin);
 }
 
@@ -429,6 +477,7 @@ header video{
     font-weight: 700;
     margin: var(--headerMargin) 0;
 }
+
 
 /* BUTTON */
 #about_us button{
@@ -525,36 +574,12 @@ header video{
     opacity: 60%;
 }
 
-/* Zębatka tło */
-#about_us{
-    position: relative;
-    overflow: hidden;
-    padding: 40px 16px;
-}
-#about_us .bgLogo{
-    position: absolute;
-    opacity: 5%;
-    transform: translate(-50%, -60%);
-}
-
-.bg .bgLogo{
-    position: absolute;
-    opacity: 5%;
-    transform: translate(-50%, 40%);
-}
-.bg{
-    position: relative;
-    overflow: hidden;
-}
-
 #about_us .mobile{
     display: none;
 }
 /* about_us mobile */
 @media (max-width: 800px){
-    .bgLogo{
-        display: none;
-    }
+
     #about_us{
         padding: 40px 0 21px 0;
     }
@@ -575,11 +600,11 @@ header video{
         #about_us .slider .arrows{
             padding: 0 16px;
         }
-    #about_us .head{
+    #about_us header{
         order: 2;
         padding: 16px 16px;
     }
-        #about_us .content .head{
+        #about_us .content header{
         margin-bottom: 0;
         }
     #about_us .text{
@@ -610,10 +635,10 @@ header video{
 }
 
 
-/* ########### KONIEC O NAS ##########   */
+/* ####################################################### KONIEC O NAS ######################################################   */
 
 
-/* ########### GRAFIK ##########   */
+/* ####################################################### GRAFIK ##########################################################   */
 #schedule img{
     margin-top: 44px;
     width: 100%;
@@ -637,9 +662,11 @@ header video{
     }
 }
 
-/* ########### KONIEC GRAFIK ##########   */
 
-/* ########### CENNIK ##########   */
+/* ####################################################### KONIEC GRAFIK ######################################################   */
+
+
+/* ####################################################### CENNIK ######################################################   */
 #price .wraper{
     display: flex;
 }
@@ -718,18 +745,6 @@ header video{
     left: -24px;
 }
 
-#price{
-    position: relative;
-    overflow: hidden;
-}
-
-
-#price .bgLogo{
-    opacity: 5%;
-    position: absolute;
-    top: -45%;
-    right: -20%;
-}
 
 @media (max-width: 800px){
     #price .wraper{
@@ -772,9 +787,84 @@ header video{
         left: -35px;
 }
 }
-/* ########### KONIEC CENNIK ##########   */
 
-/* ########### KONTAKT ##########   */
+
+/* ####################################################### KONIEC CENNIK ###################################################   */
+
+
+/* ####################################################### FAQ ######################################################   */
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+#faq .wraper{
+    flex-basis: 100%;
+    background-color: var(--primaryColor);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+    display: flex;
+}
+.question{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: 700;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.question span{
+    flex-basis: 90%;
+    padding: 0;
+}
+
+#faq ion-icon{
+    font-size: 20px;
+}
+
+#faq ion-icon.active{
+    transform: rotate(180deg);
+}
+
+.answer{
+    flex-basis: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    font-weight: normal;
+    line-height: 1.6rem;   
+}
+.answer::before{
+    content: '';
+    display: block;
+    height: 16px;
+}
+
+.answer.active{
+    max-height: 150px;
+    opacity: 1;
+}
+
+
+@media(max-width: 800px){
+    .answer.active{
+        max-height: 200px;
+    }
+    .tasks{
+        margin-top: 4px;
+    }
+}
+
+
+/* ####################################################### KONIEC FAQ ######################################################   */
+
+
+/* ####################################################### KONTAKT ######################################################   */
 #contact .card.mobile{
     display: none;
 }
@@ -843,17 +933,7 @@ header video{
     flex-basis: 50%;
 }
 
-#contact{
-    position: relative;
-    overflow: hidden;
-}
 
-#contact .bgLogo{
-    opacity: 5%;
-    position: absolute;
-    transform: translate(-50%, 10%);
-    z-index: -1;
-}
 
 
 @media (max-width: 800px){
@@ -884,10 +964,6 @@ header video{
         flex-basis: 100%;
         height: 250px;
     }
-    #contact .bgLogo{
-        display: none;
-    }
-
     #contact .card span:nth-last-of-type(2){
         padding: 24px 0 16px 0;
         margin: 0;
@@ -895,9 +971,12 @@ header video{
 
 }
 
-/* ########### KONIEC KONTAKT ##########   */
 
-/* ########### FOOTER ##########   */
+
+/* ####################################################### KONIEC KONTAKT ###########################################   */
+
+
+/* ####################################################### FOOTER ######################################################   */
 .footer{
     display: none;
 }
@@ -964,85 +1043,7 @@ footer .social-link{
     }
 
 }
-/* ########### KONIEC FOOTER ##########   */
-
-/* ########### FAQ ##########   */
-
-.tasks{
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
-}
-#faq .wraper{
-    flex-basis: 100%;
-    background-color: var(--primaryColor);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 16px;
-    display: flex;
-}
-.question{
-    cursor: pointer;
-    padding: 16px;
-    font-weight: 700;
-    flex-basis: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-.question span{
-    flex-basis: 90%;
-    padding: 0;
-}
-
-#faq ion-icon{
-    font-size: 20px;
-}
-
-#faq ion-icon.active{
-    transform: rotate(180deg);
-}
-
-.answer{
-    flex-basis: 100%;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    font-weight: normal;   
-}
-.answer::before{
-    content: '';
-    display: block;
-    height: 16px;
-}
-
-.answer.active{
-    max-height: 150px;
-    opacity: 1;
-}
-
-
-@media(max-width: 800px){
-    .answer.active{
-        max-height: 200px;
-    }
-    .tasks{
-        margin-top: 4px;
-    }
-}
+/* ############################################ KONIEC FOOTER ######################################################   */
 
 
 
-
-/* 
-.tasks h2{
-    padding: 0;
-    margin: 16px 0 0 0;
-    font-size: 1.6rem;
-    font-weight: 500;
-    text-transform: uppercase;
-} */
-
-/* ########### KONIEC FAQ ##########   */

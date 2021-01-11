@@ -1,4 +1,4 @@
-// PRELOADER #####################################################################################
+// ################################################### PRELOADER #############################################################
 const preload = document.querySelector('.loader-wrapper');
 
 preload.classList.add('show-preloader');
@@ -9,52 +9,56 @@ $(window).load(function() {
           $(".loader-wrapper").fadeOut();
       }, 500);
 });
-// KONIEC PRELOADER ###############################################################################
+// ################################################### KONIEC PRELOADER ###################################################
 
 
-//BURGER
-$('.burger, fade').click(function(){
-    $('nav.mobile, .fade').toggleClass('active')
-})
-
-$('.fade').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
-$('nav li a').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
-
-// SCROLL ########################################################################################################
-
-// $('nav img').click(function(){
-//     $('html, body').animate({
-//     scrollTop: $('body').offset().top
-// }, 800);})
-
-$("nav img").click(function() {
-    window.location.href = 'index.html'
-  });
-
-
-$(document).ready(function () {
-  $('a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-
-      var target = this.hash,
-          $target = $(target);
-
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top - 67
-      }, 800, 'swing', function () {
-          // window.location.hash = target;
+// ###################################################### SCROLL ###################################################### 
+    // IMG powrót
+    $("nav img").click(function() {
+        window.location.href = 'index.html'
       });
-  });
-});
-// KONIEC SCROLL ########################################################################################################
+    
+       // SCROLL NAWIGACJA AKTYWACJA
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 64) {
+           $('nav.desktop').addClass('active');
+        } else {
+           $('nav.desktop').removeClass('active');
+        }
+    });
+        // SCROLL 
+    $(document).ready(function () {
+      $('a[href^="#"]').on('click', function (e) {
+          e.preventDefault();
+    
+          var target = this.hash,
+              $target = $(target);
+    
+          $('html, body').stop().animate({
+              'scrollTop': $target.offset().top - 67
+          }, 800, 'swing', function () { // czas scrolowania
+              // window.location.hash = target;
+          });
+      });
+    });
+    
+    //BURGER
+    $('.burger, fade').click(function(){
+        $('nav.mobile, .fade').toggleClass('active')
+    })
+    
+    $('.fade').click(function(){
+        $('nav.mobile, .fade').removeClass('active')
+    })
+    
+    $('nav li a').click(function(){
+        $('nav.mobile, .fade').removeClass('active')
+    })
+    
+// ###################################################### KONIEC SCROLL ######################################################
 
 
-// ################################# SLAJDER #################################################################
-
+// ################################# SLIDER #################################################################
 
 const coachesIMG = document.querySelectorAll('#coaches .slider img')
 const coachesH1 = ['Daniel Wrześniewski', 'Adam Górny', 'Anrzej Iwat', 'Marcin Soszyński', 'Joanna Zabulewicz', 'Michał Miranowski', 'Mateusz Kowalski', 'Marcin Grabowski']
@@ -144,8 +148,9 @@ $('.left').click(function(){
     $('.slide-number').text('0'+(i+1) + ' / 08')
 
 })
+// ######################################## KONIEC SLIDER #####################################################
 
-
+// ######################################## MEDIA CONTENT #####################################################
 
 const mediaQuery = window.matchMedia('(max-width: 800px')
 const h2 = document.querySelectorAll('h2')
@@ -158,131 +163,30 @@ if (mediaQuery.matches){
     footerText[1].textContent = "";
 }
 
-
-
-// $('.right').click(function(){
-//     left = left - 544
+if (mediaQueryDesktop.matches){
     
-//     i++
-//     a++
-//     if(i === 1){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[1].classList.add('active');
-//         coachesIMG[0].classList.add('inactive');
-//         coachesIMG[0].classList.remove('active');
-        
-//         $('#coaches .text h1').hide().text(coaches[1]).fadeIn(1000); 
+    $(".slider img:nth-of-type(1)").attr("src","img/coaches/daniel.jpg");
+    $(".slider img:nth-of-type(2)").attr("src","img/coaches/adam.jpg");
+    $(".slider img:nth-of-type(3)").attr("src","img/coaches/andrzej.jpg");
+    $(".slider img:nth-of-type(4)").attr("src","img/coaches/marcin.jpg");
+    $(".slider img:nth-of-type(5)").attr("src","img/coaches/asia.jpg");
+    $(".slider img:nth-of-type(6)").attr("src","img/coaches/michał.jpg");
+    $(".slider img:nth-of-type(7)").attr("src","img/coaches/mateusz.jpg");
+    $(".slider img:nth-of-type(8)").attr("src","img/coaches/marcinZ.jpg");
+}
 
-//     }
-//     if(i === 2){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[2].classList.add('active');
-//         coachesIMG[1].classList.add('inactive');
-//         coachesIMG[1].classList.remove('active');
+if (mediaQueryMobile.matches){
+    $(".slider img:nth-of-type(1)").attr("src","img/coaches/mobile/daniel.jpg");
+    $(".slider img:nth-of-type(2)").attr("src","img/coaches/mobile/adam.jpg");
+    $(".slider img:nth-of-type(3)").attr("src","img/coaches/mobile/andrzej.jpg");
+    $(".slider img:nth-of-type(4)").attr("src","img/coaches/mobile/marcin.jpg");
+    $(".slider img:nth-of-type(5)").attr("src","img/coaches/mobile/asia.jpg");
+    $(".slider img:nth-of-type(6)").attr("src","img/coaches/mobile/michał.jpg");
+    $(".slider img:nth-of-type(7)").attr("src","img/coaches/mobile/mateusz.jpg");
+    $(".slider img:nth-of-type(8)").attr("src","img/coaches/marcinZ.jpg");
 
+}
 
-//     }
-//     if(i === 3){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[3].classList.add('active');
-//         coachesIMG[2].classList.add('inactive');
-//         coachesIMG[2].classList.remove('active');
-
-//     }
-//     if(i === 4){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[4].classList.add('active');
-//         coachesIMG[3].classList.add('inactive');
-//         coachesIMG[3].classList.remove('active');
-
-//     }
-//     if(i === 5){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[5].classList.add('active');
-//         coachesIMG[4].classList.add('inactive');
-//         coachesIMG[4].classList.remove('active');
-
-//     }
-//     if(i === 6){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         coachesIMG[6].classList.add('active');
-//         coachesIMG[5].classList.add('inactive');
-//         coachesIMG[5].classList.remove('active');
-
-//     }
-//     if(i === 7){
-//         i = 6
-//     }
-//     if(a === 7){
-//         a = 6
-//     }
-//     if (left < -3264){
-//         left = -3264
-//     }
-//     $('.slide-number').text('0'+(i+1) + ' / 07')
-// })
-// $('.left').click(function(){
-//     left = left + 544
-    
-//     i--
-
-//     if(a === 1){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(1)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(2)').removeClass('inactive');
-//         $('#coaches .slider img:nth-of-type(2)').removeClass('active');
-//         a--
-//     }
-    
-//     if(a === 2){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(2)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(3)').removeClass('inactive');
-//         $('#coaches .slider img:nth-of-type(3)').removeClass('active');
-//         a--
-
-//     }
-//     if(a === 3){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(3)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(4)').removeClass('inactive');
-//         $('#coaches .slider img:nth-of-type(4)').removeClass('active');
-//         a--
-//     }
-//     if(a === 4){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(4)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(5)').removeClass('inactive');
-//         $('#coaches .slider img:nth-of-type(5)').removeClass('active');
-//         a--
-
-//     }
-//     if(a === 5){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(5)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(6)').removeClass('inactive');
-//         $('#coaches .slider img:nth-of-type(6)').removeClass('active');
-//         a--
-
-//     }
-//     if(a === 6){
-//         $("#coaches .slider img").css({left: left+'px'});
-//         $('#coaches .slider img:nth-of-type(6)').addClass('active');
-//         $('#coaches .slider img:nth-of-type(7)').removeClass('active');
-//         a--
-//     }
-//     if(i < 0){
-//         i = 0
-//     }
-//     if (a < 0){
-//         a = 0
-//     }
-//     if (left > 0){
-//         left = 0
-//     }
-//     $('.slide-number').text('0'+(i+1) + ' / 07')
-// })
+// ######################################## MEDIA CONTENT #####################################################
 
 
-
-// ################################# KONIEC SLAJDER #################################################################

@@ -1,4 +1,4 @@
-// PRELOADER 
+// ###################################################### PRELOADER ######################################################
 const preload = document.querySelector('.loader-wrapper');
 
 preload.classList.add('show-preloader');
@@ -9,14 +9,64 @@ $(window).load(function() {
           $(".loader-wrapper").fadeOut();
       }, 500);
 });
+// ########################################## KONIEC PRELOADER ######################################################
+
+// ###################################################### SCROLL  ######################################################
+// scroll img
+$('nav img').click(function(){
+    $('html, body').animate({
+    scrollTop: $('body').offset().top
+}, 0);})
+
+// scroll sekcji 
+$(document).ready(function () {
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+  
+        var target = this.hash,
+            $target = $(target);
+  
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top - 63
+        }, 800, 'swing', function () { // czas scrolowania
+            // window.location.hash = target;
+        });
+    });
+  });
 
 
+
+// desktop aktywacja nawigacji
+$(window).scroll(function () {
+   if ($(window).scrollTop() > 64) {
+      $('nav.desktop').addClass('active');
+   } else {
+      $('nav.desktop').removeClass('active');
+   }
+});
+
+
+  //burger
+$('.burger, fade').click(function(){
+    $('nav.mobile, .fade').toggleClass('active')
+ })
+ 
+ $('.fade').click(function(){
+    $('nav.mobile, .fade').removeClass('active')
+ })
+
+    // usuwanie cienia
+ $('nav li a').click(function(){
+    $('nav.mobile, .fade').removeClass('active')
+ })
+
+// ###################################################### KONIEC SCROLL ######################################################
+
+// ###################################################### FAQ ######################################################
 const quests = document.querySelectorAll('.question')
 const answers = document.querySelectorAll('.answer')
 const arrows = document.querySelectorAll('.arrow')
 
-
-/* FAQ */
 quests[0].addEventListener('click', function(){
     for (i = 0; i < quests.length; i++){
         answers[0].classList.toggle('active');
@@ -142,55 +192,9 @@ quests[12].addEventListener('click', function(){
         arrows[i].classList.remove('active');
     }
 })
+// ###################################################### KONIEC FAQ ######################################################
 
-
-
-
-
-/* SCROLL */
- $('nav img').click(function(){
-     $('html, body').animate({
-     scrollTop: $('body').offset().top
- }, 0);})
-
-
- //scroll
-//  $('nav li a').click(function(){
-//     $('html, body').animate({
-//     scrollTop: ($('.'+$(this).attr('id')).offset().top - 63)
-// }, 800);})
-
-$('nav li a').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
-
-
-
-
-//BURGER
-$('.burger, fade').click(function(){
-    $('nav.mobile, .fade').toggleClass('active')
-})
-
-$('.fade').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
-})
-
- // SCROLL NAWIGACJA
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 64) {
-       $('nav.desktop').addClass('active');
-    } else {
-       $('nav.desktop').removeClass('active');
-    }
-});
-
-
-
-
-
-
-/* SLIDER */
+// ###################################################### SLIDER ABOUT_US ######################################################
 a = 0
 
 $('#about_us .right').click(function(){
@@ -256,11 +260,13 @@ $('#about_us button').click(function(){
     }
 })
 
+// ###################################################### SLIDER ABOUT_US ######################################################
 
 
 
 
-// MOBILE TEXT CONTENT
+
+//  ###################################################### MOBILE TEXT CONTENT ###################################################
 const mediaQuery = window.matchMedia('(max-width: 800px')
 const h2 = document.querySelectorAll('h2')
 const h1 = document.querySelectorAll('h1')
@@ -277,23 +283,10 @@ if (mediaQuery.matches){
     footerText[1].textContent = "";
 }
 
+//  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
 
-//CONTACT 
+
+// ###################################################### CONTACT ###############################################################
 const contactContent = document.querySelectorAll('.contact .card')
 
 
-// tymczasowe ??????????????????????????????????????????????????????????????????????????????????????????
-$(document).ready(function () {
-  $('a[href^="#"]').on('click', function (e) {
-      e.preventDefault();
-
-      var target = this.hash,
-          $target = $(target);
-
-      $('html, body').stop().animate({
-          'scrollTop': $target.offset().top - 63
-      }, 800, 'swing', function () {
-          // window.location.hash = target;
-      });
-  });
-});
