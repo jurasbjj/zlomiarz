@@ -12,6 +12,7 @@ $(window).load(function() {
 // ########################################## KONIEC PRELOADER ######################################################
 
 // ###################################################### SCROLL  ######################################################
+
 // scroll img
 $('nav img').click(function(){
     $('html, body').animate({
@@ -36,8 +37,6 @@ $(document).ready(function () {
     });
   });
 
-
-
 // desktop aktywacja nawigacji
 $(window).scroll(function () {
    if ($(window).scrollTop() > 64) {
@@ -46,7 +45,6 @@ $(window).scroll(function () {
       $('nav.desktop').removeClass('active');
    }
 });
-
 
   //burger
 $('.burger, fade').click(function(){
@@ -57,12 +55,13 @@ $('.burger, fade').click(function(){
     $('nav.mobile, .fade').removeClass('active')
  })
 
-    // usuwanie cienia
+  // usuwanie cienia
  $('nav li a').click(function(){
     $('nav.mobile, .fade').removeClass('active')
  })
 
 // ###################################################### KONIEC SCROLL ######################################################
+
 
 // ###################################################### FAQ ######################################################
 const quests = document.querySelectorAll('.question')

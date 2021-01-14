@@ -12,7 +12,15 @@
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet"> -->
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
+
+    <!-- Demo styles -->
+    <style>
+
+
+     
+    </style>
 
     
 
@@ -82,7 +90,21 @@
         <div class="text">
         Jesteśmy klubem sportów walki, a na naszej macie odbywają się treningi <b>brazylijskiego jiu-jitsu</b> oraz <b>kickboxingu</b>. Trenerami są znakomici zawodnicy, odnoszący sukcesy zarówno w kraju jak i na scenie międzynarodowej. Nasz klub jest przyjaznym miejscem dla każdego, kto chce zacząć swoją przygodę ze sportami walki oraz dla doświadczonych zawodników z wieloletnim doświadczeniem. Jeżeli chcesz dołączyć do naszego klubu, to nie ma nic prostszego - wpadaj na trening.
         </div>
-        <div class="slider">
+
+          <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/about_us/mobile/onas1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/about_us/mobile/onas2.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/about_us/mobile/onas3.jpg" alt=""></div>
+    </div>
+    <div class="arrows">
+      <img class="left slider-arrow" src="img/svg/arrow-left.svg" alt="">
+      <span class="slide-number">01 / 03</span>
+      <img class="right slider-arrow" src="img/svg/arrow-right.svg" alt="">
+    </div>
+  </div>
+         <div class="slider">
           <img class="static" src="" alt="">
 
           <img class="active slider"  src="" alt="">
@@ -94,7 +116,7 @@
             <span class="slide-number">01 / 03</span>
             <img class="right slider-arrow" src="img/svg/arrow-right.svg" alt="">
           </div>
-        </div>
+        </div> 
         <div class="wrap-text">
           <h3>Historia klubu</h3>
           <p>Początki, oraz powstanie klubu trudno jednoznacznie określić. Mała grupa osób pasjonujących się <b>brazylijskim jiu-jitsu</b>, postanowiła znaleźć własne lokum, gdzie mogłaby trenować całymi dniami, nie zamartwiając się troskami życia. Jedno z takich znalezionych i upatrzonych miejsc znajdowało się niedaleko <b>złomowiska</b>, z którego też niekiedy korzystali gdy odgruzowywali swoje przyszłe eldorado. Niestety plan wprowadzenia się spalił na panewce. Po tym zdarzeniu żartobliwie określili się <b>"złomiarzami"</b> z powodu tejże właśnie lokalizacji i wykonywanych w niej pracach. Grupa pasjonatów z czasem zaczęła się powiększać. Dla wielu z nich życie napisało różne scenariusze, jednakże <b>zamiłowanie</b> do tej dyscypliny pozostało.</p>
@@ -388,6 +410,23 @@
   type="text/javascript"></script>
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap"
   type="text/javascript"></script> -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        pagination: {
+          // el: '.slide-number',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.right',
+          prevEl: '.left',
+        },
+      });
+    </script>
 
     
 </body>

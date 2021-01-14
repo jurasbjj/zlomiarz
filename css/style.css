@@ -578,8 +578,52 @@ header.page-header video{
 #about_us .mobile{
     display: none;
 }
+
+.swiper-container {
+    display: none;
+}
 /* about_us mobile */
 @media (max-width: 800px){
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .swiper-container img{
+        width: 100%;
+      }
+
+      .swiper-container .arrows{
+        width: 100%;
+        text-align: right;
+        padding: 16px 16px 0 16px;
+      }
+
+
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
 
     #about_us{
         padding: 40px 0 21px 0;
@@ -588,19 +632,10 @@ header.page-header video{
         flex-direction: column;
         /* align-items: center; */
     }
-    #about_us .slider{
-        order: 1;
-        overflow: hidden;
+    #about_us .post .slider{
+        display: none;
     }
-        #about_us .slider .arrows .slide-number{
-            padding: 16px 16px;
-        }
-        #about_us .slider .active{
-            z-index: 1;
-        }
-        #about_us .slider .arrows{
-            padding: 0 16px;
-        }
+
     #about_us header{
         order: 2;
         padding: 16px 16px;
@@ -684,6 +719,10 @@ header.page-header video{
 }
 #price table{
     text-align: center;
+    display: block; /* mozzila fix */
+}
+tbody{
+    display: block; /* mozzila fix */
 }
 #price table tr{
     display: flex;
@@ -693,6 +732,7 @@ header.page-header video{
     margin: 2px;
     font-size: 0.9rem;
     padding: 19px 0;
+    display: block; /* internet explorer fix*/
 }
 #price table td b{
     font-size: 0.9rem;
