@@ -80,70 +80,70 @@ const quests = document.querySelectorAll('.question')
 // ###################################################### KONIEC FAQ ######################################################
 
 // ###################################################### SLIDER ABOUT_US ######################################################
-a = 0
+// a = 0
 
-$('#about_us .right').click(function(){
-    console.log('ok')
+// $('#about_us .right').click(function(){
+//     console.log('ok')
 
 
-    if(a < 2){
-    a++
-    $('#about_us img.active.slider').addClass('empty')
-    $('#about_us img.active').removeClass('active')
+//     if(a < 2){
+//     a++
+//     $('#about_us img.active.slider').addClass('empty')
+//     $('#about_us img.active').removeClass('active')
 
-    $('#about_us img.inactive.slider').addClass('active')
-    $('#about_us img.inactive.slider').removeClass('inactive')
+//     $('#about_us img.inactive.slider').addClass('active')
+//     $('#about_us img.inactive.slider').removeClass('inactive')
 
-    $('#about_us img.far.slider').addClass('inactive')
-    $('#about_us img.far.slider').removeClass('far')
+//     $('#about_us img.far.slider').addClass('inactive')
+//     $('#about_us img.far.slider').removeClass('far')
 
-    $('.slide-number').text('0'+(a+1) + ' / 03')
-}
+//     $('.slide-number').text('0'+(a+1) + ' / 03')
+// }
 
-})
-$('#about_us .left').click(function(){
-    console.log('ok')
+// })
+// $('#about_us .left').click(function(){
+//     console.log('ok')
 
-    if(a == 1){
-    a--
-    $('#about_us img.inactive.slider').addClass('far')
-    $('#about_us img.inactive.slider').removeClass('inactive')
+//     if(a == 1){
+//     a--
+//     $('#about_us img.inactive.slider').addClass('far')
+//     $('#about_us img.inactive.slider').removeClass('inactive')
 
-    $('#about_us img.active.slider').addClass('inactive')
-    $('#about_us img.active.slider').removeClass('active')
+//     $('#about_us img.active.slider').addClass('inactive')
+//     $('#about_us img.active.slider').removeClass('active')
 
-    $('#about_us img.slider:nth-of-type(2)').addClass('active')
-    $('#about_us img.slider:nth-of-type(2)').removeClass('empty')
+//     $('#about_us img.slider:nth-of-type(2)').addClass('active')
+//     $('#about_us img.slider:nth-of-type(2)').removeClass('empty')
 
-    $('.slide-number').text('0'+(a+1) + ' / 03')
-}
+//     $('.slide-number').text('0'+(a+1) + ' / 03')
+// }
 
-    if(a == 2){
-        a--
-        $('#about_us img.inactive.slider').addClass('far')
-        $('#about_us img.inactive.slider').removeClass('inactive')
+//     if(a == 2){
+//         a--
+//         $('#about_us img.inactive.slider').addClass('far')
+//         $('#about_us img.inactive.slider').removeClass('inactive')
     
-        $('#about_us img.active.slider').addClass('inactive')
-        $('#about_us img.active.slider').removeClass('active')
+//         $('#about_us img.active.slider').addClass('inactive')
+//         $('#about_us img.active.slider').removeClass('active')
     
-        $('#about_us img.slider:nth-of-type(3)').addClass('active')
-        $('#about_us img.slider:nth-of-type(3)').removeClass('empty')
+//         $('#about_us img.slider:nth-of-type(3)').addClass('active')
+//         $('#about_us img.slider:nth-of-type(3)').removeClass('empty')
 
-        $('.slide-number').text('0'+(a+1) + ' / 03')
-    }
+//         $('.slide-number').text('0'+(a+1) + ' / 03')
+//     }
 
-})
-// #about_us SLIDER WRAP BUTTON
-$('#about_us button').click(function(){
-    $('.wrap-text').toggleClass('active')
-    $('#about_us button').toggleClass('active');
-    if ($("#about_us button").hasClass("active")) {
-        $("#about_us button span").text('Czytaj mniej');
-      }
-    else {
-        $('#about_us button span').text('Czytaj więcej')
-    }
-})
+// })
+// // #about_us SLIDER WRAP BUTTON
+// $('#about_us button').click(function(){
+//     $('.wrap-text').toggleClass('active')
+//     $('#about_us button').toggleClass('active');
+//     if ($("#about_us button").hasClass("active")) {
+//         $("#about_us button span").text('Czytaj mniej');
+//       }
+//     else {
+//         $('#about_us button span').text('Czytaj więcej')
+//     }
+// })
 
 // ###################################################### SLIDER ABOUT_US ######################################################
 

@@ -564,6 +564,7 @@ header.page-header video{
 #about_us .post .arrows img.slider-arrow{
     width: 32px;
     opacity: 40%;
+    outline: none;
 }
 #about_us .post .arrows img.slider-arrow:hover{
    cursor: pointer;
@@ -593,8 +594,12 @@ header.page-header video{
         justify-content: flex-end;
         align-items: flex-end;
       }
-      .swiper-container img{
-        width: 100%;
+
+      .swiper-slide img{
+          width: 100%;
+}
+      .swiper-slide-active img{
+          width: 100%;
       }
 
       .swiper-container .arrows{
@@ -609,6 +614,7 @@ header.page-header video{
         text-align: center;
         font-size: 18px;
         background: #fff;
+        
   
         /* Center slide text vertically */
         display: -webkit-box;
