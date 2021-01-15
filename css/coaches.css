@@ -207,12 +207,15 @@ nav.desktop{
 
     #coaches .swiper-wrapper{
         align-items: center;
+        overflow: hidden;
     }
     #coaches .swiper-slide{
         width: 80%;
         opacity: 100%;
         position: relative;
         transition: 0.8s;
+        overflow: hidden;
+
 }
     #coaches .swiper-slide-next{
         width: 70%;
@@ -223,9 +226,9 @@ nav.desktop{
     }
 
 
-    #coaches .swiper-slide:last-child{
+    /* #coaches .swiper-slide:last-child{
         margin-right: 20%;
-    }
+    } */
 
 }
 
