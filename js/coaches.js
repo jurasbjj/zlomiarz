@@ -69,8 +69,7 @@ var mySwiper = new Swiper('.swiper-container', {
     // swiper settings
     speed: 800,
     spaceBetween: 12,
-    slidesPerView: 'auto',
-    loop: true,
+    slidesPerView: 1,
 
     // swiper licznik
     pagination: {
