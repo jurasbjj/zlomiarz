@@ -116,11 +116,8 @@ var mySwiper = new Swiper('.swiper-container', {
  
 
   setTimeout(function(){
-  })
-
-  setTimeout(function(){
-    $('.swiper-wrapper').css('height', $(".swiper-slide-active").height() + "px");
-}, 100);
+    $('.swiper-wrapper').css('height', $(".swiper-wrapper").height() + "px");
+}, 500);
 
 
   
