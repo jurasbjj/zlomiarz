@@ -18,14 +18,6 @@ $(window).load(function() {
         window.location.href = 'index.html'
       });
     
-       // SCROLL NAWIGACJA AKTYWACJA
-    // $(window).scroll(function () {
-    //     if ($(window).scrollTop() > 64) {
-    //        $('nav.desktop').addClass('active');
-    //     } else {
-    //        $('nav.desktop').removeClass('active');
-    //     }
-    // });
         // SCROLL 
     $(document).ready(function () {
       $('a[href^="#"]').on('click', function (e) {
@@ -60,6 +52,7 @@ $(window).load(function() {
 
 // ################################# SLIDER #################################################################
 
+// swiper array content 
 const coachesIMG = document.querySelectorAll('#coaches .slider img')
 const coachesH1 = ['Daniel Wrześniewski', 'Adam Górny', 'Anrzej Iwat', 'Marcin Soszyński', 'Joanna Zabulewicz', 'Michał Miranowski', 'Mateusz Kowalski', 'Marcin Grabowski']
 const coachesH3 = ['BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU KIDS', 'BRAZYLIJSKIE JIU-JITSU', 'KICKBOXING', 'ZAPASY']
@@ -70,6 +63,7 @@ const socialIG = ['danielwrzesniewskibjj', 'kleszczbjj', 'psuj_jitsu', 'marcinso
 const mediaQueryMobile = window.matchMedia('(max-width: 800px')
 const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
+    // swiper init
 var mySwiper = new Swiper('.swiper-container', {
 
     // swiper settings
@@ -91,10 +85,20 @@ var mySwiper = new Swiper('.swiper-container', {
       nextEl: '.right',
       prevEl: '.left',
     },
+
+        breakpoints: {
+        800: {
+            spaceBetween: 0,
+
+            pagination: {
+                el: '.pagination',
+            }
+        }
+    }
   });
   
 
-  // swiper content
+  // swiper change content
   mySwiper.on('slideChange', function(){
     console.log('ok')
     setTimeout(function(){
@@ -108,7 +112,20 @@ var mySwiper = new Swiper('.swiper-container', {
   }, 1);
 
   })
+
+ 
+
+  setTimeout(function(){
+  })
+
+  setTimeout(function(){
+    $('.swiper-wrapper').css('height', $(".swiper-slide-active").height() + "px");
+}, 100);
+
+
   
+
+
 
 // ######################################## KONIEC SLIDER #####################################################
 
