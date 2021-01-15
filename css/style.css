@@ -564,7 +564,6 @@ header.page-header video{
 #about_us .post .arrows img.slider-arrow{
     width: 32px;
     opacity: 40%;
-    outline: none;
 }
 #about_us .post .arrows img.slider-arrow:hover{
    cursor: pointer;
@@ -606,10 +605,7 @@ header.page-header video{
         width: 100%;
         text-align: right;
         padding: 16px 16px 0 16px;
-      }
-
-
-  
+      }  
       .swiper-slide {
         text-align: center;
         font-size: 18px;

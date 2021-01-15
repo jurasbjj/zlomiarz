@@ -70,84 +70,40 @@ const socialIG = ['danielwrzesniewskibjj', 'kleszczbjj', 'psuj_jitsu', 'marcinso
 const mediaQueryMobile = window.matchMedia('(max-width: 800px')
 const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
+var mySwiper = new Swiper('.swiper-container', {
 
-left = 0
-i = 0
-a = 0
+    speed: 1000,
+    spaceBetween: 12,
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.slide-number',
+      type: 'custom',
+       renderCustom: function (swiper, current, total) {
+        return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
+  }
+    },
+    navigation: {
+      nextEl: '.right',
+      prevEl: '.left',
+    },
+  });
+  
 
-$('.right').click(function(){
-    
-    if(mediaQueryDesktop.matches){
-        left = left - 53
-        if (left < -431){
-            left = -431
-        }
-    }
-    if(mediaQueryMobile.matches){
-        left = left - 83
-        if (left < -581){
-            left = -581
-        }
-    }
-    
-    if(i > 7){
-        i = 7
-    }
-    if(i < 7){
-    $("#coaches .slider img").css({left: left+'%'});
-    $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i+1]).fadeIn(1000);
-    $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i+1]).fadeIn(1000);
-    $('#coaches .text span.coach-social img').hide().fadeIn(1000);
-    $('#coaches .text h1').hide().text(coachesH1[i+1]).fadeIn(1000);
-    $('#coaches .text h3').hide().text(coachesH3[i+1]).fadeIn(1000);
-    $('#coaches .text p').hide().text(coachesP[i+1]).fadeIn(1000);
-    coachesIMG[i+1].classList.add('active');
-    coachesIMG[i].classList.add('inactive');
-    coachesIMG[i].classList.remove('active');
-    i++
-    a++
-    }
-     
-     $('.slide-number').text('0'+(i+1) + ' / 08')
-})
+  mySwiper.on('slideChange', function(){
+    console.log('ok')
+    setTimeout(function(){
+      console.log($('.swiper-slide-active').data().id)
+      $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[$('.swiper-slide-active').data().id]).fadeIn(1000);
+      $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[$('.swiper-slide-active').data().id]).fadeIn(1000);
+      $('#coaches .text span.coach-social img').hide().fadeIn(1000);
+      $('#coaches .text h1').hide().text(coachesH1[$('.swiper-slide-active').data().id]).fadeIn(1000);
+      $('#coaches .text h3').hide().text(coachesH3[$('.swiper-slide-active').data().id]).fadeIn(1000);
+      $('#coaches .text p').hide().text(coachesP[$('.swiper-slide-active').data().id]).fadeIn(1000);
+  }, 1);
 
+  })
+  
 
-$('.left').click(function(){
-    
-    if(mediaQueryDesktop.matches){
-        left = left + 53
-        if (left > 0){
-            left = 0
-        }
-    }
-    if(mediaQueryMobile.matches){
-        left = left + 83
-        if (left > 0){
-            left = 0
-        }
-    }
-    i--
-    if (i > -1){
-    $("#coaches .slider img").css({left: left+'%'});
-    $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[i]).fadeIn(1000);
-    $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[i]).fadeIn(1000);
-    $('#coaches .text span.coach-social img').hide().fadeIn(1000);
-
-    $('#coaches .text h1').hide().text(coachesH1[i]).fadeIn(1000);
-    $('#coaches .text h3').hide().text(coachesH3[i]).fadeIn(1000);
-    $('#coaches .text p').hide().text(coachesP[i]).fadeIn(1000);
-    coachesIMG[i].classList.add('active');
-    coachesIMG[i+1].classList.remove('inactive');
-    coachesIMG[i+1].classList.remove('active');
-    }
-
-    if(i < 0){
-        i = 0
-    }
-     
-    $('.slide-number').text('0'+(i+1) + ' / 08')
-
-})
 // ######################################## KONIEC SLIDER #####################################################
 
 // ######################################## MEDIA CONTENT #####################################################
@@ -163,29 +119,6 @@ if (mediaQuery.matches){
     footerText[1].textContent = "";
 }
 
-if (mediaQueryDesktop.matches){
-    
-    $(".slider img:nth-of-type(1)").attr("src","img/coaches/daniel.jpg");
-    $(".slider img:nth-of-type(2)").attr("src","img/coaches/adam.jpg");
-    $(".slider img:nth-of-type(3)").attr("src","img/coaches/andrzej.jpg");
-    $(".slider img:nth-of-type(4)").attr("src","img/coaches/marcin.jpg");
-    $(".slider img:nth-of-type(5)").attr("src","img/coaches/asia.jpg");
-    $(".slider img:nth-of-type(6)").attr("src","img/coaches/michał.jpg");
-    $(".slider img:nth-of-type(7)").attr("src","img/coaches/mateusz.jpg");
-    $(".slider img:nth-of-type(8)").attr("src","img/coaches/marcinZ.jpg");
-}
-
-if (mediaQueryMobile.matches){
-    $(".slider img:nth-of-type(1)").attr("src","img/coaches/mobile/daniel.jpg");
-    $(".slider img:nth-of-type(2)").attr("src","img/coaches/mobile/adam.jpg");
-    $(".slider img:nth-of-type(3)").attr("src","img/coaches/mobile/andrzej.jpg");
-    $(".slider img:nth-of-type(4)").attr("src","img/coaches/mobile/marcin.jpg");
-    $(".slider img:nth-of-type(5)").attr("src","img/coaches/mobile/asia.jpg");
-    $(".slider img:nth-of-type(6)").attr("src","img/coaches/mobile/michał.jpg");
-    $(".slider img:nth-of-type(7)").attr("src","img/coaches/mobile/mateusz.jpg");
-    $(".slider img:nth-of-type(8)").attr("src","img/coaches/marcinZ.jpg");
-
-}
 
 // ######################################## MEDIA CONTENT #####################################################
 
