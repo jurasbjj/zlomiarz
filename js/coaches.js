@@ -109,21 +109,11 @@ var mySwiper = new Swiper('.swiper-container', {
       $('#coaches .text h1').hide().text(coachesH1[$('.swiper-slide-active').data().id]).fadeIn(799);
       $('#coaches .text h3').hide().text(coachesH3[$('.swiper-slide-active').data().id]).fadeIn(799);
       $('#coaches .text p').hide().text(coachesP[$('.swiper-slide-active').data().id]).fadeIn(799);
-  }, 1);
+  }, 0);
 
   })
 
  
-
-  setTimeout(function(){
-    $('.swiper-wrapper').css('height', $(".swiper-wrapper").height() + "px");
-}, 500);
-
-
-  
-
-
-
 // ######################################## KONIEC SLIDER #####################################################
 
 // ######################################## MEDIA CONTENT #####################################################

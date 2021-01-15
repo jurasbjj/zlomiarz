@@ -209,19 +209,22 @@ nav.desktop{
         align-items: center;
     }
     #coaches .swiper-slide{
-        width: 70%;
-        opacity: 20%;
-        transition: 1s;
-
-    }
-    #coaches .swiper-slide-active{
         width: 80%;
         opacity: 100%;
+        position: relative;
+        transition: 0.8s;
+}
+    #coaches .swiper-slide-next{
+        width: 70%;
+        opacity: 20%;
+    }
+    #coaches .swiper-slide-prev{
+        opacity: 20%;
     }
 
 
     #coaches .swiper-slide:last-child{
-        margin-right: 30%;
+        margin-right: 20%;
     }
 
 }
