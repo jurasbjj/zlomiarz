@@ -209,18 +209,14 @@ nav.desktop{
         align-items: center;
     }
     #coaches .swiper-slide{
-        width: 80%;
-        opacity: 100%;
-        position: relative;
         transition: 0.8s;
-        overflow: hidden;
-
-}
-    #coaches .swiper-slide-next{
-        width: 70%;
-        opacity: 20%;
     }
-    #coaches .swiper-slide-prev{
+    #coaches .swiper-slide-active{
+        width: 80% !important;
+        opacity: 100%;
+    }
+    #coaches .swiper-slide-next{
+        width: 70% !important;
         opacity: 20%;
     }
 
