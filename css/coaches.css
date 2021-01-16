@@ -214,23 +214,35 @@ nav.desktop{
         opacity: 60%;
     }
 
+
     #coaches .swiper-wrapper{
         align-items: center;
+
     }
     #coaches .swiper-slide{
         transition: 0.8s;
+        width: 80%;
     }
-    
-    #coaches .swiper-slide-active{
-        width: 80% !important;
+    #coaches .swiper-slide img{
+        width: 90%;
+        transition: 0.8s;
         opacity: 100%;
+
     }
-    #coaches .swiper-slide-next{
-        width: 70% !important;
-        opacity: 20%;
+    #coaches .swiper-slide-active img{
+        width: 100%;
+        
+
     }
-    #coaches .swiper-slide-prev{
+    #coaches .swiper-slide-prev img{
+        width: 100%;
         opacity: 20%;
+
+    }
+    #coaches .swiper-slide-next img{
+        width: 90%;
+        opacity: 20%;
+
     }
 
 
