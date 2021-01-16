@@ -51,17 +51,28 @@ $(window).load(function() {
 
 
 // ################################# SLIDER #################################################################
-{/* <div data-id="0" class="swiper-slide swiper-slide-active"><img src="img/coaches/daniel.jpg" alt=""></div> */}
+
 // swiper array content 
+
+// text content array
 const coachesH1 = ['Daniel Wrześniewski', 'Adam Górny', 'Anrzej Iwat', 'Marcin Soszyński', 'Joanna Zabulewicz', 'Michał Miranowski', 'Mateusz Kowalski', 'Marcin Grabowski']
 const coachesH3 = ['BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU', 'BRAZYLIJSKIE JIU-JITSU KIDS', 'BRAZYLIJSKIE JIU-JITSU', 'KICKBOXING', 'ZAPASY']
 const coachesP = ['Współzałożyciel klubu Złomiarz Team i główny jego trener. Czarny pas bjj od 2012 roku pod Vagner „Boca” Guimaraes. Ze sportem związany od 7 roku życia, zaś z samym BJJ od 17 lat. Na polskiej scenie BJJ znany jako doświadczony trener i topowy zawodnik. Wielokrotny, podwójny Mistrz Polski BJJ. Jest ojcem sukcesów Multimedalista zarówno polskiej jak i zagranicznej sceny BJJ. Na co dzień nauczyciel wychowania fizycznego oraz trener grupy zaawansowanej w naszym klubie. Ceni sobie wytrwałość i ciężką pracę.', 'Współzałożyciel klubu Złomiarz Team. Czarny pas BJJ od 2014 roku, trenuje BJJ od 2001 roku. W brazylijskim jiu-jitsu najbardziej ceni wszechstronność tej dyscypliny oraz fakt, że dzięki opanowanej technice można zdominować większego i silniejszego od siebie przeciwnika. Regularnie startujący zawodnik z wieloma sukcesami zarówno w kimonach jak i bez. Wielokrotny medalista Mistrzostw Polski BJJ, No-Gi oraz ADCC. W klubie prowadzi treningi bjj grupy początkującej i wszystkich grup bjj dla dzieci.', 'W klubie Złomiarz Team Gdańsk jest trenerem grupy no-gi. Przekazywanie wiedzy innym motywuje go do głębszego zrozumienia technik i daje możliwość  skupienia się na szczegółach. Objął opieką trenerską wielu byłych i aktualnych Mistrzów Polski ADCC. Należy do Kadry Polski Ju-Jitsu NeWaza. Każdego roku zbiera masę osiągnięć, a jego kalendarz wypełniony jest startami w zawodach. Wielokrotny, złoty medalista Mistrzostw Polski BJJ, Mistrz Polski ADCC PRO oraz medalista ADCC Europe.', 'Purpurowy pas BJJ, wielokrotny medalista zawodów krajowych i zagranicznych. Specjalizuje się w zajęciach grupowych oraz indywidualnych dla dorosłych i dzieci na terenie Trójmiasta. Zaprasza wszystkich zainteresowanych współpracą.', 'Z brazylijskim jiu-jitsu związana od 2017 roku. Bardzo szybko okazało się, że to jej największa pasja i właśnie w tym sporcie pragnie się rozwijać. Wielokrotna złota medalistka Mistrzostw Polski BJJ, ADCC, V-ce Mistrzyni Europy IBJJF. Należy do Kadry Narodowej Grapplingu. Trenerka brazylijskiego jiu-jitsu dla dzieci w naszym klubie. Prywatnie magister i pasjonatka fizjoterapii.', 'Brazylijskie jiu-jitsu trenuje od 15 roku życia. Aktualnie purpurowy pas BJJ, ma na koncie wiele doświadczeń i sukcesów zawodniczych. Wicemistrz Europy Ju-Jitsu NeWaza, wielokrotny medalista Mistrzostw Polski BJJ i ADCC. Spędził cały miesiąc trenując w klubie Cicero Costha Jiu Jitsu w São Paulo, co dało mu ogromną motywację do rozwoju i zdobywania kolejnych doświadczeń. Dąży do ustalonych sobie celów, wkładając w to całe serce. W klubie prowadzi treningi bjj na poziomie średnio-zaawansowanym. Wierzy, że w jiu-jitsu każdy może obrać własną drogę, wykształcić swój styl i sposób walki. BJJ uczy poszukiwania rozwiązań i pozwala uczyć się na błędach.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet pretium risus. Etiam vel ullamcorper nunc, ac tempus tellus. Integer suscipit, tortor pretium consectetur varius, risus ligula aliquam ante, at aliquet eros arcu quis turpis. Fusce vel ultricies erat, vel ultricies justo. Proin dignissim justo ut est eleifend pretium ac in ', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet felis et ante suscipit aliquam. Donec ultrices eros sit amet sapien elementum, vitae pulvinar neque dignissim. Sed hendrerit egestas justo, vel vulputate sem porttitor at. Etiam libero lacus, finibus at enim et, ornare tristique orci. Praesent faucibus ut lacus vitae pretium. Fusce porttitor turpis sed lectus sollicitudin cursus.']
-const socialFB = ['Daniel Wrześniewski BJJ', 'Adam Górny BJJ', 'Psuj jitsu', 'Marcin Soszyński BJJ', 'Dżoana', 'Mirnelius', 'Mateusz Kowalski', 'Marcin Grabowski' ]
+
+// social array
+const socialFB = ['Daniel Wrześniewski BJJ', 'Adam Górny BJJ', 'Psuj jitsu', 'Marcin Soszyński BJJ', 'Asia Zabulewicz', 'Michał Miranowski', 'Mateusz Kowalski', 'Marcin Grabowski' ]
 const socialIG = ['danielwrzesniewskibjj', 'kleszczbjj', 'psuj_jitsu', 'marcinsoszynski_bjj', 'asia_zabulewicz', 'miranov_bjj', 'kowalkick', 'marcingrabekgrabowski']
+const socialPhone = ['607 548 866', '691 839 697', '601 673 076', '791 499 009', 'asia_zabulewicz', '601 673 076', 'lul', 'lul']
+
+// social href array
+const socialFbHref = ['https://www.facebook.com/danielwrzesniewskibjj', 'https://www.facebook.com/adamgornybjj', 'https://www.facebook.com/PsujBJJ', 'https://www.facebook.com/Marcin-Soszy%C5%84ski-BJJ-627764904062903', 'https://www.facebook.com/asia.zabulewicz', 'https://www.facebook.com/profile.php?id=100002267867488', 'https://www.facebook.com/Kowalski.Kickboxing', 'https://www.facebook.com/marcin.grabowski.5876060']
+const socialIgHref = ['https://www.instagram.com/danielwrzesniewski.bjj/', 'https://www.instagram.com/kleszczbjj/', 'https://www.instagram.com/psuj_jitsu/', 'https://www.instagram.com/marcinsoszynski_bjj/', 'https://www.instagram.com/asia_zabulewicz/', 'https://www.instagram.com/miranov_bjj/', 'https://www.instagram.com/kowalkick/', 'https://www.instagram.com/marcingrabekgrabowski/']
+const socialPhoneHref = ['607 548 866', '691 839 697', '601 673 076', '791 499 009', 'asia_zabulewicz', '601 673 076', '123', '123']
 
 const mediaQueryMobile = window.matchMedia('(max-width: 800px')
 const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
+// img src 
 if (mediaQueryDesktop.matches){
     
     $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/daniel.jpg");
@@ -73,7 +84,7 @@ if (mediaQueryDesktop.matches){
     $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mateusz.jpg");
     $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
 }
-
+// img src 
 if (mediaQueryMobile.matches){
     $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/mobile/daniel.jpg");
     $(".swiper-slide:nth-of-type(2) img").attr("src","img/coaches/mobile/adam.jpg");
@@ -121,22 +132,56 @@ var mySwiper = new Swiper('.swiper-container', {
     }
   });
   
-
+  // disable mail
+  $('#coaches .text span.coach-social:nth-of-type(2)').hide()
+  
   // swiper change content
   mySwiper.on('slideChange', function(){
     console.log('ok')
     setTimeout(function(){
       console.log($('.swiper-slide-active').data().id)
-      $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[$('.swiper-slide-active').data().id]).fadeIn(799);
-      $('#coaches .text span.coach-social:nth-of-type(2) span').hide().text(socialIG[$('.swiper-slide-active').data().id]).fadeIn(799);
-      $('#coaches .text span.coach-social img').hide().fadeIn(799);
-      $('#coaches .text h1').hide().text(coachesH1[$('.swiper-slide-active').data().id]).fadeIn(799);
-      $('#coaches .text h3').hide().text(coachesH3[$('.swiper-slide-active').data().id]).fadeIn(799);
-      $('#coaches .text p').hide().text(coachesP[$('.swiper-slide-active').data().id]).fadeIn(799);
+
+      // text content
+      $('#coaches .text h1').hide().text(coachesH1[$('.swiper-slide-active').data().id]).fadeIn(800);
+      $('#coaches .text h3').hide().text(coachesH3[$('.swiper-slide-active').data().id]).fadeIn(800);
+      $('#coaches .text p').hide().text(coachesP[$('.swiper-slide-active').data().id]).fadeIn(800);
+      
+      // social content
+      $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialPhone[$('.swiper-slide-active').data().id]).fadeIn(800);
+      $('#coaches .text span.coach-social:nth-of-type(3) span').hide().text(socialFB[$('.swiper-slide-active').data().id]).fadeIn(800);
+      $('#coaches .text span.coach-social:nth-of-type(4) span').hide().text(socialIG[$('.swiper-slide-active').data().id]).fadeIn(800);
+      $('#coaches .text span.coach-social img').hide().fadeIn(800);    
+
+      // social href
+      $('#coaches .text span.coach-social:nth-of-type(1) a').attr('href', socialPhoneHref[$('.swiper-slide-active').data().id])
+      $('#coaches .text span.coach-social:nth-of-type(3) a').attr('href', socialFbHref[$('.swiper-slide-active').data().id])
+      $('#coaches .text span.coach-social:nth-of-type(4) a').attr('href', socialIgHref[$('.swiper-slide-active').data().id])
+      
+      
+
+      // specjalne ustawienia 
+
+       // phone
+       if($('.swiper-slide-active').data().id === 4){
+        $('#coaches .text span.coach-social:nth-of-type(1)').hide()
+       }
+       else {
+        $('#coaches .text span.coach-social:nth-of-type(1)').fadeIn(800)
+       }
+      
+       // mail
+       if($('.swiper-slide-active').data().id === 3){
+        $('#coaches .text span.coach-social:nth-of-type(2)').fadeIn(800)
+       }
+       else {
+        $('#coaches .text span.coach-social:nth-of-type(2)').hide()
+       }
+
   }, 0);
 
   })
 
+  // fix container height
   setTimeout(function(){
     $("#coaches .swiper-container").height($('.swiper-slide').height())
 }, 0);

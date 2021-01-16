@@ -42,7 +42,21 @@ nav.desktop{
     line-height: 30px;
     margin-bottom: 24px;
 }
-#coaches .text span.coach-social{
+/* #coaches .text span.coach-social{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 30px;
+    opacity: 50%;
+    transition: 0.2s;
+} */
+#coaches .text span.coach-social a:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+#coaches .text span.coach-social a{
+    text-decoration: none;
+    color: #000000;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -50,17 +64,19 @@ nav.desktop{
     opacity: 50%;
     transition: 0.2s;
 }
-#coaches .text span.coach-social:hover{
+#coaches .text span.coach-social a:hover{
     cursor: pointer;
     opacity: 70%;
-}
-#coaches .text span.coach-social:nth-of-type(1){
-    margin-bottom: 14px;
 }
 #coaches .text .social{
     width: 18px;
     height: 18px;
     margin: 0 16px 0 0;
+}
+#coaches .text .coach-social:nth-of-type(1) img{
+    width: 16px;
+    height: 18px;
+    margin: 0 18px 0 0;
 }
 #coaches .head1{
     height: 44px;
