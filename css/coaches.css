@@ -211,12 +211,16 @@ nav.desktop{
     #coaches .swiper-slide{
         transition: 0.8s;
     }
+    
     #coaches .swiper-slide-active{
         width: 80% !important;
         opacity: 100%;
     }
     #coaches .swiper-slide-next{
         width: 70% !important;
+        opacity: 20%;
+    }
+    #coaches .swiper-slide-prev{
         opacity: 20%;
     }
 

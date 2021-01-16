@@ -70,7 +70,6 @@ var mySwiper = new Swiper('.swiper-container', {
     speed: 800,
     spaceBetween: 12,
     slidesPerView: 1,
-
     // swiper licznik
     pagination: {
       el: '.slide-number',
@@ -99,9 +98,9 @@ var mySwiper = new Swiper('.swiper-container', {
   });
   
 
+
   // swiper change content
   mySwiper.on('slideChange', function(){
-    console.log('ok')
     setTimeout(function(){
       console.log($('.swiper-slide-active').data().id)
       $('#coaches .text span.coach-social:nth-of-type(1) span').hide().text(socialFB[$('.swiper-slide-active').data().id]).fadeIn(799);
@@ -113,6 +112,11 @@ var mySwiper = new Swiper('.swiper-container', {
   }, 0);
 
   })
+
+  setTimeout(function(){
+    $("#coaches .swiper-container").height($('.swiper-slide').height())
+}, 0);
+
 
  
 // ######################################## KONIEC SLIDER #####################################################
