@@ -67,12 +67,12 @@ const socialPhone = ['607 548 866', '691 839 697', '601 673 076', '791 499 009',
 // social href array
 const socialFbHref = ['https://www.facebook.com/danielwrzesniewskibjj', 'https://www.facebook.com/adamgornybjj', 'https://www.facebook.com/PsujBJJ', 'https://www.facebook.com/Marcin-Soszy%C5%84ski-BJJ-627764904062903', 'https://www.facebook.com/asia.zabulewicz', 'https://www.facebook.com/profile.php?id=100002267867488', 'https://www.facebook.com/Kowalski.Kickboxing', 'https://www.facebook.com/marcin.grabowski.5876060']
 const socialIgHref = ['https://www.instagram.com/danielwrzesniewski.bjj/', 'https://www.instagram.com/kleszczbjj/', 'https://www.instagram.com/psuj_jitsu/', 'https://www.instagram.com/marcinsoszynski_bjj/', 'https://www.instagram.com/asia_zabulewicz/', 'https://www.instagram.com/miranov_bjj/', 'https://www.instagram.com/kowalkick/', 'https://www.instagram.com/marcingrabekgrabowski/']
-const socialPhoneHref = ['607 548 866', '691 839 697', '601 673 076', '791 499 009', 'asia_zabulewicz', '601 673 076', '123', '123']
+const socialPhoneHref = ['tel:+48607548866', 'tel:+48691839697', 'tel:+48601673076', 'tel:+48791499009', 'asia_zabulewicz', 'tel:+48601673076', 'tel:+48123', 'tel:+48123']
 
 const mediaQueryMobile = window.matchMedia('(max-width: 800px')
 const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
-// img src 
+// img src desktop
 if (mediaQueryDesktop.matches){
     
     $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/daniel.jpg");
@@ -84,18 +84,19 @@ if (mediaQueryDesktop.matches){
     $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mateusz.jpg");
     $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
 }
-// img src 
-if (mediaQueryMobile.matches){
-    $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/mobile/daniel.jpg");
-    $(".swiper-slide:nth-of-type(2) img").attr("src","img/coaches/mobile/adam.jpg");
-    $(".swiper-slide:nth-of-type(3) img").attr("src","img/coaches/mobile/andrzej.jpg");
-    $(".swiper-slide:nth-of-type(4) img").attr("src","img/coaches/mobile/marcin.jpg");
-    $(".swiper-slide:nth-of-type(5) img").attr("src","img/coaches/mobile/asia.jpg");
-    $(".swiper-slide:nth-of-type(6) img").attr("src","img/coaches/mobile/michał.jpg");
-    $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mobile/mateusz.jpg");
-    $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
+// img src  mobile
+    if (mediaQueryMobile.matches){
+        $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/mobile/daniel.jpg");
+        $(".swiper-slide:nth-of-type(2) img").attr("src","img/coaches/mobile/adam.jpg");
+        $(".swiper-slide:nth-of-type(3) img").attr("src","img/coaches/mobile/andrzej.jpg");
+        $(".swiper-slide:nth-of-type(4) img").attr("src","img/coaches/mobile/marcin.jpg");
+        $(".swiper-slide:nth-of-type(5) img").attr("src","img/coaches/mobile/asia.jpg");
+        $(".swiper-slide:nth-of-type(6) img").attr("src","img/coaches/mobile/michał.jpg");
+        $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mobile/mateusz.jpg");
+        $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
+    }
 
-}
+
 
     // swiper init
 var mySwiper = new Swiper('.swiper-container', {
