@@ -45,17 +45,18 @@ nav.desktop{
 
 #coaches .text span.coach-social{
     margin: 7px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 #coaches .text span.coach-social a{
     text-decoration: none;
     color: #000000;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     line-height: 30px;
     opacity: 50%;
     transition: 0.2s;
-    max-width: 40%;
 }
 
 #coaches .text span.coach-social a:hover{
