@@ -55,6 +55,7 @@ nav.desktop{
     line-height: 30px;
     opacity: 50%;
     transition: 0.2s;
+    max-width: 40%;
 }
 
 #coaches .text span.coach-social a:hover{
