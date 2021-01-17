@@ -106,6 +106,7 @@ var mySwiper = new Swiper('.swiper-container', {
     spaceBetween: 0,
     slidesPerView: 'auto',
     loop: true,
+    clickable: true,
 
     // swiper licznik
     pagination: {
@@ -183,10 +184,6 @@ var mySwiper = new Swiper('.swiper-container', {
 
   })
 
-  // fix container height
-  setTimeout(function(){
-    $("#coaches .swiper-container").height($('.swiper-slide').height())
-}, 100);
 
 
  
