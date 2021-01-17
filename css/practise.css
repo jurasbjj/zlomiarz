@@ -23,14 +23,15 @@ header img{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 0%;
-    transition: opacity 1.2s, transform 20s;
+    transition: opacity 1.2s, transform 12s linear
+
 
 }
 header img.active{
-    opacity: 100%;
     transform: translate(-50%, -50%) scale(1.1);
+    opacity: 100%;
 }
 
 .arrows-content{

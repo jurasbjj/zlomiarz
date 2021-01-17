@@ -99,8 +99,33 @@ practices.forEach(function(practice){
 
 
 // ###################################################### SLIDER ################################################################
+
 i = 0
-$('header .bg img:nth-of-type(1)').addClass('active');
+
+// 
+// automatyczna zmiana
+setTimeout(
+    function()
+    {
+        $('header .bg img:nth-of-type(1)').addClass('active');
+
+    }, 100);
+setInterval(
+    function()
+    {
+        $('header img').toggleClass('active');
+        if(i == 0){
+            i++
+        }
+        else{
+            i--
+        }
+        $('.slide-number').text('0'+(i+1) + ' / 02')
+
+    }, 10000);
+  
+
+
 
 $('.right').click(function(){
     if (i == 0){
@@ -117,19 +142,7 @@ $('.left').click(function(){
     }
 })
 
-setInterval(
-    function()
-    {
-        $('header img').toggleClass('active');
-        if(i == 0){
-            i++
-        }
-        else{
-            i--
-        }
-        $('.slide-number').text('0'+(i+1) + ' / 02')
 
-    }, 10000);
 
 
 // ###################################################### KONIEC SLIDER ##########################################################
