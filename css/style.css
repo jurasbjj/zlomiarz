@@ -557,6 +557,7 @@ header.page-header video{
 #about_us .post .arrows img.slider-arrow{
     width: 32px;
     opacity: 40%;
+    outline: none;
 }
 #about_us .post .arrows img.slider-arrow:hover{
    cursor: pointer;
@@ -640,7 +641,7 @@ header.page-header video{
         }
     #about_us .text{
         order: 3;
-        padding: 16px 16px;
+        padding: 4px 16px 16px 16px;
     }
     #about_us .wrap-text{
         order: 4;
