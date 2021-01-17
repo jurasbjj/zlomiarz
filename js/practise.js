@@ -100,6 +100,8 @@ practices.forEach(function(practice){
 
 // ###################################################### SLIDER ################################################################
 i = 0
+$('header .bg img:nth-of-type(1)').addClass('active');
+
 $('.right').click(function(){
     if (i == 0){
         $('header img').toggleClass('active')
@@ -114,6 +116,21 @@ $('.left').click(function(){
         $('.slide-number').text('0'+(i+1) + ' / 02')
     }
 })
+
+setInterval(
+    function()
+    {
+        $('header img').toggleClass('active');
+        if(i == 0){
+            i++
+        }
+        else{
+            i--
+        }
+        $('.slide-number').text('0'+(i+1) + ' / 02')
+
+    }, 10000);
+
 
 // ###################################################### KONIEC SLIDER ##########################################################
 

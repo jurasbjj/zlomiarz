@@ -25,10 +25,12 @@ header img{
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0%;
-    transition: opacity 1.2s;
+    transition: opacity 1.2s, transform 20s;
+
 }
 header img.active{
     opacity: 100%;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .arrows-content{

@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Złomiarz Team</title>
+
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
     <!-- icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://kit.fontawesome.com/9ff07957db.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!-- swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
 </head>
 <body>
 
@@ -392,9 +395,9 @@
 
 
   
-
+<!-- jquery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/java.js"></script>
+
 <script src="js/google_maps.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?j3mlxrZ9mnYS-6eBe8&callback=initMap"
   type="text/javascript"></script>
@@ -406,23 +409,10 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper('.swiper-container', {
-        speed: 800,
-        effect: 'slide',
-        slidesPerView: 1,
-        pagination: {
-           el: '.slide-number',
-          type: 'custom',
-          renderCustom: function (swiper, current, total) {
-          return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
-    }
-        },
-        navigation: {
-          nextEl: '.right',
-          prevEl: '.left',
-        },
-      });
+
     </script>
+<!-- main js-->
+<script src="js/java.js"></script>
 
     
 </body>

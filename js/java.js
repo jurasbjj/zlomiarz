@@ -80,70 +80,93 @@ const quests = document.querySelectorAll('.question')
 // ###################################################### KONIEC FAQ ######################################################
 
 // ###################################################### SLIDER ABOUT_US ######################################################
-// a = 0
+// MOBILE 
+var swiper = new Swiper('.swiper-container', {
+    speed: 800,
+    effect: 'slide',
+    slidesPerView: 1,
+    pagination: {
+       el: '.slide-number',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+      return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
+}
+    },
+    navigation: {
+      nextEl: '.right',
+      prevEl: '.left',
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+  });
 
-// $('#about_us .right').click(function(){
-//     console.log('ok')
+ // DESKTOP
+ a = 0
+
+ $('#about_us .right').click(function(){
+     console.log('ok')
 
 
-//     if(a < 2){
-//     a++
-//     $('#about_us img.active.slider').addClass('empty')
-//     $('#about_us img.active').removeClass('active')
+     if(a < 2){
+     a++
+     $('#about_us img.active.slider').addClass('empty')
+     $('#about_us img.active').removeClass('active')
 
-//     $('#about_us img.inactive.slider').addClass('active')
-//     $('#about_us img.inactive.slider').removeClass('inactive')
+     $('#about_us img.inactive.slider').addClass('active')
+     $('#about_us img.inactive.slider').removeClass('inactive')
 
-//     $('#about_us img.far.slider').addClass('inactive')
-//     $('#about_us img.far.slider').removeClass('far')
+     $('#about_us img.far.slider').addClass('inactive')
+     $('#about_us img.far.slider').removeClass('far')
 
-//     $('.slide-number').text('0'+(a+1) + ' / 03')
-// }
+     $('.slide-number').text('0'+(a+1) + ' / 03')
+ }
 
-// })
-// $('#about_us .left').click(function(){
-//     console.log('ok')
+ })
+ $('#about_us .left').click(function(){
+     console.log('ok')
 
-//     if(a == 1){
-//     a--
-//     $('#about_us img.inactive.slider').addClass('far')
-//     $('#about_us img.inactive.slider').removeClass('inactive')
+     if(a == 1){
+     a--
+     $('#about_us img.inactive.slider').addClass('far')
+     $('#about_us img.inactive.slider').removeClass('inactive')
 
-//     $('#about_us img.active.slider').addClass('inactive')
-//     $('#about_us img.active.slider').removeClass('active')
+     $('#about_us img.active.slider').addClass('inactive')
+     $('#about_us img.active.slider').removeClass('active')
 
-//     $('#about_us img.slider:nth-of-type(2)').addClass('active')
-//     $('#about_us img.slider:nth-of-type(2)').removeClass('empty')
+     $('#about_us img.slider:nth-of-type(2)').addClass('active')
+     $('#about_us img.slider:nth-of-type(2)').removeClass('empty')
 
-//     $('.slide-number').text('0'+(a+1) + ' / 03')
-// }
+     $('.slide-number').text('0'+(a+1) + ' / 03')
+ }
 
-//     if(a == 2){
-//         a--
-//         $('#about_us img.inactive.slider').addClass('far')
-//         $('#about_us img.inactive.slider').removeClass('inactive')
+     if(a == 2){
+         a--
+         $('#about_us img.inactive.slider').addClass('far')
+         $('#about_us img.inactive.slider').removeClass('inactive')
     
-//         $('#about_us img.active.slider').addClass('inactive')
-//         $('#about_us img.active.slider').removeClass('active')
+         $('#about_us img.active.slider').addClass('inactive')
+         $('#about_us img.active.slider').removeClass('active')
     
-//         $('#about_us img.slider:nth-of-type(3)').addClass('active')
-//         $('#about_us img.slider:nth-of-type(3)').removeClass('empty')
+         $('#about_us img.slider:nth-of-type(3)').addClass('active')
+         $('#about_us img.slider:nth-of-type(3)').removeClass('empty')
 
-//         $('.slide-number').text('0'+(a+1) + ' / 03')
-//     }
+         $('.slide-number').text('0'+(a+1) + ' / 03')
+     }
 
-// })
-// // #about_us SLIDER WRAP BUTTON
-// $('#about_us button').click(function(){
-//     $('.wrap-text').toggleClass('active')
-//     $('#about_us button').toggleClass('active');
-//     if ($("#about_us button").hasClass("active")) {
-//         $("#about_us button span").text('Czytaj mniej');
-//       }
-//     else {
-//         $('#about_us button span').text('Czytaj więcej')
-//     }
-// })
+ })
+ // #about_us SLIDER WRAP BUTTON
+ $('#about_us button').click(function(){
+     $('.wrap-text').toggleClass('active')
+     $('#about_us button').toggleClass('active');
+     if ($("#about_us button").hasClass("active")) {
+         $("#about_us button span").text('Czytaj mniej');
+       }
+     else {
+         $('#about_us button span').text('Czytaj więcej')
+     }
+ })
 
 // ###################################################### SLIDER ABOUT_US ######################################################
 
@@ -167,10 +190,6 @@ if (mediaQueryMobile.matches){
     h2[4].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
-
-    $('.slider img.static, .slider img.active').attr('src','img/about_us/mobile/onas1.jpg')
-    $('.slider img.inactive').attr('src','img/about_us/mobile/onas2.png')
-    $('.slider img.far').attr('src','img/about_us/mobile/onas3.jpg')
 }
 
 if(mediaQueryDesktop.matches){
