@@ -23,6 +23,13 @@
     --mobilePadding: 32px 16px;
 }
 
+@media(min-width: 800px) and (max-width: 1000px){
+    :root{
+        --maxWidth: 768px;
+        --fontSize: 12px;
+    }
+}
+
 
 /* DOMYŚLNE */
 section{
@@ -302,7 +309,7 @@ nav.desktop{
     position: sticky;
     top: 0;
     transition: 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 nav.desktop .content{
@@ -341,7 +348,7 @@ nav.desktop ul li a{
     text-decoration: none;
     color: white;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2rem;
     display: block;;
     padding: 22.5px 0;
     width: 100%;
@@ -565,9 +572,7 @@ overflow: visible !important;
 }
 
 /* SLIDER ARROWS */
-.arrows .left.disable, .arrows .right.disable{
-    opacity: 0.1 !important;
-}
+
 #about_us .post  .arrows{
     display: flex;
     justify-content: flex-end;
@@ -576,10 +581,15 @@ overflow: visible !important;
     width: 32px;
     opacity: 40%;
     outline: none;
+    transition: 0.2s;
 }
 #about_us .post .arrows img.slider-arrow:hover{
    cursor: pointer;
    opacity: 60%;
+}
+
+.arrows .left.disable, .arrows .right.disable{
+    opacity: 0.1 !important;
 }
 
 #about_us .post .arrows .slide-number{
