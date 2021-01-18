@@ -634,6 +634,9 @@ header.page-header video{
         display: none;
     }
 
+    #about_us .post .arrows img.slider-arrow:hover{
+        opacity: 40%;
+     }
     #about_us header{
         order: 2;
         padding: 16px 16px;
@@ -993,6 +996,7 @@ tbody{
     opacity: 60%;
 }
 
+
 #contact #map{
     margin-top: 58px;
     flex-basis: 50%;
@@ -1032,6 +1036,13 @@ tbody{
     #contact .card span:nth-last-of-type(2){
         padding: 24px 0 16px 0;
         margin: 0;
+    }
+
+    #contact .iconify:nth-of-type(1):hover{
+        opacity: 1;
+    }
+    #contact .iconify:nth-of-type(2):hover{
+        opacity: 1;
     }
 
 }

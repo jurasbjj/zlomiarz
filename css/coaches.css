@@ -140,6 +140,7 @@ nav.desktop{
 }
 
 
+
 /* KONIEC SLIDER */
 
 /* ARROWS */
@@ -161,7 +162,7 @@ nav.desktop{
 }
 .arrows .left:hover, .arrows .right:hover{
     cursor: pointer;
-    opacity: 60%;
+    opacity: 40%;
 }
 #coaches .text span.pagination{
     padding: 0 16px;
@@ -179,7 +180,6 @@ nav.desktop{
     }
 }
 
-
 /* KONIEC ARROWS */
 
 @media (max-width: 800px){
@@ -196,6 +196,11 @@ nav.desktop{
     #coaches .text h3{
         font-size: 1.2rem;
         font-weight: 400;
+    }
+
+    #coaches .text span.coach-social a:hover{
+        cursor: pointer;
+        opacity: 50%;
     }
     #coaches .head{
         padding: 16px;
