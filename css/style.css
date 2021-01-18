@@ -187,7 +187,7 @@ h3{
         background-color: transparent;
         position: fixed;
         top: 0; 
-        z-index: 1;
+        z-index: 2;
         visibility: hidden;
         transition: 0.3s;
     }
