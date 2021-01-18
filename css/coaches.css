@@ -162,7 +162,7 @@ nav.desktop{
 }
 .arrows .left:hover, .arrows .right:hover{
     cursor: pointer;
-    opacity: 40%;
+    opacity: 60%;
 }
 #coaches .text span.pagination{
     padding: 0 16px;
@@ -216,10 +216,16 @@ nav.desktop{
         width: 80%;
         padding: 16px 0;
     }
+
+    .arrows .left:hover, .arrows .right:hover{
+        cursor: pointer;
+        opacity: 40%;
+    }
     #coaches .arrows.mobile span.slide-number{
         padding: 15px 16px;
         opacity: 60%;
     }
+
 
     /* #coaches .swiper-container{
         height: 350px;
@@ -312,5 +318,8 @@ footer{
     }
     footer .social-link img{
         padding: 0 8px;
+    }
+    footer img.iconify:hover{
+        opacity: 50%;
     }
 }

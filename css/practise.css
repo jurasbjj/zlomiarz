@@ -319,4 +319,7 @@ header img.active{
     footer .social-link img{
         padding: 0 8px;
     }
+    footer img.iconify:hover{
+        opacity: 50%;
+    }
 }

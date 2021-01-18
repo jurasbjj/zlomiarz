@@ -84,7 +84,7 @@ const quests = document.querySelectorAll('.question')
 var swiper = new Swiper('.swiper-container', {
     speed: 800,
     effect: 'slide',
-    slidesPerView: 1,
+    slidesPerView: '1',
     pagination: {
        el: '.slide-number',
       type: 'custom',
@@ -96,66 +96,24 @@ var swiper = new Swiper('.swiper-container', {
       nextEl: '.right',
       prevEl: '.left',
     },
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
+     autoplay: {
+         delay: 4000,
+         disableOnInteraction: false,
+       },
+       breakpoints:{
+           800:{
+               slidesPerView: 'auto',
+               spaceBetween: 32,
+
+               autoplay:{
+                   delay: 6000,
+               },
+
+           }
+       }
   });
 
- // DESKTOP
- a = 0
 
- $('#about_us .right').click(function(){
-     console.log('ok')
-
-
-     if(a < 2){
-     a++
-     $('#about_us img.active.slider').addClass('empty')
-     $('#about_us img.active').removeClass('active')
-
-     $('#about_us img.inactive.slider').addClass('active')
-     $('#about_us img.inactive.slider').removeClass('inactive')
-
-     $('#about_us img.far.slider').addClass('inactive')
-     $('#about_us img.far.slider').removeClass('far')
-
-     $('.slide-number').text('0'+(a+1) + ' / 03')
- }
-
- })
- $('#about_us .left').click(function(){
-     console.log('ok')
-
-     if(a == 1){
-     a--
-     $('#about_us img.inactive.slider').addClass('far')
-     $('#about_us img.inactive.slider').removeClass('inactive')
-
-     $('#about_us img.active.slider').addClass('inactive')
-     $('#about_us img.active.slider').removeClass('active')
-
-     $('#about_us img.slider:nth-of-type(2)').addClass('active')
-     $('#about_us img.slider:nth-of-type(2)').removeClass('empty')
-
-     $('.slide-number').text('0'+(a+1) + ' / 03')
- }
-
-     if(a == 2){
-         a--
-         $('#about_us img.inactive.slider').addClass('far')
-         $('#about_us img.inactive.slider').removeClass('inactive')
-    
-         $('#about_us img.active.slider').addClass('inactive')
-         $('#about_us img.active.slider').removeClass('active')
-    
-         $('#about_us img.slider:nth-of-type(3)').addClass('active')
-         $('#about_us img.slider:nth-of-type(3)').removeClass('empty')
-
-         $('.slide-number').text('0'+(a+1) + ' / 03')
-     }
-
- })
  // #about_us SLIDER WRAP BUTTON
  $('#about_us button').click(function(){
      $('.wrap-text').toggleClass('active')
