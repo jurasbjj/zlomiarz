@@ -262,9 +262,11 @@ nav.desktop{
 .bgC .bgLogo{
     position: absolute;
     opacity: 5%;
-    top: 70%;
-    right: -15%;
-}
+    right: 0%;
+    bottom: 0%;
+    transform: translate(50%, 40%);
+
+}   
 .bgC{
     position: relative;
     overflow: hidden;

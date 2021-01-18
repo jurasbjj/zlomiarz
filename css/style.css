@@ -144,12 +144,14 @@ h3{
 }
 
 #price .bg-logo{
-    top: -35%;
-    right: -15%;
+    right: 0%;
+    transform: translate(50%, -60%);
+
 }
 
 .bg .bg-logo{
-    transform: translate(-40%, 80%);
+    bottom: 0%;
+    transform: translate(-50%, 40%);
 
 }
 
