@@ -180,6 +180,22 @@ var mySwiper = new Swiper('.swiper-container', {
         $('#coaches .text span.coach-social:nth-of-type(2)').hide()
        }
 
+       // disable arrow
+       if(mediaQueryDesktop.matches){
+       if($('.swiper-slide-active').data().id === 7){
+        $('.right').addClass('disable')
+       }
+       else{
+           $('.right').removeClass('disable')
+       }
+       if($('.swiper-slide-active').data().id === 0){
+        $('.left').addClass('disable')
+       }
+       else{
+           $('.left').removeClass('disable')
+       }
+    }
+
   }, 0);
 
   })

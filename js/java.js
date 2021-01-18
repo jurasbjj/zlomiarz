@@ -113,6 +113,28 @@ var swiper = new Swiper('.swiper-container', {
        }
   });
 
+  swiper.on('slideChange', function(){
+    
+        setTimeout(function(){
+            console.log($('.swiper-slide-active').data().id)
+            if($('.swiper-slide-active').data().id === 2){
+             $('.right').addClass('disable')
+            }
+            else{
+                $('.right').removeClass('disable')
+            }
+            if($('.swiper-slide-active').data().id === 0){
+             $('.left').addClass('disable')
+            }
+            else{
+                $('.left').removeClass('disable')
+            }
+            
+        }, 0)
+
+     
+  })
+
 
  // #about_us SLIDER WRAP BUTTON
  $('#about_us button').click(function(){

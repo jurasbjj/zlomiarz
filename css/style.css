@@ -560,9 +560,14 @@ overflow: visible !important;
     opacity: 20%;
   }
 
+
+
 }
 
 /* SLIDER ARROWS */
+.arrows .left.disable, .arrows .right.disable{
+    opacity: 0.1 !important;
+}
 #about_us .post  .arrows{
     display: flex;
     justify-content: flex-end;

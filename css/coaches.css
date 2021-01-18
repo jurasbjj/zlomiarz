@@ -164,6 +164,10 @@ nav.desktop{
     cursor: pointer;
     opacity: 60%;
 }
+
+.arrows .left.disable, .arrows .right.disable{
+    opacity: 0.1;
+}
 #coaches .text span.pagination{
     padding: 0 16px;
     margin: 0;
