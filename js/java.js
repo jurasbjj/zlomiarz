@@ -114,7 +114,6 @@ var swiper = new Swiper('.swiper-container', {
   });
 
   swiper.on('slideChange', function(){
-    
         setTimeout(function(){
             console.log($('.swiper-slide-active').data().id)
             if($('.swiper-slide-active').data().id === 2){
@@ -131,9 +130,9 @@ var swiper = new Swiper('.swiper-container', {
             }
             
         }, 0)
-
-     
   })
+
+
 
 
  // #about_us SLIDER WRAP BUTTON
@@ -173,9 +172,14 @@ if (mediaQueryMobile.matches){
 }
 
 if(mediaQueryDesktop.matches){
-    $('.slider img.static, .slider img.active').attr('src','img/about_us/onas1.jpg')
-    $('.slider img.inactive').attr('src','img/about_us/onas2.png')
-    $('.slider img.far').attr('src','img/about_us/onas3.jpg')
+    $(".swiper-slide:nth-of-type(1) img").attr("src","img/about_us/onas1.jpg");
+    $(".swiper-slide:nth-of-type(2) img").attr("src","img/about_us/onas2.png");
+    $(".swiper-slide:nth-of-type(3) img").attr("src","img/about_us/onas3.jpg");
+}
+if(mediaQueryMobile.matches){
+    $(".swiper-slide:nth-of-type(1) img").attr('src','img/about_us/mobile/onas1.jpg')
+    $(".swiper-slide:nth-of-type(2) img").attr('src','img/about_us/mobile/onas2.png')
+    $(".swiper-slide:nth-of-type(3) img").attr('src','img/about_us/mobile/onas3.jpg')
 }
 
 //  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
