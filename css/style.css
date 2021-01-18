@@ -91,14 +91,14 @@ h3{
     height: 100vh;
     position: fixed;
     margin-top: 67px;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
 }
 
-.show-preloader {
+/* .show-preloader {
     visibility: visible;
     opacity: 1;
-}
+} */
 
 .loader-wrapper img{
     width: 150px;
@@ -187,7 +187,7 @@ h3{
         background-color: transparent;
         position: fixed;
         top: 0; 
-        z-index: 2;
+        z-index: 3;
         visibility: hidden;
         transition: 0.3s;
     }
