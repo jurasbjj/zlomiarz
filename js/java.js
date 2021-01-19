@@ -1,7 +1,7 @@
 // ###################################################### PRELOADER ######################################################
 const preload = document.querySelector('.loader-wrapper');
 
-preload.classList.add('show-preloader');
+// preload.classList.add('show-preloader');
 $(window).load(function() {
     setTimeout(
       function()
