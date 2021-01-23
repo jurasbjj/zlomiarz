@@ -76,11 +76,16 @@ nav.desktop{
 #coaches .head1{
     height: 44px;
 }
+#coaches .text h1{
+    height: 44px;
+    font-size: 2.4rem;
+}
 /* KONIEC TEKST */
 
 /* SLIDER */
 
 @media(min-width: 800px){
+    
 #coaches .swiper-container{
     height: 450px;
     display: flex;
@@ -207,7 +212,10 @@ nav.desktop{
         opacity: 50%;
     }
     #coaches .head{
-        padding: 16px;
+        padding: 32px 16px;
+    }
+    #coaches .head h2{
+        margin-top: 16px;
     }
 
     #coaches .head1{

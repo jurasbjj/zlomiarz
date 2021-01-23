@@ -83,12 +83,12 @@ if (mediaQueryDesktop.matches){
 
 //###################################################### CLASSES #############################################################
 const activitys = document.querySelectorAll('.activity')
-const practices = document.querySelectorAll('.class')
 
-practices.forEach(function(practice){
-    practice.addEventListener('click', function(){
+activitys.forEach(function(activity){
+    activity.addEventListener('click', function(){
+        console.log(this)
+        activitys[this.dataset.id].classList.toggle('active');
         for (i = 0; i < activitys.length; i++){
-            activitys[this.dataset.id].classList.toggle('active');
             if (i == this.dataset.id) continue;
             activitys[i].classList.remove('active');
         }

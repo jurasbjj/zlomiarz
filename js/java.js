@@ -85,6 +85,7 @@ var swiper = new Swiper('.swiper-container', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
+    loop: false,
     pagination: {
        el: '.slide-number',
       type: 'custom',
@@ -104,6 +105,7 @@ var swiper = new Swiper('.swiper-container', {
            800:{
                slidesPerView: 'auto',
                spaceBetween: 32,
+               loop: false,
 
                autoplay:{
                    delay: 6000,
@@ -161,12 +163,12 @@ const h1 = document.querySelectorAll('h1')
 const footerText = document.querySelectorAll('footer span')
 
 if (mediaQueryMobile.matches){
-    h2[0].textContent = "Kim jesteśmy? Kilka słów o klubie Złomiarz Team Gdańsk."
-    h2[1].textContent = "Sprawdź aktualny rozkład treningów."
-    h1[1].textContent = "Grafik zajęć"
-    h2[2].textContent = "Składki członkowskie"
-    h2[3].textContent = 'Najczęściej zadawane pytania i nasze odpowiedzi.'
-    h2[4].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
+    // h2[0].textContent = "Kim jesteśmy? Kilka słów o klubie Złomiarz Team Gdańsk."
+    // h2[1].textContent = "Sprawdź aktualny rozkład treningów."
+    // h1[1].textContent = "Grafik zajęć"
+     h2[2].textContent = "Składki członkowskie"
+    // h2[3].textContent = 'Najczęściej zadawane pytania i nasze odpowiedzi.'
+     h2[4].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
 }

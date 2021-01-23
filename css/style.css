@@ -30,6 +30,11 @@
         --fontSize: 12px;
     }
 }
+@media(max-width: 350px){
+    :root{
+        --fontSize: 13px;
+    }
+}
 
 
 /* DOMYŚLNE */
@@ -44,7 +49,8 @@ section .content{
     margin: 0 auto;
 }
 h1{
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
+    font-size: 4rem;
     font-weight: 700;
     margin: 0;
 }
@@ -74,7 +80,8 @@ h3{
         margin-top: 0px;
     }
     h1{
-        font-size: 2.13rem;
+        /* font-size: 2.13rem; */
+        font-size: 2.66rem;
     }
     h2{
         font-size: 1.2rem;
@@ -496,16 +503,14 @@ header.page-header video{
     outline: none;
     position: relative;
     top: -70px;
-    opacity: 0%;
+    opacity: 60%;
     font-size: 12px;
     display: flex;
     align-items: center;
     transition: 0.5s;
     z-index: 2;
 }
-#about_us button.js-animate{
-    opacity: 60%;
-}
+
 #about_us button span{
     margin-right: 9px;
     font-size: 12px;
@@ -533,21 +538,9 @@ header.page-header video{
 .swiper-container {
 flex-basis: 45%;
 overflow: visible !important;
-position: relative;
-opacity: 0;
 transition: 0.7s;
 }
-.swiper-container.js-animate{
-    opacity: 1;
-    /* animation: jiggle 250ms linear; */
-}
 
-@keyframes jiggle{
-    0%{transform: rotate(0);}
-    33%{transform: rotate(15deg);}
-    66%{transform: rotate(-15deg);}
-    100%{transform: rotate(0deg);}
-}
 
 #about_us .swiper-container{
     flex-direction: column;
@@ -620,44 +613,19 @@ transition: 0.7s;
     .swiper-container {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
       }
 
       .swiper-slide img{
           width: 100%;
+          opacity: 1;
 }
-      .swiper-slide-active img{
-          width: 100%;
-      }
 
       .swiper-container .arrows{
         width: 100%;
         text-align: right;
         padding: 16px 16px 0 16px;
       }  
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        
-  
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
+
 
     #about_us{
         padding: 40px 0 21px 0;
@@ -1142,6 +1110,7 @@ footer .social-link{
     footer{
         padding: 16px 0 0 0;
         /* background-color: var(--secondaryColor); */
+
     }
     footer .content{
         display: block;
@@ -1153,196 +1122,9 @@ footer .social-link{
     footer span:nth-of-type(1){
         width: 100%;
         text-align: center;
+        font-size: 0.8rem;
     }
 
 }
 /* ############################################ KONIEC FOOTER ######################################################   */
 
-/* ############################################  ANIMACJE SCROLL ############################################ */
-@media(min-width: 1000px){
-    :root{
-        --movePx: 30%;
-        --movePxMinus: -30%;
-    }
-
-    @keyframes moveIn{
-        0%{left: var(--movePx)}
-        100%{left: 0}
-    }
-    @keyframes moveOut{
-        0%{left: 0}
-        100%{left: var(--movePx)}
-    }
-
-    /* ABOUT_US */
-    #about_us .content header{
-        position: relative;
-        left: var(--movePx);
-        opacity: 0;
-        transition: 0.7s;
-    }
-
-    #about_us .content header.js-animate{
-        left: 0;
-        opacity: 1;
-    }
-
-    #about_us .content .post .text{
-        position: relative;
-        opacity: 0;
-        transition: 0.7s;
-        left: var(--movePxMinus);
-    }
-    #about_us .content .post .text.js-animate{
-        opacity: 1;
-        left: 0;
-    }
-
-    /* SCHEDULE */
-    #schedule img{
-        opacity: 0;
-        transition: 0.7s;
-    }
-    #schedule img.js-animate{
-        opacity: 1;
-    }
-    #schedule header{
-        position: relative;
-        opacity: 0;
-        /* left: var(--movePx); */
-        transition: 0.7s;
-        animation: moveOut 0.7s;
-
-    }
-    #schedule header.js-animate{
-        opacity: 1;
-        animation: moveIn 0.7s;
-    }
-
-    /* PRICE */ 
-    #price header{
-        position: relative;
-        opacity: 0;
-    }
-
-@media(min-width: 1000px){
-    :root{
-        --movePx: 30%;
-        --movePxMinus: -30%;
-        --transition: 1s;
-    }
-
-    @keyframes moveIn{
-        0%{left: var(--movePx)}
-        100%{left: 0}
-    }
-    @keyframes moveOut{
-        0%{left: 0}
-        100%{left: var(--movePx)}
-    }
-
-    /* ABOUT_US */
-    #about_us .content header{
-        position: relative;
-        left: var(--movePx);
-        opacity: 0;
-        transition: 0.7s;
-    }
-
-    #about_us .content header.js-animate{
-        left: 0;
-        opacity: 1;
-    }
-
-    #about_us .content .post .text{
-        position: relative;
-        opacity: 0;
-        transition: 0.7s;
-        left: var(--movePxMinus);
-    }
-    #about_us .content .post .text.js-animate{
-        opacity: 1;
-        left: 0;
-    }
-
-    /* SCHEDULE */
-    #schedule img{
-        opacity: 0;
-        transition: 1.3s;
-    }
-    #schedule img.js-animate{
-        opacity: 1;
-    }
-    #schedule header{
-        position: relative;
-        opacity: 0;
-        /* left: var(--movePx); */
-        transition: 0.7s;
-        animation: moveOut 0.7s;
-
-    }
-    #schedule header.js-animate{
-        opacity: 1;
-        animation: moveIn 0.7s;
-    }
-
-    /* PRICE */ 
-    #price header{
-        position: relative;
-        opacity: 0;
-        animation: moveOut 0.7s;
-        transition: 0.7s;
-    }
-    #price header.js-animate{
-        opacity: 1;
-        animation: moveIn 0.7s;
-    }
-
-    #price .wraper{
-        opacity: 0;
-        transition: 1.2s;
-    }
-    #price .wraper.js-animate{
-        opacity: 1;
-    }
-
-    /* FAQ */
-    #faq header{
-        position: relative;
-        opacity: 0;
-        animation: moveOut 0.7s;
-        transition: 0.7s;
-    }
-    #faq header.js-animate{
-        opacity: 1;
-        animation: moveIn 0.7s;
-    }
-    #faq .tasks{
-        opacity: 0;
-        transition: 1.5s;
-    }
-    #faq .tasks.js-animate{
-        opacity: 1;
-    }
-
-    /* CONTACT */ 
-
-    #contact header{
-        position: relative;
-        opacity: 0;
-        animation: moveOut 0.7s;
-        transition: 0.7s;
-    }
-    #contact header.js-animate{
-        opacity: 1;
-        animation: moveIn 0.7s;
-    }
-    #contact .info{
-        opacity: 0;
-        transition: 1.3s;
-    }
-    #contact .info.js-animate{
-        opacity: 1;
-    }
-
-}}
