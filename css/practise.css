@@ -153,7 +153,7 @@ header img.active{
 .practise .description{
     max-height: 0;
     overflow: hidden;
-    transition: background-color 0.2s, max-height 0.5s;
+    transition: background-color 0.2s, max-height 0.6s;
     padding: 0 16px;
     line-height: 24px;
     display: flex;
@@ -171,7 +171,7 @@ header img.active{
     height: 16px;
 }
 .practise .activity.active .description{
-    max-height: 200px;
+    max-height: 250px;
     background-color: rgba(0, 0, 0, 0.02);
 }
 
@@ -196,6 +196,9 @@ header img.active{
     .practise .head h2{
         margin-bottom: 0;
         margin-top: 16px;
+    }
+    .practise .bjj h1, .kick h1{
+        font-size: 24px;
     }
     .practise .bjj, .practise .kick{
         margin-bottom: 24px;
