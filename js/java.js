@@ -178,11 +178,11 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide:nth-of-type(2) img").attr("src","img/about_us/onas2.png");
     $(".swiper-slide:nth-of-type(3) img").attr("src","img/about_us/onas3.jpg");
 }
-if(mediaQueryMobile.matches){
-    $(".swiper-slide:nth-of-type(1) img").attr('src','img/about_us/mobile/onas1.jpg')
-    $(".swiper-slide:nth-of-type(2) img").attr('src','img/about_us/mobile/onas2.png')
-    $(".swiper-slide:nth-of-type(3) img").attr('src','img/about_us/mobile/onas3.jpg')
-}
+// if(mediaQueryMobile.matches){
+//     $(".swiper-slide:nth-of-type(1) img").attr('src','img/about_us/mobile/onas1.jpg')
+//     $(".swiper-slide:nth-of-type(2) img").attr('src','img/about_us/mobile/onas2.png')
+//     $(".swiper-slide:nth-of-type(3) img").attr('src','img/about_us/mobile/onas3.jpg')
+// }
 
 //  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
 

@@ -85,16 +85,16 @@ if (mediaQueryDesktop.matches){
     $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
 }
  //img src  mobile
- if (mediaQueryMobile.matches){
-         $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/mobile/daniel.jpg");
-         $(".swiper-slide:nth-of-type(2) img").attr("src","img/coaches/mobile/adam.jpg");
-         $(".swiper-slide:nth-of-type(3) img").attr("src","img/coaches/mobile/andrzej.jpg");
-         $(".swiper-slide:nth-of-type(4) img").attr("src","img/coaches/mobile/marcin.jpg");
-         $(".swiper-slide:nth-of-type(5) img").attr("src","img/coaches/mobile/asia.jpg");
-         $(".swiper-slide:nth-of-type(6) img").attr("src","img/coaches/mobile/michał.jpg");
-         $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mobile/mateusz.jpg");
-         $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
-}
+//  if (mediaQueryMobile.matches){
+//          $(".swiper-slide:nth-of-type(1) img").attr("src","img/coaches/mobile/daniel.jpg");
+//          $(".swiper-slide:nth-of-type(2) img").attr("src","img/coaches/mobile/adam.jpg");
+//          $(".swiper-slide:nth-of-type(3) img").attr("src","img/coaches/mobile/andrzej.jpg");
+//          $(".swiper-slide:nth-of-type(4) img").attr("src","img/coaches/mobile/marcin.jpg");
+//          $(".swiper-slide:nth-of-type(5) img").attr("src","img/coaches/mobile/asia.jpg");
+//          $(".swiper-slide:nth-of-type(6) img").attr("src","img/coaches/mobile/michał.jpg");
+//          $(".swiper-slide:nth-of-type(7) img").attr("src","img/coaches/mobile/mateusz.jpg");
+//          $(".swiper-slide:nth-of-type(8) img").attr("src","img/coaches/zapasior.jpg");
+// }
 
 
 
