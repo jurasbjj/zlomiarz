@@ -335,7 +335,13 @@ nav.desktop .content{
     height: 67px;
 
 }
-
+nav.desktop a.home{
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
 nav.desktop img{
     height: 96px;
     opacity: 0;
@@ -384,7 +390,7 @@ nav.desktop.active ul li a{
 }
 
 nav.desktop.active img{
-    height: 80%;
+    height: 90%;
     opacity: 100%;
 }
 /* ####################################################### KONIEC NAWIGACJA ######################################################   */
@@ -413,6 +419,7 @@ header.page-header video{
     transform: translate(-50%, -55%);
     z-index: -1; 
 }
+
 
 /* @media all and (orientation:portrait) {
     header.page-header video{
@@ -1144,6 +1151,8 @@ footer .social-link{
     }
 
 }
+
+
 /* ############################################ KONIEC FOOTER ######################################################   */
 
 /* IE FIX*/
@@ -1165,6 +1174,39 @@ footer .social-link{
 
     #about_us .content .post .text{
         flex-basis: 100%;
-    
     }
+    nav.desktop{
+        width: 100%;
+        position: fixed;
+    }
+    nav.desktop img{
+        opacity: 1;
+    }
+    nav.desktop img{
+        height: 80%;
+    }
+    nav.desktop.active img{
+        height: 80%;
+    }
+    header.page-header video{
+        display: none;
+    }
+    header.page-header{
+        background-image: url('../img/practise/bjj.jpg');
+        background-size: cover;
+    }
+    nav ul li:nth-child(3){
+        display: none;
+    }
+    nav ul li:nth-child(6){
+        display: none;
+    }
+    .clean{
+        display: none !important;
+    }
+    #map{
+        background-image: url('../img/ie-map.jpg');
+        background-position: center;
+    }
+
 }

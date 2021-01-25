@@ -208,5 +208,3 @@ $(window).resize(function() {
 });
 
 // KONIEC RE-SIZE REFRESH
-
-
