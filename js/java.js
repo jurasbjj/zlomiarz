@@ -68,7 +68,7 @@ const quests = document.querySelectorAll('.question')
 
  quests.forEach(function(quest){
      quest.addEventListener('click', function(){
-         console.log(this.dataset.id)
+        //  console.log(this.dataset.id)
          quests[this.dataset.id].classList.toggle('active');
          for (i = 0; i < quests.length; i++){
              if (i == this.dataset.id) continue;
@@ -117,7 +117,7 @@ var swiper = new Swiper('.swiper-container', {
 
   swiper.on('slideChange', function(){
         setTimeout(function(){
-            console.log($('.swiper-slide-active').data().id)
+            // console.log($('.swiper-slide-active').data().id)
             if($('.swiper-slide-active').data().id === 2){
              $('.right').addClass('disable')
             }
@@ -208,3 +208,5 @@ $(window).resize(function() {
 });
 
 // KONIEC RE-SIZE REFRESH
+
+

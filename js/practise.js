@@ -86,7 +86,7 @@ const activitys = document.querySelectorAll('.activity')
 
 activitys.forEach(function(activity){
     activity.addEventListener('click', function(){
-        console.log(this)
+        // console.log(this)
         activitys[this.dataset.id].classList.toggle('active');
         for (i = 0; i < activitys.length; i++){
             if (i == this.dataset.id) continue;
