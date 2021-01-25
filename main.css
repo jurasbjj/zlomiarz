@@ -1,0 +1,1214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--fontSize);
+    -webkit-tap-highlight-color: transparent;
+    /* position: relative; */
+}
+
+
+:root{
+    --primaryColor: #ffffff;
+    --secondaryColor: #F8F8F8;
+    --thirdColor: #EEEEEE;
+    --emptyColor: #C4C4C4;
+    --maxWidth: 1000px;
+    --fontSize: 15px;
+    --elementMargin: 24px;
+    --headerMargin: 40px;
+    --sectionPadding: 80px;
+    --mobilePadding: 32px 16px;
+}
+
+@media(min-width: 800px) and (max-width: 1000px){
+    :root{
+        --maxWidth: 768px;
+        --fontSize: 12px;
+    }
+}
+@media(max-width: 350px){
+    :root{
+        --fontSize: 13px;
+    }
+}
+
+
+/* DOMYŚLNE */
+section{
+    padding: var(--sectionPadding) 0px;
+}
+section:nth-child(odd){
+    background-color: var(--secondaryColor);
+}
+section .content{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+h1{
+    /* font-size: 2.4rem; */
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* margin: 10px 0; */
+    margin-top: 16px;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+ body{
+    /* position: relative; */
+    margin-top: -67px;
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 800px){
+    section{
+        padding: var(--mobilePadding);
+    }
+    body{
+        margin-top: 0px;
+    }
+    h1{
+        /* font-size: 2.13rem; */
+        font-size: 2.66rem;
+    }
+    h2{
+        font-size: 1.2rem;
+        margin-top: 8px;
+        line-height: 30px;
+    }
+
+}
+/* KONIEC DOMYŚLNE */
+
+/* PRELOADER */
+.loader-wrapper{
+    z-index: 1000;
+    background-color: var(--secondaryColor);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    margin-top: 67px;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+/* .show-preloader {
+    visibility: visible;
+    opacity: 1;
+} */
+
+.loader-wrapper img{
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    animation: rotate 10s infinite both linear;
+    transform: rotate(0deg);
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(720deg)
+    }
+}
+
+@media(max-width: 800px){
+    .loader-wrapper{
+        margin-top: 0;
+    }
+
+    .loader-wrapper img{
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+
+    }
+}
+/* KONIEC PRELOADER */
+
+/* ZĘBATKA TŁO */
+
+.bg, #about_us, #contact, #price{
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-logo{
+    position: absolute;
+    opacity: 5%;
+    -webkit-opacity: 5%;
+}
+
+#about_us .bg-logo{
+    z-index: 1;
+}
+
+#about_us .bg-logo{
+    transform: translate(-50%, -60%);
+}
+
+#price .bg-logo{
+    right: 0%;
+    transform: translate(50%, -60%);
+
+}
+
+.bg .bg-logo{
+    bottom: 0%;
+    transform: translate(-50%, 40%);
+
+}
+
+
+@media(max-width: 800px){
+    .bg-logo{
+        display: none;
+    }
+}
+/* KONIEC ZĘBATKA TŁO */
+
+
+/* ############################################ NAWIGACJA ######################################################   */
+@media (max-width: 800px){
+    nav.desktop{
+        display: none;
+    }
+    .fade{
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        background-color: transparent;
+        position: fixed;
+        top: 0; 
+        z-index: 3;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .fade.active{
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    nav.mobile{
+        display: flex;
+        flex-direction: column;
+        max-height: auto;
+        overflow: hidden;
+        transition: 0.6s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+        box-shadow: 0px 0px 14px 2px #0002;
+    }
+
+    nav.mobile .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        z-index: 2;
+        background-color: #F8F8F8;
+        height: 64px;
+
+    }
+    div.logoImg{
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav.mobile img{
+        height: 70%;
+        cursor: pointer;
+    }
+
+    nav.mobile ul{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        text-align: left;
+        list-style-type: none;
+        z-index: 1;
+        max-height: 0;
+        transition: 0.6s;
+    }
+
+
+    nav.mobile ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 23px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+
+    nav.mobile ul li a:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+
+    nav.mobile.active ul{
+        max-height: 800px;
+    }
+
+
+
+    /* BURGER */
+    nav.mobile .burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+        width: 32px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+    nav.mobile.active .burger{
+        transform: rotate(90deg);
+    }
+    
+    nav.mobile .burger span{
+        display: block;
+        width: 32px;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        top: 0;
+        transition: top 0.1s 0.1s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+    }
+    nav.mobile.active .burger span:nth-child(1){
+        top: calc(50% - 3px/2);
+        transform: rotate(45deg);
+    }
+    nav.mobile.active .burger span:nth-child(3){
+        top: calc(-50% + 3px/2);
+        transform: rotate(-45deg);
+    }
+    nav.mobile.active .burger span:nth-child(2){
+        opacity: 0;
+    }
+    
+}
+
+@media (min-width: 800px){
+    nav.mobile{
+        display: none;
+    }
+}
+nav.desktop{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    transition: 0.5s;
+    z-index: 3;
+    box-shadow: 0px 0px 14px 2px #0002;
+}
+
+nav.desktop .content{
+    display: flex;
+    flex-direction: row;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+
+}
+nav.desktop a.home{
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+nav.desktop img{
+    height: 96px;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav.desktop ul{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 200px;
+    list-style-type: none;
+}
+
+nav.desktop ul li{
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav.desktop ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block;;
+    padding: 22.5px 0;
+    width: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+nav.desktop.active ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav.desktop.active{
+    background-color: rgba(255, 255, 255, 0.815);
+    backdrop-filter: blur(3px);
+}
+
+nav.desktop.active ul li a{
+    color: black;
+    /* font-size: 15px; */
+}
+
+nav.desktop.active img{
+    height: 90%;
+    opacity: 100%;
+}
+/* ####################################################### KONIEC NAWIGACJA ######################################################   */
+
+
+/* ####################################################### HEADER #################################################################   */
+@media (max-width: 800px){
+    header.page-header{
+        display: none;
+    }
+}
+header.page-header{
+    /* position: relative; */
+    top: -67px;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+header.page-header video{
+    display: block;
+    position: relative;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    z-index: -1; 
+}
+
+
+/* @media all and (orientation:portrait) {
+    header.page-header video{
+        min-width: 100%;
+        min-height: 100%;
+
+    }
+    } */
+
+
+/* KOMUNIKAT */ 
+.attention{
+    width: var(--maxWidth);
+    display: flex;
+    background: rgba(37, 70, 119, 0.9);
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.1rem;
+    display: none;
+}
+
+.attention .iconify{
+    font-size: 2rem;
+    margin: 0 20% 0 5%;
+}
+/* ####################################################### KONIEC HEADER ###########################################   */
+
+
+
+/* ####################################################### O NAS ######################################################   */
+
+#about_us{
+    padding: 80px 16px;
+
+}
+
+#about_us .content{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+#about_us .content header{
+    margin-bottom: var(--headerMargin);
+    z-index: 2;
+}
+
+#about_us .content .post{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    
+}
+#about_us .content .post .text{
+    flex-basis: 50%;
+    line-height: 30px;
+    z-index: 1;
+    margin-top: 16px;
+
+}
+
+
+
+/* WRAP */
+#about_us .content .post .wrap-text{
+    /* flex-basis: 100%; */
+    line-height: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1.5s;
+}
+#about_us .content .post .wrap-text::after{ /* MARGIN WRAP */
+    content: '';
+    display: block;
+    margin-bottom: 32px;
+}
+#about_us .content .post .wrap-text.active{
+    max-height: 500px;
+}
+#about_us .content .post .wrap-text h3{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: var(--headerMargin) 0;
+}
+
+
+/* BUTTON */
+#about_us button{
+    background-color: white;
+    border: none;
+    line-height: 20px;
+    /* padding: 2px 44px; */
+    outline: none;
+    position: relative;
+    top: -70px;
+    opacity: 60%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#about_us button span{
+    margin-right: 9px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+#about_us button .arrow{
+    font-size: 12px;
+}
+
+#about_us button:hover{
+    cursor: pointer;
+}
+#about_us button.active{
+    top: 0;
+}
+#about_us button.active .arrow{
+    transform: rotate(180deg);
+}
+
+
+
+/* SLIDER */
+ /* SWIPER */
+@media(min-width: 800px){ 
+.swiper-container {
+flex-basis: 45%;
+overflow: visible !important;
+transition: 0.7s;
+}
+
+
+#about_us .swiper-container{
+    flex-direction: column;
+    margin: 0;
+    z-index: 0;
+}
+#about_us .swiper-wrapper{
+    width: 100%;
+}
+.swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide img{
+    width: 100%;
+    opacity: 0%;
+    transition: 1s;
+  }
+  .swiper-slide-active img{
+    opacity: 100%;
+  }
+  .swiper-slide-duplicate-active img{
+    opacity: 100%;
+  }
+  .swiper-slide-next img{
+    width: 80%;
+    opacity: 20%;
+  }
+
+
+
+}
+
+/* SLIDER ARROWS */
+
+#about_us .post  .arrows{
+    display: flex;
+    justify-content: flex-end;
+}
+@media(min-width: 800px){
+    #about_us .post  .arrows{
+        margin-top: 8px;
+    }
+}
+#about_us .post .arrows img.slider-arrow{
+    width: 32px;
+    opacity: 40%;
+    outline: none;
+    transition: 0.2s;
+}
+#about_us .post .arrows img.slider-arrow:hover{
+   cursor: pointer;
+   opacity: 60%;
+}
+
+.arrows .left.disable, .arrows .right.disable{
+    opacity: 0.1 !important;
+}
+
+#about_us .post .arrows .slide-number{
+    padding: 0px 16px;
+    opacity: 60%;
+}
+
+.swiper-pagination-custom{
+    width: auto !important;
+}
+/* about_us mobile */
+@media (max-width: 800px){
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide img{
+          width: 100%;
+          opacity: 1;
+}
+
+      .swiper-container .arrows{
+        width: 100%;
+        text-align: right;
+        padding: 16px 16px 0 16px;
+      }  
+
+
+    #about_us{
+        padding: 40px 0 21px 0;
+    }
+    #about_us .content .post{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    #about_us .post .slider{
+        display: none;
+    }
+
+    #about_us .post .arrows img.slider-arrow:hover{
+        opacity: 40%;
+     }
+    #about_us header{
+        order: 2;
+        padding: 16px 16px;
+    }
+        #about_us .content header{
+        margin-bottom: 0;
+        }
+    #about_us .text{
+        order: 3;
+        padding: 4px 16px 16px 16px;
+
+    }
+    #about_us .wrap-text{
+        order: 4;
+        padding: 0 16px;
+    }
+        #about_us .content .post .wrap-text.active{
+            max-height: 1200px;
+        }
+        #about_us .content .post .wrap-text::after{ /* MARGIN WRAP */
+            display: none;
+        }
+        #about_us .content .post .wrap-text h3{
+            font-size: 2.13rem;
+            margin: 32px 0;
+        }
+    #about_us button{
+        order: 5;
+        align-self: center;
+        margin-top: 16px;
+        position: static;
+    }
+
+    @media(max-width: 350px){
+        #about_us .content .post .wrap-text.active{
+            max-height: 1350px;
+        }
+    }
+}
+
+
+/* ####################################################### KONIEC O NAS ######################################################   */
+
+
+/* ####################################################### GRAFIK ##########################################################   */
+#schedule img{
+    margin-top: 44px;
+    width: 100%;
+}
+#schedule h1, #schedule h2{
+    text-align: left;
+}
+#schedule .content{
+    text-align: center;
+}
+
+#schedule h2 b{
+    font-size: 1.6rem;
+}
+@media (max-width: 800px){
+    #schedule img{
+        margin-top: 24px;
+    }
+    #schedule{
+        padding: 32px 16px;
+    }
+}
+
+
+/* ####################################################### KONIEC GRAFIK ######################################################   */
+
+
+/* ####################################################### CENNIK ######################################################   */
+#price .wraper{
+    display: flex;
+}
+#price .wraper .table{
+    margin-top: 42px;
+    flex-basis: 58%;
+    display: flex;
+    flex-direction: column;
+}
+#price table{
+    text-align: center;
+    display: block; /* mozzila fix */
+}
+tbody{
+    display: block; /* mozzila fix */
+}
+#price table tr{
+    display: flex;
+}
+#price table td{
+    flex-basis: 33%;
+    margin: 2px;
+    font-size: 0.9rem;
+    padding: 19px 0;
+    display: block; /* internet explorer fix*/
+}
+#price table td b{
+    font-size: 0.9rem;
+}
+#price table tr td{
+    background-color: var(--secondaryColor);
+}
+#price table tr:nth-of-type(1) td{
+    background-color: var(--thirdColor);
+}
+
+#price table tr:nth-last-of-type(2) td{
+    flex-basis: 50%;
+}
+#price table tr:nth-last-of-type(1) td{
+    flex-basis: 50%;
+}
+
+#price table tr:nth-last-of-type(2) td{
+    margin-top: var(--elementMargin);
+    background-color: var(--thirdColor);
+}
+
+#price .wraper .table span{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 24px;
+}
+#price .wraper .table span span:nth-of-type(1){
+    margin-top: 40px;
+}
+
+#price .wraper .text{
+    margin-left: var(--elementMargin);
+    flex-basis: 42%;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--elementMargin);
+
+}
+#price .wraper .text span{
+    padding: 13px 16px;
+    margin-left: 20px;
+}
+#price .wraper .text span, #price .wraper .text span b{
+    font-size: 0.95rem;
+    line-height: 20px;
+}
+#price .wraper .text span::before{
+    content: url('https://api.iconify.design/bx-bx-check.svg?color=%23808080&height=17');
+    vertical-align: -0.125em;
+    color: gray;
+    margin-right: -17px;
+    position: relative;
+    left: -24px;
+}
+
+
+@media (max-width: 800px){
+    #price {
+        padding: 32px 0;
+    }
+    #price .wraper{
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    #price header{
+        padding: 0 16px;
+    }
+
+    #price table{
+        padding: 0 16px;
+    }
+
+    #price .wraper .table{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    
+
+    #price .wraper .text{
+        margin-left: 0;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        padding: 0 16px;
+}
+
+    #price .wraper .table span span:nth-of-type(1){
+        margin: 0;
+        line-height: 30px;
+
+    }
+    #price .wraper .table span.payment{
+        margin-top: 16px;
+        background-color: var(--secondaryColor);
+        padding: 16px 16px;
+        line-height: 30px;
+    }
+
+
+    /* #price .wraper .table span span:nth-of-type(1)::before{
+        display: inline-block;
+        content: '';
+        height: 1px;
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 16px 0;
+    } */
+    
+
+    #price .wraper .text span::before{
+        left: -39px;
+}
+}
+
+
+/* ####################################################### KONIEC CENNIK ###################################################   */
+
+
+/* ####################################################### FAQ ######################################################   */
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+#faq .wraper{
+    flex-basis: 100%;
+    background-color: var(--primaryColor);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 16px;
+    display: flex;
+}
+.question{
+    cursor: pointer;
+    padding: 16px;
+    font-weight: 700;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.question span{
+    flex-basis: 90%;
+    padding: 0;
+}
+
+#faq ion-icon{
+    font-size: 20px;
+}
+
+#faq .question.active ion-icon{
+    transform: rotate(180deg);
+}
+
+.answer{
+    flex-basis: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    font-weight: normal;
+    line-height: 1.6rem;   
+}
+.answer::before{
+    content: '';
+    display: block;
+    height: 16px;
+}
+
+.question.active .answer{
+    max-height: 150px;
+    opacity: 1;
+}
+
+
+@media(max-width: 800px){
+    .question.active .answer{
+        max-height: 250px;
+    }
+    .tasks{
+        margin-top: 4px;
+    }
+}
+
+
+/* ####################################################### KONIEC FAQ ######################################################   */
+
+
+/* ####################################################### KONTAKT ######################################################   */
+#contact .card.mobile{
+    display: none;
+}
+#contact .info{
+    display: flex;
+}
+#contact .card{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#contact .card span{
+    padding: 13px 16px;
+    font-size: 0.95rem;
+}
+#contact .card img{
+    margin: 56px 0 28px 0;
+}
+#contact .card span::before{
+    position: relative;
+    left: -15px;
+    top: 3px;
+}
+#contact .card span a{
+    text-decoration: none;
+    color: black;
+}
+#contact .card span:nth-of-type(1)::before{
+    content: url('https://api.iconify.design/clarity:phone-handset-solid.svg?height=20');
+}
+#contact .card span:nth-of-type(2)::before{
+    content: url('https://api.iconify.design/ic:baseline-mail.svg?height=20');
+}
+#contact .card span:nth-of-type(3)::before{
+    content: url('https://api.iconify.design/gridicons:location.svg?height=20');
+}
+#contact .card span:nth-last-of-type(2){
+    font-weight: 700;
+    margin-top: var(--elementMargin);
+    padding: 0 0;
+}
+#contact .card span.icon{
+    margin: 0;
+    padding: 0;
+
+}
+#contact .card img.iconify{
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 1;
+    margin: 24px 15px 0 0;
+}
+#contact .iconify:nth-of-type(1){
+    margin-right: 15px;
+}
+#contact .iconify:nth-of-type(1):hover{
+    opacity: 60%;
+}
+#contact .iconify:nth-of-type(2):hover{
+    opacity: 60%;
+}
+
+
+#contact #map{
+    margin-top: 58px;
+    flex-basis: 50%;
+}
+
+
+
+
+@media (max-width: 800px){
+    #contact{
+        padding-bottom: 0;
+    }
+    #contact .card{
+        display: none;
+    }
+    #contact .card.mobile{
+        display: flex;
+    }
+    #contact .info{
+        display: block;
+    }
+    #contact img{
+        align-self: center;
+    }
+    #contact .card img{
+        margin: 24px 0 27px 0;
+    }
+    #contact .card img.iconify{
+        margin: 0 15px 0 0;
+    }
+
+    #contact #map{
+        margin-top: 24px;
+        flex-basis: 100%;
+        height: 250px;
+    }
+    #contact .card span:nth-last-of-type(2){
+        padding: 24px 0 16px 0;
+        margin: 0;
+    }
+
+    #contact .iconify:nth-of-type(1):hover{
+        opacity: 1;
+    }
+    #contact .iconify:nth-of-type(2):hover{
+        opacity: 1;
+    }
+
+}
+
+
+
+/* ####################################################### KONIEC KONTAKT ###########################################   */
+
+
+/* ####################################################### FOOTER ######################################################   */
+.footer{
+    display: none;
+}
+
+footer{
+    text-align: center;
+    padding: 32px 0 0 0;
+    background-color: var(--primaryColor);
+    font-weight: 500;
+}
+
+footer .content{
+    display: flex;
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 32px 0;
+}
+
+
+footer span:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    justify-content: space-around;
+}
+
+
+
+footer img.iconify{
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 50%;
+    transition: 0.2s;
+}
+
+footer .iconify:hover{
+    opacity: 60%;
+}
+
+footer .social-link{
+    display: none;
+}
+
+@media (max-width: 800px){
+    footer{
+        padding: 16px 0 0 0;
+        /* background-color: var(--secondaryColor); */
+
+    }
+    footer .content{
+        display: block;
+        padding: 16px;
+        background-color: var(--secondaryColor);
+        border-top: none;
+
+    }
+
+    footer span:nth-of-type(1){
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* ############################################ KONIEC FOOTER ######################################################   */
+
+/* IE FIX*/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS here*/
+    .bg-logo{
+        display: none;
+    }
+    .swiper-container{
+        display: none !important;
+    }
+    button{
+        top: 0 !important;
+    }
+    #faq{
+        display: none !important;
+    }
+
+    #about_us .content .post .text{
+        flex-basis: 100%;
+    }
+    nav.desktop{
+        width: 100%;
+        position: fixed;
+    }
+    nav.desktop img{
+        opacity: 1;
+    }
+    nav.desktop img{
+        height: 80%;
+    }
+    nav.desktop.active img{
+        height: 80%;
+    }
+    header.page-header video{
+        display: none;
+    }
+    header.page-header{
+        background-image: url('../img/practise/bjj.jpg');
+        background-size: cover;
+    }
+    nav ul li:nth-child(3){
+        display: none;
+    }
+    nav ul li:nth-child(6){
+        display: none;
+    }
+    .clean{
+        display: none !important;
+    }
+    #map{
+        background-image: url('../img/ie-map.jpg');
+        background-position: center;
+    }
+
+}
