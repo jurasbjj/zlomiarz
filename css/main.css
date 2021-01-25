@@ -153,6 +153,7 @@ h3{
 .bg-logo{
     position: absolute;
     opacity: 5%;
+    -webkit-opacity: 5%;
 }
 
 #about_us .bg-logo{
