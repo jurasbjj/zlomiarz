@@ -871,7 +871,7 @@ transition: 0.7s;
     }
     #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(1){
         padding-bottom: 3px;
-        font-size: 1.2vw;
+        font-size: 1.5vw;
     }
     #schedule .table-schedule tr:not(:nth-of-type(1)) td{
         padding: 8px 4px;
