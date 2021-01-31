@@ -154,8 +154,8 @@ if (mediaQueryMobile.matches){
 
 if(mediaQueryDesktop.matches){
     $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.jpg");
-    $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.png");
-    $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.png");
+    $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.jpg");
+    $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.jpg");
 
 }
 

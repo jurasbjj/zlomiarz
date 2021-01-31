@@ -604,8 +604,12 @@ header.page-header img.active{
     justify-content: center;
     align-items: center;
     transform: scale(0.9);
+    transition: 1s;
 }
 .swiper-slide-active{
+    transform: scale(1.1);
+}
+.swiper-slide-duplicate-active{
     transform: scale(1.1);
 }
 
