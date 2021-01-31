@@ -782,6 +782,9 @@ header.page-header img.active{
     text-align: left;
 }
 
+#schedule .type-schedule option:nth-of-type(2), #schedule .type-schedule option:nth-of-type(13){
+    font-weight: bold;
+}
 #schedule .table-schedule{
     width: 100%;
 }
