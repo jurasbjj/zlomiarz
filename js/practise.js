@@ -75,8 +75,8 @@ if (mediaQuery.matches){
     footerText[1].textContent = "";
 }
 if (mediaQueryDesktop.matches){
-    $('header img.kick').attr('src', 'img/practise/kick.jpg')
-    $('header img.bjj').attr('src', 'img/practise/bjj.jpg')
+    $('header img.kick').attr('src', 'img/practise/kick.webp')
+    $('header img.bjj').attr('src', 'img/practise/bjj.webp')
 }
 // ###################################################### KONIEC MOBILE TEXT CONTENT ############################################# 
 

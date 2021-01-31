@@ -81,11 +81,12 @@ const quests = document.querySelectorAll('.question')
 
 // ###################################################### SLIDER ABOUT_US ######################################################
 // MOBILE 
-var swiper = new Swiper('.swiper-container', {
+
+  var swiper = new Swiper('.swiper-container', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
-    loop: false,
+    loop: true,
     pagination: {
        el: '.slide-number',
       type: 'custom',
@@ -103,9 +104,10 @@ var swiper = new Swiper('.swiper-container', {
        },
        breakpoints:{
            800:{
-               slidesPerView: 'auto',
-               spaceBetween: 32,
-               loop: false,
+                slidesPerView: 3,
+                spaceBetween: 22,
+                loop: true,
+                centeredSlides: true,
 
                autoplay:{
                    delay: 6000,
@@ -114,29 +116,6 @@ var swiper = new Swiper('.swiper-container', {
            }
        }
   });
-
-  swiper.on('slideChange', function(){
-        setTimeout(function(){
-            // console.log($('.swiper-slide-active').data().id)
-            if($('.swiper-slide-active').data().id === 2){
-             $('.right').addClass('disable')
-            }
-            else{
-                $('.right').removeClass('disable')
-            }
-            if($('.swiper-slide-active').data().id === 0){
-             $('.left').addClass('disable')
-            }
-            else{
-                $('.left').removeClass('disable')
-            }
-            
-        }, 0)
-  })
-
-
-
-
  // #about_us SLIDER WRAP BUTTON
  $('#about_us button').click(function(){
      $('.wrap-text').toggleClass('active')
@@ -174,7 +153,10 @@ if (mediaQueryMobile.matches){
 }
 
 if(mediaQueryDesktop.matches){
-    $("video").attr("src","Ztpromo-1-1.m4v");
+    $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.jpg");
+    $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.png");
+    $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.png");
+
 }
 
 
@@ -202,3 +184,43 @@ $(window).resize(function() {
 });
 
 // KONIEC RE-SIZE REFRESH
+
+// SLIDER HEADER PAGE
+i = 0
+
+// 
+// automatyczna zmiana
+setTimeout(
+    function()
+    {
+        $('header .bg img:nth-of-type(1)').addClass('active');
+
+    }, 100);
+setInterval(
+    function()
+    {
+        $('header img').toggleClass('active');
+        if(i == 0){
+            i++
+        }
+        else{
+            i--
+        }
+
+    }, 10000);
+  
+
+
+
+$('.right').click(function(){
+    if (i == 0){
+        $('header img').toggleClass('active')
+        i++
+    }
+})
+$('.left').click(function(){
+    if (i == 1){
+        $('header img').toggleClass('active')
+        i--
+    }
+})
