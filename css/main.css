@@ -370,6 +370,9 @@ nav.desktop ul li a{
     transition: 0.2s;
     cursor: pointer;
 }
+nav.desktop ul li a:hover{
+    color:  #c0c0c0;
+}
 
 nav.desktop.active ul li a:hover{
     background-color: rgba(0, 0, 0, 0.05);
@@ -385,6 +388,9 @@ nav.desktop.active{
 nav.desktop.active ul li a{
     color: black;
     /* font-size: 15px; */
+}
+nav.desktop.active ul li a:hover{
+    color:  black;
 }
 
 nav.desktop.active img{
