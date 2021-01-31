@@ -105,7 +105,7 @@ const quests = document.querySelectorAll('.question')
        breakpoints:{
            800:{
                 slidesPerView: 3,
-                spaceBetween: 22,
+                spaceBetween: 0,
                 loop: true,
                 centeredSlides: true,
 
