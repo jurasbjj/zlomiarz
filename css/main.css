@@ -777,8 +777,12 @@ header.page-header img.active{
     font-size: 1.6rem;
 }
 
+#schedule .type-schedule{
+    margin: 44px 0px 16px 0;
+    text-align: left;
+}
+
 #schedule .table-schedule{
-    margin-top: 44px;
     width: 100%;
 }
 #schedule .table-schedule tr{
@@ -880,8 +884,13 @@ header.page-header img.active{
     background-color: #2a4a49;
 }
 
-
-
+#schedule .table-schedule tr:not(:nth-of-type(1)) td{
+    opacity: 20%;
+    transition: 0.2s;
+}
+#schedule .table-schedule tr td.active{
+    opacity: 100%;
+}
 
 @media (max-width: 800px){
     #schedule{
