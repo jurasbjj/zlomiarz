@@ -67,7 +67,7 @@ h3{
 
  body{
     /* position: relative; */
-    margin-top: -67px;
+    margin-top: -72px;
     overflow-x: hidden;
 }
 
@@ -328,7 +328,7 @@ nav.desktop .content{
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    height: 67px;
+    height: 72px;
 
 }
 nav.desktop a.home{
@@ -339,7 +339,7 @@ nav.desktop a.home{
     align-items: center;
 }
 nav.desktop img{
-    height: 72%;
+    height: 48px;
     opacity: 100%;
     transition: 0.3s;
     cursor: pointer;
@@ -394,7 +394,7 @@ nav.desktop.active ul li a:hover{
 }
 
 nav.desktop.active img{
-    height: 72%;
+    height: 48px;
     opacity: 100%;
 }
 /* ####################################################### KONIEC NAWIGACJA ######################################################   */
