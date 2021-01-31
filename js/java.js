@@ -224,3 +224,101 @@ $('.left').click(function(){
         i--
     }
 })
+
+
+/// koniec
+
+
+
+    $('.table-schedule td').addClass('active');
+document.getElementById('type-class').addEventListener('change', function (e) {
+    if (e.target.value === "all") {
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr:not(:nth-of-type(1)) td').addClass('active');
+    }
+    if (e.target.value === "bjj-all-type") {
+        console.log('ok')
+        $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+        $('.table-schedule tr:not(:nth-of-type(8)) td').addClass('active');
+        $('.table-schedule tr:nth-of-type(4) td:nth-of-type(6)').removeClass('active');
+      }
+    if (e.target.value === "bjj-beginners") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-beginners').addClass('active');
+    }
+    if (e.target.value === "bjj-all") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-all').addClass('active');
+    }
+    if (e.target.value === "bjj-sparring") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-sparring').addClass('active');
+    }
+    if (e.target.value === "bjj-intermediate") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-intermediate').addClass('active');
+    }
+    if (e.target.value === "bjj-no-gi") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-no-gi').addClass('active');
+    }
+    if (e.target.value === "bjj-advanced") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-advanced').addClass('active');
+    }
+    if (e.target.value === "bjj-kids") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-kids-young, .table-schedule tr td#bjj-kids-old').addClass('active');
+    }
+    if (e.target.value === "bjj-kids-young") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-kids-young').addClass('active');
+    }
+    if (e.target.value === "bjj-kids-old") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#bjj-kids-old').addClass('active');
+    }
+    if (e.target.value === "wrestling") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr td#wrestling').addClass('active');
+    }
+    //kick
+    if (e.target.value === "kick-all-type") {
+      console.log('ok')
+      $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+      $('.table-schedule tr:nth-of-type(8) td').addClass('active');
+      $('.table-schedule tr:nth-of-type(4) td:nth-of-type(6)').addClass('active');
+    }
+    if (e.target.value === "kick-beginners") {
+        console.log('ok')
+        $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+        $('.table-schedule tr td#kick-beginners').addClass('active');
+      }
+    if (e.target.value === "kick-intermediate") {
+        console.log('ok')
+        $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+        $('.table-schedule tr td#kick-intermediate').addClass('active');
+      }
+    if (e.target.value === "kick-circut") {
+        console.log('ok')
+        $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+        $('.table-schedule tr td#kick-circut').addClass('active');
+      }
+    if (e.target.value === "kick-sparring") {
+        console.log('ok')
+        $('.table-schedule tr:not(:nth-of-type(1)) td').removeClass('active');
+        $('.table-schedule tr td#kick-sparring').addClass('active');
+      }
+
+
+  });
