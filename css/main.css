@@ -603,14 +603,14 @@ header.page-header img.active{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.9);
+    transform: scale(0.85);
     transition: 1s;
 }
 .swiper-slide-active{
-    transform: scale(1.1);
+    transform: scale(1);
 }
 .swiper-slide-duplicate-active{
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .swiper-slide img{
@@ -628,7 +628,7 @@ header.page-header img.active{
 
 #about_us .content .arrows{
     margin-top: 32px;
-    transform: translateX(11.7%);
+    transform: translateX(10.7%);
 }
 }
 
