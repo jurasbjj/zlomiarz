@@ -74,10 +74,17 @@ if (mediaQuery.matches){
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
 }
-if (mediaQueryDesktop.matches){
-    $('header img.kick').attr('src', 'img/practise/kick.webp')
-    $('header img.bjj').attr('src', 'img/practise/bjj.webp')
-}
+
+
+const headerImg = document.querySelectorAll('header img')
+const practiseImg = document.querySelectorAll('.img-practise')
+$(window).load(function(){
+    for (let i = 0; i < headerImg.length; i++){
+      if(mediaQueryDesktop.matches){
+        headerImg[i].src = headerImg[i].dataset.src
+      }     
+    }
+})
 // ###################################################### KONIEC MOBILE TEXT CONTENT ############################################# 
 
 
