@@ -9,7 +9,6 @@ $(window).load(function() {
           $(".loader-wrapper").fadeOut();
       }, 500);
 });
-
 // ################################################### KONIEC PRELOADER ###################################################
 
 
@@ -74,8 +73,6 @@ const mediaQueryMobile = window.matchMedia('(max-width: 800px')
 const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
 
-
-
     // swiper init
 var mySwiper = new Swiper('.swiper-container', {
 
@@ -85,10 +82,6 @@ var mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
     loop: true,
     clickable: true,
-    // Disable preloading of all images
-    preloadImages: false,
-    // Enable lazy loading
-    lazy: true,
 
     // swiper licznik
     pagination: {
@@ -217,12 +210,3 @@ $(window).resize(function() {
 });
 
 // ######################################## KONIEC RE-SIZE REFRESH ########################################
-
-// ################################################### LAZY LOADING ###################################################
-const swiperSlideImg = document.querySelectorAll('.swiper-slide img')
-$(window).load(function(){
-    for (let i = 0; i < swiperSlideImg.length; i++){
-        swiperSlideImg[i].src = swiperSlideImg[i].dataset.src     
-    }
-})
-// ################################################### KONIEC LAZY LOADING ###################################################

@@ -11,8 +11,6 @@ $(window).load(function() {
 });
 // ########################################## KONIEC PRELOADER ######################################################
 
-
-
 // ###################################################### SCROLL  ######################################################
 
 // scroll img
@@ -153,6 +151,15 @@ if (mediaQueryMobile.matches){
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
 }
+
+if(mediaQueryDesktop.matches){
+    $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.jpg");
+    $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.jpg");
+    $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.jpg");
+
+}
+
+
 //  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
 
 
