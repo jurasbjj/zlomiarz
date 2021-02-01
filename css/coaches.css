@@ -145,6 +145,16 @@ nav.desktop{
   .swiper-slide-prev img{
     opacity: 0;
   }
+  .swiper-slide-duplicate-active img{
+    width: 100%;
+    opacity: 100%;
+  }
+  .swiper-slide-duplicate-next img{
+    opacity: 20%;
+  }
+  .swiper-slide-duplicate-prev img{
+    opacity: 0;
+  }
 }
 
 
