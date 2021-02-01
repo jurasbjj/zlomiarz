@@ -9,7 +9,281 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- main css -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+    
+    <style>
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--fontSize);
+    -webkit-tap-highlight-color: transparent;
+    /* position: relative; */
+}
+
+
+:root{
+    --primaryColor: #ffffff;
+    --secondaryColor: #F8F8F8;
+    --thirdColor: #EEEEEE;
+    --emptyColor: #C4C4C4;
+    --maxWidth: 1000px;
+    --fontSize: 15px;
+    --elementMargin: 24px;
+    --headerMargin: 40px;
+    --sectionPadding: 80px;
+    --mobilePadding: 32px 16px;
+}
+
+@media(min-width: 800px) and (max-width: 1000px){
+    :root{
+        --maxWidth: 768px;
+        --fontSize: 12px;
+    }
+}
+@media(max-width: 350px){
+    :root{
+        --fontSize: 13px;
+    }
+}
+
+
+/* DOMYŚLNE */
+section{
+    padding: var(--sectionPadding) 0px;
+}
+section:nth-child(odd){
+    background-color: var(--secondaryColor);
+}
+section .content{
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+h1{
+    /* font-size: 2.4rem; */
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+h2{
+    font-size: 1.6rem;
+    font-weight: 500;
+    /* margin: 10px 0; */
+    margin-top: 16px;
+}
+h3{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+ body{
+    /* position: relative; */
+    margin-top: -72px;
+    overflow-x: hidden;
+}
+
+
+
+/* KONIEC DOMYŚLNE */
+
+/* PRELOADER */
+.loader-wrapper{
+    z-index: 1000;
+    background-color: var(--secondaryColor);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    margin-top: 67px;
+    /* visibility: hidden;
+    opacity: 0; */
+}
+
+.loader-wrapper img{
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    animation: rotate 10s infinite both linear;
+    transform: rotate(0deg);
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(720deg)
+    }
+}
+
+
+/* KONIEC PRELOADER */
+
+/* ZĘBATKA TŁO */
+
+.bg, #about_us, #contact, #price{
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-logo{
+    position: absolute;
+    opacity: 5%;
+    -webkit-opacity: 5%;
+}
+
+#about_us .bg-logo{
+    z-index: 1;
+}
+
+#about_us .bg-logo{
+    transform: translate(-50%, -60%);
+}
+
+#price .bg-logo{
+    right: 0%;
+    transform: translate(50%, -60%);
+
+}
+
+.bg .bg-logo{
+    bottom: 0%;
+    transform: translate(-50%, 40%);
+
+}
+
+
+
+/* KONIEC ZĘBATKA TŁO */
+
+
+/* ############################################ NAWIGACJA ######################################################   */
+
+
+@media (min-width: 800px){
+    nav.mobile{
+        display: none;
+    }
+}
+nav.desktop{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+nav.desktop .content{
+    display: flex;
+    flex-direction: row;
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+
+}
+nav.desktop a.home{
+    height: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+nav.desktop img{
+    height: 48px;
+    opacity: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav.desktop ul{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 200px;
+    list-style-type: none;
+}
+
+nav.desktop ul li{
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav.desktop ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: block;;
+    padding: 22.5px 0;
+    width: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+nav.desktop ul li a:hover{
+    color:  #c0c0c0;
+}
+
+nav.desktop.active ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav.desktop.active{
+    background-color: rgba(255, 255, 255, 0.815);
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 0px 14px 2px #0002;
+
+}
+
+nav.desktop.active ul li a{
+    color: black;
+    /* font-size: 15px; */
+}
+nav.desktop.active ul li a:hover{
+    color:  black;
+}
+
+nav.desktop.active img{
+    height: 48px;
+    opacity: 100%;
+}
+/* ####################################################### KONIEC NAWIGACJA ######################################################   */
+
+
+/* ####################################################### HEADER #################################################################   */
+
+header.page-header{
+    height: 80vh;
+}
+header.page-header .bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+header.page-header img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0%;
+    transition: opacity 1.2s, transform 12s linear;
+}
+
+header.page-header img.active{
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 100%;
+}
+
+/* ####################################################### KONIEC HEADER ###########################################   */
+
+    </style>
     <!-- icons -->
     <!-- <script src="//code.iconify.design/1/1.0.7/iconify.min.js"></script> -->
     <!-- <script src="//kit.fontawesome.com/9ff07957db.js" crossorigin="anonymous"></script> -->
