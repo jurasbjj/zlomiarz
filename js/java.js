@@ -110,7 +110,7 @@ const quests = document.querySelectorAll('.question')
                 centeredSlides: true,
 
                autoplay:{
-                   delay: 6000,
+                   delay: 1000,
                },
 
            }

@@ -101,7 +101,7 @@ var mySwiper = new Swiper('.swiper-container', {
         breakpoints: {
         800: {
             spaceBetween: 0,
-            loop: false,
+            loop: true,
 
             pagination: {
                 el: '.pagination',
