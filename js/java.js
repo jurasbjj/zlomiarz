@@ -161,19 +161,19 @@ const headerImg = document.querySelectorAll('.page-header img')
 const videoYouTube = document.querySelector('.video')
 $(window).load(function(){
     videoYouTube.src = videoYouTube.dataset.src
+    if(mediaQueryDesktop.matches){
+      headerImg[0].src = headerImg[0].dataset.src
+      headerImg[1].src = headerImg[1].dataset.src
+    }     
     for (let i = 0; i < swiperSlideImg.length; i++){
       if(mediaQueryMobile.matches){
         swiperSlideImg[i].src = swiperSlideImg[i].dataset.srcm
       }     
       if(mediaQueryDesktop.matches){
         swiperSlideImg[i].src = swiperSlideImg[i].dataset.src
-        headerImg[i].src = headerImg[i].dataset.src
       }     
     }
-    if(mediaQueryDesktop.matches){
-      headerImg[0].src = headerImg[0].dataset.src
-      headerImg[1].src = headerImg[1].dataset.src
-    }     
+
 })
 
 // ################################################### KONIEC LAZY LOADING ###################################################
