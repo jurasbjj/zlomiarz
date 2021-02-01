@@ -10,11 +10,9 @@
 
     <!-- main css -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- swiper css -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- icons -->
-    <script src="//code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="//kit.fontawesome.com/9ff07957db.js" crossorigin="anonymous"></script>
+    <!-- <script src="//code.iconify.design/1/1.0.7/iconify.min.js"></script> -->
+    <!-- <script src="//kit.fontawesome.com/9ff07957db.js" crossorigin="anonymous"></script> -->
     <script type="module" src="//unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="//unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
 
@@ -70,14 +68,13 @@
     <div class="bg">
       <img class="kick" data-src="img/practise/bjj.webp" alt="">
       <img class="bjj" data-src="img/practise/kick.webp" alt="">
-      <div class="fade-img"></div>
     </div>
   </header>
   
 
 
   <section id="about_us">
-    <img class="bg-logo" src="img/LOGO_ZT_BG.png" alt=""> <!-- bg zębatka -->
+    <img class="bg-logo" data-src="img/LOGO_ZT_BG.png" alt=""> <!-- bg zębatka -->
     </div>
     <div class="content">
       <div class="post">
@@ -89,7 +86,7 @@
         Jesteśmy klubem sportów walki, a na naszej macie odbywają się treningi <b>brazylijskiego jiu-jitsu</b> oraz <b>kickboxingu</b>. Trenerami są znakomici zawodnicy, odnoszący sukcesy zarówno w kraju jak i na scenie międzynarodowej. Nasz klub jest przyjaznym miejscem dla każdego, kto chce zacząć swoją przygodę ze sportami walki oraz dla doświadczonych zawodników z wieloletnim stażem treningowym. Jeżeli chcesz dołączyć do naszego klubu, to nie ma nic prostszego - wpadaj na trening.
         </div>
         <div class="video-container">
-          <iframe class="video" data-src="https://www.youtube.com/embed/i2HNNc1AdMA" frameborder="0" allowfullscreen></iframe>
+          <iframe class="video" src="https://www.youtube.com/embed/i2HNNc1AdMA" frameborder="0" allowfullscreen></iframe>
       </div>
         <div class="wrap-text">
           <h3>Historia klubu</h3>
@@ -102,18 +99,9 @@
           <!-- Swiper -->
       <div class="swiper-container mobile">
         <div class="swiper-wrapper">
-          <div data-id="0" class="swiper-slide">
-            <img data-src="img/about_us/onas1.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
-          </div>
-          <div data-id="0" class="swiper-slide">
-            <img data-src="img/about_us/onas2.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
-          </div>
-          <div data-id="0" class="swiper-slide">
-            <img data-src="img/about_us/onas3.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
-          </div>
+          <div id="s1" data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
+          <div id="s2" data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>
+          <div id="s3" data-id="2" class="swiper-slide"><img src="img/about_us/mobile/onas3.webp" alt=""></div>
         </div>
         <div class="arrows">
           <img class="left slider-arrow" src="img/svg/arrow-left.svg" alt="">
@@ -227,7 +215,7 @@
   </section>
   
   <section id="price">
-    <img class="bg-logo" src="img/LOGO_ZT_BG.png" alt=""> <!-- bg zębatka -->
+    <img class="bg-logo" data-src="img/LOGO_ZT_BG.png" alt=""> <!-- bg zębatka -->
     <div class="content">
       <header>
         <h1>Cennik</h1>
@@ -436,7 +424,7 @@
   </section>
  
 <div class="bg">  <!-- bg zębatka -->
-  <img class="bg-logo" src="img/LOGO_ZT_BG.png" alt=""> 
+  <img class="bg-logo" data-src="img/LOGO_ZT_BG.png" alt=""> 
   <section id="contact">
     <div class="content">
       <header> 
@@ -498,7 +486,7 @@
  <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap"
   type="text/javascript"></script> 
 <!-- Swiper JS -->
-<script src="js/swiper-bundle.min.js"></script>
+<script  src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- main js-->
 <script src="js/java.js"></script>
 
