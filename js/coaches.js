@@ -12,17 +12,6 @@ $(window).load(function() {
 
 // ################################################### KONIEC PRELOADER ###################################################
 
-// ################################################### LAZY LOADING ###################################################
-const swiperSlideImg = document.querySelectorAll('.swiper-slide img')
-$(window).load(function(){
-    for (let i = 0; i < swiperSlideImg.length; i++){
-        swiperSlideImg[i].src = swiperSlideImg[i].dataset.src     
-    }
-})
-
-// ################################################### KONIEC LAZY LOADING ###################################################
-
-
 
 // ###################################################### SCROLL ###################################################### 
     // IMG powrót
@@ -228,3 +217,12 @@ $(window).resize(function() {
 });
 
 // ######################################## KONIEC RE-SIZE REFRESH ########################################
+
+// ################################################### LAZY LOADING ###################################################
+const swiperSlideImg = document.querySelectorAll('.swiper-slide img')
+$(window).load(function(){
+    for (let i = 0; i < swiperSlideImg.length; i++){
+        swiperSlideImg[i].src = swiperSlideImg[i].dataset.src     
+    }
+})
+// ################################################### KONIEC LAZY LOADING ###################################################

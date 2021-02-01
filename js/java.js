@@ -157,6 +157,7 @@ if (mediaQueryMobile.matches){
 
 // ################################################### LAZY LOADING ###################################################
 const swiperSlideImg = document.querySelectorAll('.swiper-slide img')
+const headerImg = document.querySelectorAll('.page-header img')
 $(window).load(function(){
     for (let i = 0; i < swiperSlideImg.length; i++){
       if(mediaQueryMobile.matches){
@@ -164,8 +165,13 @@ $(window).load(function(){
       }     
       if(mediaQueryDesktop.matches){
         swiperSlideImg[i].src = swiperSlideImg[i].dataset.src
+        headerImg[i].src = headerImg[i].dataset.src
       }     
     }
+    if(mediaQueryDesktop.matches){
+      headerImg[0].src = headerImg[0].dataset.src
+      headerImg[1].src = headerImg[1].dataset.src
+    }     
 })
 
 // ################################################### KONIEC LAZY LOADING ###################################################
