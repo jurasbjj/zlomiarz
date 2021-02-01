@@ -325,3 +325,11 @@ document.getElementById('type-class').addEventListener('change', function (e) {
 
 
   });
+
+
+  window.onload = function() {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/i2HNNc1AdMA'
+    document.querySelector('.video-container').appendChild(iframe);
+    document.querySelector('iframe').classList.add('.video')
+};
