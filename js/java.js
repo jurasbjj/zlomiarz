@@ -158,7 +158,9 @@ if (mediaQueryMobile.matches){
 // ################################################### LAZY LOADING ###################################################
 const swiperSlideImg = document.querySelectorAll('.swiper-slide img')
 const headerImg = document.querySelectorAll('.page-header img')
+const videoYouTube = document.querySelector('.video')
 $(window).load(function(){
+    videoYouTube.src = videoYouTube.dataset.src
     for (let i = 0; i < swiperSlideImg.length; i++){
       if(mediaQueryMobile.matches){
         swiperSlideImg[i].src = swiperSlideImg[i].dataset.srcm
