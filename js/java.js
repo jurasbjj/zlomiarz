@@ -360,3 +360,4 @@ document.getElementById('type-class').addEventListener('change', function (e) {
   //     }, 'xml');
 
   // });
+

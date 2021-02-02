@@ -281,11 +281,10 @@ nav.desktop.active img{
         opacity: 70%;
     }
 
-    #about_us .ratio-16-9 .play-btn:hover{
+    #about_us .ratio-16-9:hover .play-btn{
         cursor: pointer;
         opacity: 90%;
     }
-
 
     #about_us iframe{
         display: block;

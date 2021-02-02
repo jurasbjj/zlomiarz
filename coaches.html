@@ -16,14 +16,38 @@
     <script type="module" src="//unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="//unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
 
-    
+    <style>
+      /* PRELOADER */
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(720deg)
+    }
+}
+/* loader */
+@media(max-width: 800px){
+    .loader-wrapper{
+        margin-top: 0 !important;
+    }
+
+    .loader-wrapper img{
+        width: 100px !important;
+        height: 100px !important;
+        top: calc(50% - 50px) !important;
+        left: calc(50% - 50px) !important;
+
+    }
+}
+    </style>
     
 </head>
 <body>
   <!-- PRELOADER  -->
- <div class="loader-wrapper"> 
-  <img src="img/LOGO_ZT_MINI.png" alt="">    
-</div> 
+  <div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;" > 
+    <img src="img/LOGO_ZT_MINI.png" alt="" style="  width: 150px;height: 150px;position: fixed;top: calc(50% - 75px);left: calc(50% - 75px);animation: rotate 10s infinite both linear;transform: rotate(0deg);">    
+  </div> 
 
   <!-- cień nawigacji mobilnej -->
 <span class="fade"></span> 

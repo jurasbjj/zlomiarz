@@ -16,27 +16,6 @@
     <style>
 
 /* PRELOADER */
-.loader-wrapper{
-    z-index: 1000;
-    background-color: var(--secondaryColor);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    margin-top: 72px;
-    /* visibility: hidden;
-    opacity: 0; */
-}
-
-.loader-wrapper img{
-    width: 150px;
-    height: 150px;
-    position: fixed;
-    top: calc(50% - 75px);
-    left: calc(50% - 75px);
-    animation: rotate 10s infinite both linear;
-    transform: rotate(0deg);
-}
-
 @keyframes rotate{
     0%{
         transform: rotate(0deg)
@@ -45,22 +24,20 @@
         transform: rotate(720deg)
     }
 }
-
 /* loader */
 @media(max-width: 800px){
     .loader-wrapper{
-        margin-top: 0;
+        margin-top: 0 !important;
     }
 
     .loader-wrapper img{
-        width: 100px;
-        height: 100px;
-        top: calc(50% - 50px);
-        left: calc(50% - 50px);
+        width: 100px !important;
+        height: 100px !important;
+        top: calc(50% - 50px) !important;
+        left: calc(50% - 50px) !important;
 
     }
 }
-
 
 /* KONIEC PRELOADER */
 
@@ -97,8 +74,8 @@ header.page-header img.active{
 <body>
 
   <!-- PRELOADER  -->
- <div class="loader-wrapper"> 
-  <img src="img/LOGO_ZT_MINI.png" alt="">    
+ <div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;" > 
+  <img src="img/LOGO_ZT_MINI.png" alt="" style="  width: 150px;height: 150px;position: fixed;top: calc(50% - 75px);left: calc(50% - 75px);animation: rotate 10s infinite both linear;transform: rotate(0deg);">    
 </div> 
 
 <!-- cień nawigacji mobilnej -->
@@ -162,9 +139,6 @@ header.page-header img.active{
         <div class="text">
         Jesteśmy klubem sportów walki, a na naszej macie odbywają się treningi <b>brazylijskiego jiu-jitsu</b> oraz <b>kickboxingu</b>. Trenerami są znakomici zawodnicy, odnoszący sukcesy zarówno w kraju jak i na scenie międzynarodowej. Nasz klub jest przyjaznym miejscem dla każdego, kto chce zacząć swoją przygodę ze sportami walki oraz dla doświadczonych zawodników z wieloletnim stażem treningowym. Jeżeli chcesz dołączyć do naszego klubu, to nie ma nic prostszego - wpadaj na trening.
         </div>
-        <!-- <div class="video-container">
-          <iframe class="video lazyload" data-src="https://www.youtube.com/embed/i2HNNc1AdMA" frameborder="0"></iframe>
-      </div> -->
       <div class="video-container">
         <div class="ratio-16-9 lazyload" data-youtube="i2HNNc1AdMA" data-ytparams="ssss">
           <img class="play-btn" src="img/svg/YouTube_dark_icon_(2017).svg" alt="">     
