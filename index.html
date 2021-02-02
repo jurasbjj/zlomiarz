@@ -9,85 +9,11 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- main css -->
+    
     <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="css/main.css"></noscript>
     
     <style>
-
-*{
-    margin: 0;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--fontSize);
-    -webkit-tap-highlight-color: transparent;
-    /* position: relative; */
-}
-
-
-:root{
-    --primaryColor: #ffffff;
-    --secondaryColor: #F8F8F8;
-    --thirdColor: #EEEEEE;
-    --emptyColor: #C4C4C4;
-    --maxWidth: 1000px;
-    --fontSize: 15px;
-    --elementMargin: 24px;
-    --headerMargin: 40px;
-    --sectionPadding: 80px;
-    --mobilePadding: 32px 16px;
-}
-
-@media(min-width: 800px) and (max-width: 1000px){
-    :root{
-        --maxWidth: 768px;
-        --fontSize: 12px;
-    }
-}
-@media(max-width: 350px){
-    :root{
-        --fontSize: 13px;
-    }
-}
-
-
-/* DOMYŚLNE */
-section{
-    padding: var(--sectionPadding) 0px;
-}
-section:nth-child(odd){
-    background-color: var(--secondaryColor);
-}
-section .content{
-    max-width: var(--maxWidth);
-    margin: 0 auto;
-}
-h1{
-    /* font-size: 2.4rem; */
-    font-size: 4rem;
-    font-weight: 700;
-    margin: 0;
-}
-h2{
-    font-size: 1.6rem;
-    font-weight: 500;
-    /* margin: 10px 0; */
-    margin-top: 16px;
-}
-h3{
-    font-size: 1rem;
-    font-weight: 700;
-}
-
- body{
-    /* position: relative; */
-    margin-top: -72px;
-    overflow-x: hidden;
-}
-
-
-
-/* KONIEC DOMYŚLNE */
 
 /* PRELOADER */
 .loader-wrapper{
@@ -96,7 +22,7 @@ h3{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    margin-top: 67px;
+    margin-top: 72px;
     /* visibility: hidden;
     opacity: 0; */
 }
@@ -120,141 +46,23 @@ h3{
     }
 }
 
+/* loader */
+@media(max-width: 800px){
+    .loader-wrapper{
+        margin-top: 0;
+    }
 
-/* KONIEC PRELOADER */
+    .loader-wrapper img{
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
 
-/* ZĘBATKA TŁO */
-
-.bg, #about_us, #contact, #price{
-    position: relative;
-    overflow: hidden;
-}
-
-.bg-logo{
-    position: absolute;
-    opacity: 5%;
-    -webkit-opacity: 5%;
-}
-
-#about_us .bg-logo{
-    z-index: 1;
-}
-
-#about_us .bg-logo{
-    transform: translate(-50%, -60%);
-}
-
-#price .bg-logo{
-    right: 0%;
-    transform: translate(50%, -60%);
-
-}
-
-.bg .bg-logo{
-    bottom: 0%;
-    transform: translate(-50%, 40%);
-
-}
-
-
-
-/* KONIEC ZĘBATKA TŁO */
-
-
-/* ############################################ NAWIGACJA ######################################################   */
-
-
-@media (min-width: 800px){
-    nav.mobile{
-        display: none;
     }
 }
-nav.desktop{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    transition: 0.5s;
-    z-index: 3;
-}
 
-nav.desktop .content{
-    display: flex;
-    flex-direction: row;
-    max-width: var(--maxWidth);
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    height: 72px;
 
-}
-nav.desktop a.home{
-    height: 100%;
-    transition: 0.3s;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-nav.desktop img{
-    height: 48px;
-    opacity: 100%;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-nav.desktop ul{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 200px;
-    list-style-type: none;
-}
-
-nav.desktop ul li{
-    flex-grow: 1;
-    text-align: center;
-}
-
-nav.desktop ul li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 1.2rem;
-    display: block;;
-    padding: 22.5px 0;
-    width: 100%;
-    transition: 0.2s;
-    cursor: pointer;
-}
-nav.desktop ul li a:hover{
-    color:  #c0c0c0;
-}
-
-nav.desktop.active ul li a:hover{
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-nav.desktop.active{
-    background-color: rgba(255, 255, 255, 0.815);
-    backdrop-filter: blur(3px);
-    box-shadow: 0px 0px 14px 2px #0002;
-
-}
-
-nav.desktop.active ul li a{
-    color: black;
-    /* font-size: 15px; */
-}
-nav.desktop.active ul li a:hover{
-    color:  black;
-}
-
-nav.desktop.active img{
-    height: 48px;
-    opacity: 100%;
-}
-/* ####################################################### KONIEC NAWIGACJA ######################################################   */
-
+/* KONIEC PRELOADER */
 
 /* ####################################################### HEADER #################################################################   */
 
@@ -361,6 +169,7 @@ header.page-header img.active{
         Jesteśmy klubem sportów walki, a na naszej macie odbywają się treningi <b>brazylijskiego jiu-jitsu</b> oraz <b>kickboxingu</b>. Trenerami są znakomici zawodnicy, odnoszący sukcesy zarówno w kraju jak i na scenie międzynarodowej. Nasz klub jest przyjaznym miejscem dla każdego, kto chce zacząć swoją przygodę ze sportami walki oraz dla doświadczonych zawodników z wieloletnim stażem treningowym. Jeżeli chcesz dołączyć do naszego klubu, to nie ma nic prostszego - wpadaj na trening.
         </div>
         <div class="video-container">
+          <iframe class="video lazyload" data-src="https://www.youtube.com/embed/i2HNNc1AdMA" frameborder="0"></iframe>
       </div>
         <div class="wrap-text">
           <h3>Historia klubu</h3>
@@ -708,7 +517,7 @@ header.page-header img.active{
 
       <div class="info">
         <div class="card">
-        <img src="img/LOGO_ZT_GDA-1.png" alt="">
+        <img class="desktop lazylaod" data-src="img/LOGO_ZT_GDA-1.png" alt="">
           <span>+ 48 691 839 697</span>
           <span>zlomiarzteamgdansk@gmail.com</span>
           <span>ul. Słowackiego 4, 80-001 Gdańsk</span>
@@ -719,7 +528,7 @@ header.page-header img.active{
           </span>
         </div>
         <div class="card mobile">
-        <img src="img/LOGO_ZT_GDA-1.png" alt="">
+        <img class="lazyload" data-src="img/LOGO_ZT_GDA-1.png" alt="">
         <span><a href="tel:+48691839697">+ 48 691 839 697</a></span>
         <span><a href="mailto:zlomiarzteamgdansk@gmail.com">zlomiarzteamgdansk@gmail.com</a></span>
         <span><a href="//www.google.com/maps/place/Z%C5%82omiarz+Team+Gda%C5%84sk/@54.380731,18.5958,16z/data=!4m5!3m4!1s0x0:0xd7453f3e92dd7d19!8m2!3d54.380731!4d18.5958?hl=pl">ul. Słowackiego 4, 80-001 Gdańsk</a></span>
@@ -730,8 +539,7 @@ header.page-header img.active{
           </span>
         </div>
     
-          <div id="map"></div>
-        <!-- <iframe src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2323.65560724533!2d18.593611315755005!3d54.380734104428676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd74ea2e9ed0b1%3A0xd7453f3e92dd7d19!2sZ%C5%82omiarz%20Team%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1608633253421!5m2!1spl!2spl"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+          <div class="lazylaod" id="map"></div>
       </div>
     
     </div>
@@ -763,6 +571,7 @@ header.page-header img.active{
 <script  src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- main js-->
 <script src="js/java.js"></script>
+<script src="js/lazysizes.min.js"></script>
 
 
     

@@ -110,7 +110,7 @@ const quests = document.querySelectorAll('.question')
                 centeredSlides: true,
 
                autoplay:{
-                   delay: 1000,
+                   delay: 6000,
                },
 
            }
@@ -157,9 +157,12 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.jpg");
     $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.jpg");
 
-    $(".page-header .kick").attr("src", $(".page-header .kick").data().src)
-    $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src)
-    $(".bg-logo").attr("src", $(".bg-logo").data().src)
+    $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
+    $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
+    $(".bg-logo").attr("src", $(".bg-logo").data().src);
+    $(".card .desktop").attr("src", $(".card .desktop").data().src);
+
+    
 }
 
 
@@ -327,9 +330,3 @@ document.getElementById('type-class').addEventListener('change', function (e) {
   });
 
 
-  window.onload = function() {
-    var iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/i2HNNc1AdMA'
-    document.querySelector('.video-container').appendChild(iframe);
-    document.querySelector('iframe').classList.add('.video')
-};
