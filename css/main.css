@@ -257,12 +257,32 @@ nav.desktop.active img{
 
 }
 @media(min-width: 800px){
-    #about_us .video-container {
+    #about_us .ratio-16-9 {
         position: relative;
         flex-basis: 45%;
         padding-bottom:25.3%;
+        position: relative;
         overflow: hidden;
+        background-size: 100% 100%;
+        background-position: center;
+        cursor: pointer;
     }
+    #about_us .ratio-16-9 .play-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20%;
+        transition: 0.2s;
+        opacity: 70%;
+    }
+
+    #about_us .ratio-16-9 .play-btn:hover{
+        cursor: pointer;
+        opacity: 90%;
+    }
+
+
     #about_us iframe{
         display: block;
         position: absolute;
@@ -323,7 +343,8 @@ nav.desktop.active img{
     letter-spacing: 1px;
 }
 #about_us button .arrow{
-    font-size: 12px;
+    width: 12px;
+    height: 12px;
 }
 
 #about_us button:hover{
@@ -671,11 +692,12 @@ tbody{
     padding: 0;
 }
 
-#faq ion-icon{
-    font-size: 20px;
+#faq .arrow{
+    width: 20px;
+    height: 20px;
 }
 
-#faq .question.active ion-icon{
+#faq .question.active .arrow{
     transform: rotate(180deg);
 }
 
