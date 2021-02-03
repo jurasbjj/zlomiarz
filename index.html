@@ -557,6 +557,23 @@ header.page-header img.active{
 <script src="js/lazysizes.min.js"></script>
 <script src="js/ls.video-embed.min.js"></script>
 
+<script>
+      var fired = false;
+    $(window).scroll(function() {
+       var hT = $('#map').offset().top,
+           hH = $('#map').outerHeight(),
+           wH = $(window).height(),
+           wS = $(this).scrollTop();
+           wB = hT+hH-wH;
+        if (wS > wB  && fired === false ){
+            console.log('This will happen only once'); 
+            fired = true;
+            $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap', function( google, textStatus, jqxhr ) {
+                initialize(); 
+            });   
+       }
+    });
+</script>
     
 </body>
 </html>
