@@ -544,7 +544,7 @@ header.page-header img.active{
 <!-- jquery-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- google maps js -->
-<script src="js/google_maps.js"></script>
+<!-- <script src="js/google_maps.js"></script> -->
 <!-- Swiper JS -->
 <script  src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- main js-->
@@ -565,6 +565,9 @@ header.page-header img.active{
             console.log('This will happen only once'); 
             fired = true;
             $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap', function( google, textStatus, jqxhr ) {
+                
+            });   
+            $.getScript( 'js/google_maps.js', function( google, textStatus, jqxhr ) {
                 
             });   
        }
