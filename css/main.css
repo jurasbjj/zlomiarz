@@ -748,6 +748,9 @@ tbody{
     padding: 13px 16px;
     font-size: 0.95rem;
 }
+#contact .card span:nth-of-type(3){
+    padding-left: 8px;
+}
 #contact .card img{
     margin: 56px 0 28px 0;
 }
@@ -761,13 +764,14 @@ tbody{
     color: black;
 }
 #contact .card span:nth-of-type(1)::before{
-    content: url('https://api.iconify.design/clarity:phone-handset-solid.svg?height=20');
+    content: url('../img/svg/phone.svg');
 }
 #contact .card span:nth-of-type(2)::before{
-    content: url('https://api.iconify.design/ic:baseline-mail.svg?height=20');
+    content: url('../img/svg/mail.svg');
 }
 #contact .card span:nth-of-type(3)::before{
-    content: url('https://api.iconify.design/gridicons:location.svg?height=20');
+    content: url('../img/svg/location.svg');
+    left: -10px;
 }
 #contact .card span:nth-last-of-type(2){
     font-weight: 700;
