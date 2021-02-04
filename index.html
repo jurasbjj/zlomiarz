@@ -568,12 +568,13 @@ header.page-header img.active{
             $.getScript( 'js/google_maps.js', function( google, textStatus, jqxhr ) {
                 
               });   
-            $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap', function( google, textStatus, jqxhr ) {
-                
+            $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8', function( google, textStatus, jqxhr ) {
+              initMap(); 
             });   
 
        }
     });
+
 </script>
     
 </body>
