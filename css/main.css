@@ -250,14 +250,15 @@ nav.desktop.active img{
     
 }
 #about_us .content .post .text{
-    flex-basis: 50%;
     line-height: 30px;
     z-index: 1;
     /* margin-top: 16px; */
-    
-
 }
+
 @media(min-width: 800px){
+    #about_us .content .post .text{
+        flex-basis: 50%;
+    }
     #about_us .video-container{
         flex-basis: 42.5%;
     }
@@ -1117,6 +1118,7 @@ footer .social-link{
         flex-direction: column;
         align-items: center;
         order: 2;
+        width: 100%;
     }
     #about_us .post .slider{
         display: none;
