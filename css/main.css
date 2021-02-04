@@ -7,8 +7,10 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+
     font-size: var(--fontSize);
     -webkit-tap-highlight-color: transparent;
+    /* position: relative; */
 }
 
 :root{
@@ -49,6 +51,7 @@ section .content{
     margin: 0 auto;
 }
 h1{
+    /* font-size: 2.4rem; */
     font-size: 4rem;
     font-weight: 700;
     margin: 0;
@@ -56,6 +59,7 @@ h1{
 h2{
     font-size: 1.6rem;
     font-weight: 500;
+    /* margin: 10px 0; */
     margin-top: 16px;
 }
 h3{
@@ -64,6 +68,8 @@ h3{
 }
 
  body{
+    /* position: relative; */
+    margin-top: -72px;
     overflow-x: hidden;
 }
 
@@ -112,38 +118,46 @@ h3{
 
 
 /* ############################################ NAWIGACJA ######################################################   */
-nav{
-    position: fixed;
+
+
+@media (min-width: 800px){
+    nav.mobile{
+        display: none;
+    }
+}
+nav.desktop{
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
-    right: 0;
-    left: 0;
-    z-index: 3;
     transition: 0.5s;
+    z-index: 3;
 }
 
-nav .content{
+nav.desktop .content{
     display: flex;
+    flex-direction: row;
     max-width: var(--maxWidth);
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     height: 72px;
-} 
-nav a.home{
+
+}
+nav.desktop a.home{
     height: 100%;
     transition: 0.3s;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
-nav img{
+nav.desktop img{
     height: 48px;
     opacity: 1;
     transition: 0.3s;
     cursor: pointer;
 }
 
-nav ul{
+nav.desktop ul{
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -152,12 +166,12 @@ nav ul{
     list-style-type: none;
 }
 
-nav ul li{
+nav.desktop ul li{
     flex-grow: 1;
     text-align: center;
 }
 
-nav ul a{
+nav.desktop ul li a{
     text-decoration: none;
     color: white;
     font-weight: 500;
@@ -168,136 +182,32 @@ nav ul a{
     transition: 0.2s;
     cursor: pointer;
 }
-nav ul li a:hover{
+nav.desktop ul li a:hover{
     color:  #c0c0c0;
 }
 
-nav.active ul li a:hover{
+nav.desktop.active ul li a:hover{
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-nav.active{
+nav.desktop.active{
     background-color: rgba(255, 255, 255, 0.815);
     backdrop-filter: blur(3px);
     box-shadow: 0px 0px 14px 2px #0002;
 
 }
 
-nav.active ul li a{
+nav.desktop.active ul li a{
     color: black;
     /* font-size: 15px; */
 }
-nav.active ul li a:hover{
+nav.desktop.active ul li a:hover{
     color:  black;
 }
 
-.fade{
-    visibility: hidden;
-}
-
-@media(max-width: 800px){
-    nav{
-        top: 0;
-        box-shadow: 0px 0px 14px 2px #0002;
-    }
-    nav .content{
-        height: auto;
-        flex-direction: column;
-        background-color: #F8F8F8;
-    }
-    nav .logo{
-        height: 64px;
-        padding: 0 16px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-
-    }
-    nav img{
-        height: 70%;
-    }
-    nav ul{
-        flex-direction: column;
-        justify-content: flex-start;
-        background-color: white;
-        z-index: 1;
-        max-height: 0;
-        transition: 0.6s;
-        margin-left: 0;
-        width: 100%;
-        overflow: hidden;
-    }
-    nav ul li a{
-        text-align: left;
-        padding: 23px;
-        color: black;
-        font-size: 1rem;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        font-weight: 400;
-
-    }
-    nav ul li a:hover{
-        background-color: rgba(0, 0, 0, 0.05);
-        color: black;
-    }
-    nav.active ul{
-        max-height: 800px;
-    }
-
- /* BURGER */ 
-nav .burger{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25px;
-    width: 32px;
-    transition: 0.1s;
-    cursor: pointer;
-}
-nav .burger span{
-    display: block;
-    width: 32px;
-    height: 3px;
-    background-color: black;
-    position: relative;
-    top: 0;
-    transition: top 0.1s 0.1s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
-}
-nav.active .burger{
-    transform: rotate(90deg);
-}
-nav.active .burger span:nth-child(1){
-    top: calc(50% - 3px/2);
-    transform: rotate(45deg);
-}
-nav.active .burger span:nth-child(3){
-    top: calc(-50% + 3px/2);
-    transform: rotate(-45deg);
-}
-nav.active .burger span:nth-child(2){
-    opacity: 0;
-}
-
-/* FADE */ 
-.fade{
-    display: block;
-    height: 100vh;
-    width: 100vw;
-    background-color: transparent;
-    position: fixed;
-    top: 0; 
-    z-index: 3;
-    visibility: hidden;
-    transition: 0.3s;
-}
-.fade.active{
-    visibility: visible;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-
+nav.desktop.active img{
+    height: 48px;
+    opacity: 1;
 }
 /* ####################################################### KONIEC NAWIGACJA ######################################################   */
 
@@ -976,17 +886,17 @@ footer .social-link{
         display: none !important;
     }
 
-    nav{
+    nav.desktop{
         width: 100%;
         position: fixed;
     }
-    nav img{
+    nav.desktop img{
         opacity: 1;
     }
-    nav img{
+    nav.desktop img{
         height: 80%;
     }
-    nav.active img{
+    nav.desktop.active img{
         height: 80%;
     }
 
@@ -1041,6 +951,135 @@ footer .social-link{
         display: none;
     }
 }
+
+/* nav */
+@media (max-width: 800px){
+    nav.desktop{
+        display: none;
+    }
+    .fade{
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        background-color: transparent;
+        position: fixed;
+        top: 0; 
+        z-index: 3;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .fade.active{
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    nav.mobile{
+        display: flex;
+        flex-direction: column;
+        max-height: auto;
+        overflow: hidden;
+        transition: 0.6s;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+        box-shadow: 0px 0px 14px 2px #0002;
+    }
+
+    nav.mobile .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        z-index: 2;
+        background-color: #F8F8F8;
+        height: 64px;
+
+    }
+    div.logoImg{
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav.mobile img{
+        height: 70%;
+        cursor: pointer;
+    }
+
+    nav.mobile ul{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        text-align: left;
+        list-style-type: none;
+        z-index: 1;
+        max-height: 0;
+        transition: 0.6s;
+    }
+
+
+    nav.mobile ul li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 23px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: black;
+    }
+
+    nav.mobile ul li a:hover{
+        background-color: rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+
+    nav.mobile.active ul{
+        max-height: 800px;
+    }
+
+
+
+    /* BURGER */
+    nav.mobile .burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 25px;
+        width: 32px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+    nav.mobile.active .burger{
+        transform: rotate(90deg);
+    }
+    
+    nav.mobile .burger span{
+        display: block;
+        width: 32px;
+        height: 3px;
+        background-color: black;
+        position: relative;
+        top: 0;
+        transition: top 0.1s 0.1s, transform 0.1s 0.2s, opacity 0.1s 0.1s;
+    }
+    nav.mobile.active .burger span:nth-child(1){
+        top: calc(50% - 3px/2);
+        transform: rotate(45deg);
+    }
+    nav.mobile.active .burger span:nth-child(3){
+        top: calc(-50% + 3px/2);
+        transform: rotate(-45deg);
+    }
+    nav.mobile.active .burger span:nth-child(2){
+        opacity: 0;
+    }
+    
+}
+
 /* header */ 
 @media (max-width: 800px){
     header.page-header{
