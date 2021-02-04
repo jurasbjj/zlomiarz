@@ -7,18 +7,21 @@ $(window).load(function() {
       function()
       {
           $(".loader-wrapper").fadeOut();
-      }, 400);
+      }, 300);
 });
 // ########################################## KONIEC PRELOADER ######################################################
 
 // ###################################################### SCROLL  ######################################################
+const mediaQueryMobile = window.matchMedia('(max-width: 800px')
+const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
 
 // scroll img
+
 $('nav img').click(function(){
     $('html, body').animate({
     scrollTop: $('body').offset().top
 }, 0);
-$('nav.mobile, .fade').removeClass('active')
+$('nav, .fade').removeClass('active')
 })
 
 // scroll sekcji 
@@ -37,28 +40,31 @@ $(document).ready(function () {
     });
   });
 
-// desktop aktywacja nawigacji
-$(window).scroll(function () {
-   if ($(window).scrollTop() > 64) {
-      $('nav.desktop').addClass('active');
-   } else {
-      $('nav.desktop').removeClass('active');
-   }
-});
-
+ //desktop aktywacja nawigacji
+ if(mediaQueryDesktop.matches){
+ $(window).scroll(function () {
+    if ($(window).scrollTop() > 64) {
+       $('nav').addClass('active');
+    } else {
+       $('nav').removeClass('active');
+    }
+ });
+}
+if(mediaQueryMobile.matches){
   //burger
 $('.burger, fade').click(function(){
-    $('nav.mobile, .fade').toggleClass('active')
+    $('nav, .fade').toggleClass('active')
  })
  
  $('.fade').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
+    $('nav, .fade').removeClass('active')
  })
 
   // usuwanie cienia
  $('nav li a').click(function(){
-    $('nav.mobile, .fade').removeClass('active')
+    $('nav, .fade').removeClass('active')
  })
+}
 
 // ###################################################### KONIEC SCROLL ######################################################
 
@@ -135,8 +141,7 @@ const quests = document.querySelectorAll('.question')
 
 
 //  ###################################################### MOBILE TEXT CONTENT ###################################################
-const mediaQueryMobile = window.matchMedia('(max-width: 800px')
-const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
+
 const h2 = document.querySelectorAll('h2')
 const h1 = document.querySelectorAll('h1')
 const footerText = document.querySelectorAll('footer span')
