@@ -1098,6 +1098,12 @@ footer .social-link{
         width: 100% !important;
       }
 
+      .swiper-slide{
+          width: 100% !important;
+          height: calc(100vw / 1.333333333333333333) !important;
+
+      }
+
       .swiper-slide img{
           width: 100%;
           opacity: 1;
