@@ -69,7 +69,7 @@ h3{
 
  body{
     /* position: relative; */
-    /* margin-top: -72px; */
+    margin-top: -72px;
     overflow-x: hidden;
 }
 
@@ -126,10 +126,9 @@ h3{
     }
 }
 nav.desktop{
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
-    right: 0;
-    left: 0;
     transition: 0.5s;
     z-index: 3;
 }
@@ -1099,10 +1098,6 @@ footer .social-link{
         width: 100% !important;
       }
 
-      .swiper-slide{
-          width: 100% !important;
-          height: auto;
-      }
       .swiper-slide img{
           width: 100%;
           opacity: 1;
@@ -1122,7 +1117,6 @@ footer .social-link{
         flex-direction: column;
         align-items: center;
         order: 2;
-        width: 100%;
     }
     #about_us .post .slider{
         display: none;
