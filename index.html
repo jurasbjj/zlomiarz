@@ -15,6 +15,10 @@
 
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
+    <!--[if IE]>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+<![endif]-->
+
 
     
     <style>
@@ -81,9 +85,9 @@ header.page-header img.active{
 <body>
 
 
- <div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;" > 
+ <!-- <div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;" > 
   <img class="lazylaod" src="img/LOGO_ZT_MINI.png" alt="" style="  width: 150px;height: 150px;position: fixed;top: calc(50% - 75px);left: calc(50% - 75px);animation: rotate 10s infinite both linear;transform: rotate(0deg);">    
-</div>  
+</div>   -->
 
 <!-- cień nawigacji mobilnej -->
 <span class="fade"></span> 
@@ -544,7 +548,7 @@ header.page-header img.active{
 <!-- jquery-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- google maps js -->
-<!-- <script src="js/google_maps.js"></script> -->
+<script src="js/google_maps.js"></script>
 <!-- Swiper JS -->
 <script  src="//unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- main js-->
@@ -564,17 +568,11 @@ header.page-header img.active{
         if (wS > wB  && fired === false ){
             console.log('This will happen only once'); 
             fired = true;
-
-            $.getScript( 'js/google_maps.js', function( google, textStatus, jqxhr ) {
-                
-              });   
-            $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8', function( google, textStatus, jqxhr ) {
-              initMap(); 
+            $.getScript( '//maps.googleapis.com/maps/api/js?key=AIzaSyC18uD49QABQJUXXj3mlxrZ9mnYS-6eBe8&callback=initMap', function( google, textStatus, jqxhr ) {
+                initialize(); 
             });   
-
        }
     });
-
 </script>
     
 </body>
