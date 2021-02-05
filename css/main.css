@@ -1092,6 +1092,9 @@ footer .social-link{
     .swiper-container{
         display: none;
     }
+    #about_us .text{
+        flex-basis: 100%;
+    }
 }
 
 /* schedule */
