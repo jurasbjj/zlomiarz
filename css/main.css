@@ -230,7 +230,7 @@ nav.desktop.active img{
     position: relative;
 }
 
-#about_us .content header{
+#about_us header{
     max-width: var(--maxWidth);
     margin: 0 auto;
     width: 100%;
@@ -238,7 +238,7 @@ nav.desktop.active img{
     margin-bottom: var(--headerMargin);
 }
 
-#about_us .content .post{
+#about_us .post{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -249,7 +249,7 @@ nav.desktop.active img{
     margin: 0 auto;
     
 }
-#about_us .content .post .text{
+#about_us .text{
     flex-basis: 50%;
     line-height: 30px;
     z-index: 1;
@@ -440,12 +440,17 @@ nav.desktop.active img{
 @media(max-width: 800px){
     .swiper-container{
         width: 100%;
+        order: 1;
     }
     .swiper-slide{
         width: 100%;
     }
     .swiper-slide img{
         width: 100%;
+    }
+
+    #about_us .text{
+        flex-basis: 100%;
     }
 }
 
