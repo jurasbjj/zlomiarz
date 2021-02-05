@@ -222,6 +222,7 @@ nav.desktop.active img{
     #about_us2{
         display: none;
     }
+
 }
 @media(min-width: 800px){
     #about_us .video-container{
@@ -451,6 +452,19 @@ nav.desktop.active img{
     #about_us{
         display: none;
     }
+    #about_us2{
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+    }
+    .swiper-slide{
+        width: 100%;
+        height: calc(100vw / 1.3333333);
+        background-image: url('../img/about_us/mobile/onas1.webp');
+        background-size: contain;
+    }
+
 
 }
 
