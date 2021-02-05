@@ -49,9 +49,10 @@ body{
 
 /* KONIEC PRELOADER */
 
-/* ####################################################### HEADER #################################################################   */
+/* ####################################################### HEADER ##############################################################   */
 
-header.page-header{
+@media(min-width: 800px){
+  header.page-header{
     height: 80vh;
 }
 header.page-header .bg{
@@ -73,6 +74,7 @@ header.page-header img.active{
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 100%;
 }
+}
 
 /* ####################################################### KONIEC HEADER ###########################################   */
 
@@ -82,7 +84,7 @@ header.page-header img.active{
 <body>
 
 
-  <div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;" > 
+<div class="loader-wrapper" style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed;  margin-top: 72px;" > 
   <img class="lazylaod" src="img/LOGO_ZT_MINI.png" alt="" style="  width: 150px;height: 150px;position: fixed;top: calc(50% - 75px);left: calc(50% - 75px);animation: rotate 10s infinite both linear;transform: rotate(0deg);">    
 </div>  
 
