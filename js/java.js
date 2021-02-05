@@ -88,7 +88,7 @@ const quests = document.querySelectorAll('.question')
 // ###################################################### SLIDER ABOUT_US ######################################################
 // MOBILE 
 
-  var swiper = new Swiper('.swiper-container', {
+  var swiper2 = new Swiper('.swiper2', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
@@ -162,8 +162,8 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.webp");
     $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.webp");
 
-    $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
-    $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
+    // $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
+    // $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
     $(".bg-logo").attr("src", $(".bg-logo").data().src);
     $(".card .desktop").attr("src", $(".card .desktop").data().src);
 

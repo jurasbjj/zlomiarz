@@ -364,40 +364,40 @@ nav.desktop.active img{
 
  /* SWIPER */
 @media(min-width: 800px){ 
-    .swiper-container{
+    .swiper-container.swiper2{
      max-width: 1200px !important;
      width: 100%;
      margin: 0 auto;
      margin-top: 100px;
  }
 
-.swiper-wrapper{
+.swiper2 .swiper-wrapper{
     align-items: center !important;
 }
-.swiper-slide{
+.swiper2 .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
     transform: scale(0.85);
     transition: 1s;
 }
-.swiper-slide-active{
+.swiper2 .swiper-slide-active{
     transform: scale(1);
 }
-.swiper-slide-duplicate-active{
+.swiper2 .swiper-slide-duplicate-active{
     transform: scale(1);
 }
 
-.swiper-slide img{
+.swiper2 .swiper-slide img{
     width: 100%;
     opacity: 0.2;
     transition: 1s;
 }
-.swiper-slide-active img{
+.swiper2 .swiper-slide-active img{
     opacity: 1;
 }
 
-.swiper-slide-duplicate-active img{
+.swiper2 .swiper-slide-duplicate-active img{
     opacity: 1;
 }
 
