@@ -92,7 +92,7 @@ const quests = document.querySelectorAll('.question')
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
-    loop: true,
+    loop: false,
     pagination: {
        el: '.slide-number',
       type: 'custom',
