@@ -1120,9 +1120,6 @@ display: none;
         align-items: center;
         order: 2;
     }
-    #about_us .post .slider{
-        display: none;
-    }
 
     #about_us .arrows img.slider-arrow:hover{
         opacity: 0.4 !important;
