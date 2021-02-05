@@ -1089,6 +1089,7 @@ footer .social-link{
 
 /* #about_us */
 @media (max-width: 800px){
+
     #about_us .text{display: none;}
     #about_us .content .arrows{
         justify-content: flex-end;
@@ -1112,6 +1113,7 @@ footer .social-link{
 
     #about_us{
         padding: 40px 0 21px 0;
+display: none;
     }
     #about_us .content .post{
         flex-direction: column;
