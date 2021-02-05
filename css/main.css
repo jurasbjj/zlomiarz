@@ -980,7 +980,7 @@ footer .social-link{
         max-height: auto;
         overflow: hidden;
         transition: 0.6s;
-        position: fixed;
+        position: sticky;
         top: 0;
         width: 100%;
         z-index: 3;
@@ -1111,7 +1111,7 @@ footer .social-link{
 
 
     #about_us{
-        padding: 40px 0 21px 0;
+        padding: 0 0 21px 0;
     }
     #about_us .content .post{
         flex-direction: column;
@@ -1138,6 +1138,8 @@ footer .social-link{
     #about_us .text{
         order: 3;
         padding: 4px 16px 16px 16px;
+        font-size: 1rem;
+
     }
 
 
