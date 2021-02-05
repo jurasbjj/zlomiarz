@@ -226,17 +226,7 @@ nav.desktop.active img{
     #about_us{
         padding: 0;
     }
-    .swiper-container{
-        width: 100%;
-    }
-    .swiper-slide img{
-        width: 100%;
-        height: calc(100vw / 1.33333333);
-    }
-    #about_us header, #about_us .text, #about_us .wrap-text{
-        padding: 0 16px;
-        width: 100%;
-    }
+
 
 
 }
