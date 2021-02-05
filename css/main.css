@@ -1090,7 +1090,7 @@ footer .social-link{
 /* #about_us */
 @media (max-width: 800px){
 
-    #about_us .text{display: none;}
+  
     #about_us .content .arrows{
         justify-content: flex-end;
     }
