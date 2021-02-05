@@ -211,36 +211,7 @@ nav.desktop.active img{
 }
 /* ####################################################### KONIEC NAWIGACJA ######################################################   */
 
-/* ####################################################### HEADER #################################################################   */
-@media(min-width:800px){ 
-    .page-header .swiper-container{
-      display: none;
-    }
-    header.page-header{
-        height: 80vh;
-    }
-    header.page-header .bg{
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    header.page-header img{
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0%;
-        transition: opacity 1.2s, transform 12s linear;
-    }
-    
-    header.page-header img.active{
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 100%;
-    } 
-    }
-    
-    /* ####################################################### KONIEC HEADER ###########################################   */
+
 
 
 
@@ -1009,7 +980,7 @@ footer .social-link{
         max-height: auto;
         overflow: hidden;
         transition: 0.6s;
-        position: sticky;
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: 3;
@@ -1112,56 +1083,40 @@ footer .social-link{
 /* header */ 
 @media (max-width: 800px){
     header.page-header{
-        /* display: none; */
-        width: 100%;
-    }
-    .page-header .bg{
         display: none;
     }
-    .swiper-container{
-        width: 100%;
-    }
-    .swiper-slide{
-        width: 100%;
-    }
-    .swiper-slide img{
-        width: 100%;
-    }
-    .arrows img.slider-arrow{
-        width: 32px;
-        opacity: 0.4;
-        outline: none;
-        transition: 0.2s;
-    }
-    .arrows img.slider-arrow:hover{
-       cursor: pointer;
-       opacity: 0.6;
-    }
-    
-    .arrows .slide-number{
-        padding: 0px 16px;
-        opacity: 0.6;
-    }
-    
-    .swiper-pagination-custom{
-        width: auto !important;
-    }
-    .swiper-container .arrows{
-        width: 100%;
-        text-align: right;
-        padding: 16px 16px 0 16px;
-      }   
 }
 
 /* #about_us */
 @media (max-width: 800px){
+
+    #about_us .content .arrows{
+        justify-content: flex-end;
+    }
+
+    .swiper-container {
+        width: 100% !important;
+      }
+
+      .swiper-slide img{
+          width: 100%;
+          opacity: 1;
+}
+
+      .swiper-container .arrows{
+        width: 100%;
+        text-align: right;
+        padding: 16px 16px 0 16px;
+      }  
+
+
     #about_us{
         padding: 40px 0 21px 0;
     }
     #about_us .content .post{
         flex-direction: column;
         align-items: center;
-        /* order: 2; */
+        order: 2;
     }
     #about_us .post .slider{
         display: none;
@@ -1171,23 +1126,23 @@ footer .social-link{
         opacity: 0.4 !important;
      }
     #about_us .swiper-container{
-        /* order: 1 !important; */
+        order: 1 !important;
     }
     #about_us header{
-        /* order: 2; */
+        order: 2;
         padding: 16px 16px;
     }
         #about_us .content header{
         margin-bottom: 0;
         }
     #about_us .text{
-        /* order: 3; */
+        order: 3;
         padding: 4px 16px 16px 16px;
     }
 
 
     #about_us .video-container{
-        /* order: 4; */
+        order: 4;
         width: 100%;
         padding: 0 32px;
     }
@@ -1241,7 +1196,7 @@ footer .social-link{
         border: 0;
     }  */
     #about_us .wrap-text{
-        /* order: 5; */
+        order: 5;
         padding: 0 16px;
     }
         #about_us .content .post .wrap-text.active{
