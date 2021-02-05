@@ -1094,22 +1094,10 @@ footer .social-link{
         justify-content: flex-end;
     }
 
-    .swiper-container {
+    .swiper2 {
         width: 100% !important;
         display: none;
       }
-
-      .swiper-slide img{
-          width: 100%;
-          opacity: 1;
-}
-
-      .swiper-container .arrows{
-        width: 100%;
-        text-align: right;
-        padding: 16px 16px 0 16px;
-      }  
-
 
     #about_us{
         padding: 40px 0 21px 0;

@@ -122,6 +122,16 @@ const quests = document.querySelectorAll('.question')
            }
        }
   });
+
+
+  var swiper1 = new Swiper('.swiper1', {
+    loop: true,
+    autoplay: 5000,
+    speed: 800,
+    effect: 'slide'
+});
+
+
  // #about_us SLIDER WRAP BUTTON
  $('#about_us button').click(function(){
      $('.wrap-text').toggleClass('active')
