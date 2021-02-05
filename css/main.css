@@ -1084,6 +1084,7 @@ footer .social-link{
 @media (max-width: 800px){
     header.page-header{
         /* display: none; */
+        height: auto !important;
     }
 }
 
