@@ -227,20 +227,7 @@ nav.desktop.active img{
 /* SLIDER ARROWS */
 
 
-/* about_us mobile */
-@media(max-width: 800px){
-    .swiper-container{
-        width: 100%;
-        order: 1;
-    }
-    .swiper-slide{
-        width: 100%;
-    }
-    .swiper-slide img{
-        width: 100%;
-    }
 
-}
 
 
 /* ####################################################### KONIEC O NAS ######################################################   */
