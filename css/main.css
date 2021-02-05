@@ -452,9 +452,7 @@ nav.desktop.active img{
     #about_us{
         display: none;
     }
-    #about_us2{
-        padding: 0;
-    }
+
     .swiper-container {
         width: 100%;
     }
