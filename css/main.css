@@ -980,7 +980,7 @@ footer .social-link{
         max-height: auto;
         overflow: hidden;
         transition: 0.6s;
-        position: sticky;
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: 3;
@@ -1111,12 +1111,11 @@ footer .social-link{
 
 
     #about_us{
-        padding: 0 0 21px 0;
+        padding: 40px 0 21px 0;
     }
     #about_us .content .post{
         flex-direction: column;
         align-items: center;
-        order: 2;
     }
     #about_us .post .slider{
         display: none;
@@ -1125,26 +1124,19 @@ footer .social-link{
     #about_us .arrows img.slider-arrow:hover{
         opacity: 0.4 !important;
      }
-    #about_us .swiper-container{
-        order: 1 !important;
-    }
+
     #about_us header{
-        order: 2;
         padding: 16px 16px;
     }
         #about_us .content header{
         margin-bottom: 0;
         }
     #about_us .text{
-        order: 3;
         padding: 4px 16px 16px 16px;
-        font-size: 1rem;
-
     }
 
 
     #about_us .video-container{
-        order: 4;
         width: 100%;
         padding: 0 32px;
     }
@@ -1198,7 +1190,6 @@ footer .social-link{
         border: 0;
     }  */
     #about_us .wrap-text{
-        order: 5;
         padding: 0 16px;
     }
         #about_us .content .post .wrap-text.active{
@@ -1212,7 +1203,6 @@ footer .social-link{
             margin: 32px 0;
         }
     #about_us button{
-        order: 5;
         align-self: center;
         margin-top: 16px;
         position: static;
