@@ -249,7 +249,7 @@ nav.desktop.active img{
     
 }
 #about_us .content .post .text{
-    flex-basis: 50%;
+    flex-basis: 100%;
     line-height: 30px;
     z-index: 1;
     /* margin-top: 16px; */
@@ -1135,7 +1135,6 @@ footer .social-link{
         }
     #about_us .text{
         padding: 4px 16px 16px 16px;
-        flex-basis: 100% !important;
     }
 
 
