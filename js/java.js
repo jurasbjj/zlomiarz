@@ -8,7 +8,14 @@ $(window).load(function() {
       {
           $(".loader-wrapper").fadeOut();
       }, 300);
+      ;(function () {
+        if (!('fonts' in document)) return;
+        document.fonts.load('1em PT Serif').then(function () {
+          document.documentElement.className += ' fonts-loaded';
+        });
+      })();
 });
+
 // ########################################## KONIEC PRELOADER ######################################################
 
 // ###################################################### SCROLL  ######################################################
@@ -92,7 +99,7 @@ const quests = document.querySelectorAll('.question')
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
-    loop: true,
+    loop: false,
     pagination: {
        el: '.slide-number',
       type: 'custom',
