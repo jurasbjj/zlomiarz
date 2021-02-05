@@ -249,14 +249,7 @@ nav.desktop.active img{
     margin: 0 auto;
     
 }
-#about_us .text{
-    width: 50%;
-    line-height: 30px;
-    z-index: 1;
-    /* margin-top: 16px; */
-    
 
-}
 @media(min-width: 800px){
     #about_us .video-container{
         flex-basis: 42.5%;
@@ -296,6 +289,12 @@ nav.desktop.active img{
         height: 100%;
     }
 
+    #about_us .text{
+        flex-basis: 50%;
+        line-height: 30px;
+        z-index: 1;
+        /* margin-top: 16px; */
+    }
 }
 
 
@@ -451,9 +450,7 @@ nav.desktop.active img{
     #about_us{
         padding: 0 0;
     }
-    #about_us .text{
-        width: 100%;
-    }
+
 }
 
 
