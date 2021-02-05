@@ -1083,7 +1083,7 @@ footer .social-link{
 /* header */ 
 @media (max-width: 800px){
     header.page-header{
-        display: none;
+        /* display: none; */
     }
 }
 
@@ -1116,7 +1116,6 @@ footer .social-link{
     #about_us .content .post{
         flex-direction: column;
         align-items: center;
-        order: 2;
     }
     #about_us .post .slider{
         display: none;
@@ -1126,23 +1125,19 @@ footer .social-link{
         opacity: 0.4 !important;
      }
     #about_us .swiper-container{
-        order: 1 !important;
     }
     #about_us header{
-        order: 2;
         padding: 16px 16px;
     }
         #about_us .content header{
         margin-bottom: 0;
         }
     #about_us .text{
-        order: 3;
         padding: 4px 16px 16px 16px;
     }
 
 
     #about_us .video-container{
-        order: 4;
         width: 100%;
         padding: 0 32px;
     }
@@ -1196,7 +1191,6 @@ footer .social-link{
         border: 0;
     }  */
     #about_us .wrap-text{
-        order: 5;
         padding: 0 16px;
     }
         #about_us .content .post .wrap-text.active{
@@ -1210,7 +1204,6 @@ footer .social-link{
             margin: 32px 0;
         }
     #about_us button{
-        order: 5;
         align-self: center;
         margin-top: 16px;
         position: static;
