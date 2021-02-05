@@ -1113,12 +1113,11 @@ footer .social-link{
 
     #about_us{
         padding: 40px 0 21px 0;
-display: none;
     }
     #about_us .content .post{
         flex-direction: column;
         align-items: center;
-        order: 2;
+        order: 2; display: none;
     }
     #about_us .post .slider{
         display: none;
