@@ -1088,7 +1088,11 @@ footer .social-link{
 }
 
 /* #about_us */
-
+@media(max-width: 800px){
+    .swiper-container{
+        display: none;
+    }
+}
 
 /* schedule */
 @media (max-width: 800px){
