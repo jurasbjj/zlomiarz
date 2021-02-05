@@ -1096,6 +1096,7 @@ footer .social-link{
 
     .swiper-container {
         width: 100% !important;
+        display: none;
       }
 
       .swiper-slide img{
