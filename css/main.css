@@ -249,7 +249,7 @@ nav.desktop.active img{
     margin: 0 auto;
     
 }
-#about_us .content .post .text{
+#about_us .text{
     flex-basis: 50%;
     line-height: 30px;
     z-index: 1;
@@ -438,6 +438,14 @@ nav.desktop.active img{
 }
 /* about_us mobile */
 
+@media(max-width: 800px){
+    .swiper-container{
+        display: none;
+    }
+    #about_us .text{
+        flex-basis: 100%;
+    }
+}
 
 
 /* ####################################################### KONIEC O NAS ######################################################   */
@@ -1088,14 +1096,7 @@ footer .social-link{
 }
 
 /* #about_us */
-@media(max-width: 800px){
-    .swiper-container{
-        display: none;
-    }
-    #about_us .text{
-        flex-basis: 100%;
-    }
-}
+
 
 /* schedule */
 @media (max-width: 800px){
