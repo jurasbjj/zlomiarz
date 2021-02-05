@@ -1085,6 +1085,13 @@ footer .social-link{
     header.page-header{
         /* display: none; */
     }
+    .swiper1{
+        width: 100%;
+        
+    }
+    .swiper1 .swiper-slide img{
+        width: 100%;
+    }
 }
 
 /* #about_us */
