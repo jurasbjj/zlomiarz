@@ -250,7 +250,7 @@ nav.desktop.active img{
     
 }
 #about_us .text{
-    flex-basis: 50%;
+    width: 50%;
     line-height: 30px;
     z-index: 1;
     /* margin-top: 16px; */
@@ -452,7 +452,7 @@ nav.desktop.active img{
         padding: 0 0;
     }
     #about_us .text{
-        flex-basis: 100%;
+        width: 100%;
     }
 }
 
