@@ -49,7 +49,10 @@
 /* KONIEC PRELOADER */
 
 /* ####################################################### HEADER #################################################################   */
-
+@media(min-width:800px){ 
+.page-header .swiper-container{
+  display: none;
+}
 header.page-header{
     height: 80vh;
 }
@@ -71,6 +74,7 @@ header.page-header img{
 header.page-header img.active{
     transform: translate(-50%, -50%) scale(1.1);
     opacity: 100%;
+} 
 }
 
 /* ####################################################### KONIEC HEADER ###########################################   */
@@ -126,6 +130,18 @@ header.page-header img.active{
     </nav>
 
   <header class="page-header">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div id="s1" data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
+        <div id="s2" data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>
+        <div id="s3" data-id="2" class="swiper-slide lazylaod"><img src="img/about_us/mobile/onas3.webp" alt=""></div>
+      </div>
+      <div class="arrows">
+        <img class="left slider-arrow" src="img/svg/arrow-left.svg" alt="">
+        <span class="slide-number">01 / 03</span>
+        <img class="right slider-arrow" src="img/svg/arrow-right.svg" alt="">
+      </div>
+    </div>
     <div class="bg">
       <img class="kick" data-src="img/practise/bjj.webp" alt="">
       <img class="bjj" data-src="img/practise/kick.webp" alt="">
@@ -162,7 +178,7 @@ header.page-header img.active{
         <button><span>Czytaj więcej</span>  <img class="arrow" src="img/svg/chevron-down-outline.svg"></button>
       </div>
           <!-- Swiper -->
-      <div class="swiper-container mobile">
+      <!-- <div class="swiper-container">
         <div class="swiper-wrapper">
           <div id="s1" data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
           <div id="s2" data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>
@@ -173,7 +189,7 @@ header.page-header img.active{
           <span class="slide-number">01 / 03</span>
           <img class="right slider-arrow" src="img/svg/arrow-right.svg" alt="">
         </div>
-      </div>
+      </div> -->
     </div>
 
   </section>
