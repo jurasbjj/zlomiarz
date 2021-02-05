@@ -1095,6 +1095,7 @@ footer .social-link{
     }
 
     .swiper-container {
+        display: none;
         width: 100% !important;
       }
 
