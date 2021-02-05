@@ -1113,6 +1113,9 @@ footer .social-link{
     #about_us{
         padding: 40px 0 21px 0;
     }
+    #about_us .text{
+        font-size: 1rem;
+    }
     #about_us .content .post{
         flex-direction: column;
         align-items: center;
