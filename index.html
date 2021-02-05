@@ -49,20 +49,28 @@
 /* KONIEC PRELOADER */
 
 /* ####################################################### HEADER #################################################################   */
-@media(min-width: 800px){
-.page-header{
+
+header.page-header{
     height: 80vh;
 }
-.page-header .swiper-container{
-  height: 100%;
-  width: 100%;
+header.page-header .bg{
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-.page-header .swiper-slide{
-  width: 100%;
+header.page-header img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0%;
+    transition: opacity 1.2s, transform 12s linear;
 }
-.page-header .swiper-slide img{
-  width: 100%;
-}
+
+header.page-header img.active{
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 100%;
 }
 
 /* ####################################################### KONIEC HEADER ###########################################   */
@@ -118,17 +126,9 @@
     </nav>
 
   <header class="page-header">
-    <div class="swiper-container swiper1">
-      <div class="swiper-wrapper">
-        <div data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
-        <div data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>
-        <!-- <div id="s3" data-id="2" class="swiper-slide lazylaod"><img src="img/about_us/mobile/onas3.webp" alt=""></div> -->
-      </div>
-      <div class="arrows">
-        <img class="left slider-arrow" src="img/svg/arrow-left.svg" alt="">
-        <span class="slide-number">01 / 03</span>
-        <img class="right slider-arrow" src="img/svg/arrow-right.svg" alt="">
-      </div>
+    <div class="bg">
+      <img class="kick" data-src="img/practise/bjj.webp" alt="">
+      <img class="bjj" data-src="img/practise/kick.webp" alt="">
     </div>
   </header>
   
@@ -162,7 +162,7 @@
         <button><span>Czytaj więcej</span>  <img class="arrow" src="img/svg/chevron-down-outline.svg"></button>
       </div>
           <!-- Swiper -->
-      <div class="swiper-container swiper2">
+      <div class="swiper-container mobile">
         <div class="swiper-wrapper">
           <div id="s1" data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
           <div id="s2" data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>

@@ -88,7 +88,7 @@ const quests = document.querySelectorAll('.question')
 // ###################################################### SLIDER ABOUT_US ######################################################
 // MOBILE 
 
-  var swiper2 = new Swiper('.swiper2', {
+  var swiper = new Swiper('.swiper-container', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
@@ -122,16 +122,6 @@ const quests = document.querySelectorAll('.question')
            }
        }
   });
-
-
-  var swiper1 = new Swiper('.swiper1', {
-    loop: true,
-    autoplay: 5000,
-    speed: 800,
-    effect: 'slide'
-});
-
-
  // #about_us SLIDER WRAP BUTTON
  $('#about_us button').click(function(){
      $('.wrap-text').toggleClass('active')
@@ -172,8 +162,8 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.webp");
     $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.webp");
 
-    // $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
-    // $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
+    $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
+    $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
     $(".bg-logo").attr("src", $(".bg-logo").data().src);
     $(".card .desktop").attr("src", $(".card .desktop").data().src);
 
