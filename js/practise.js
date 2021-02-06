@@ -1,13 +1,18 @@
 // ###################################################### PRELOADER ###################################################
-const preload = document.querySelector('.loader-wrapper');
 
-preload.classList.add('show-preloader');
 $(window).load(function() {
     setTimeout(
       function()
       {
+        (function () {
+          if (!('fonts' in document)) return;
+          document.fonts.load('1em PT Serif').then(function () {
+            document.documentElement.className += ' fonts-loaded';
+          });
+        })();
           $(".loader-wrapper").fadeOut();
       }, 300);
+
 });
 // ###################################################### KONIEC PRELOADER ####################################################
 
