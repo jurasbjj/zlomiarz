@@ -184,6 +184,7 @@ header img.active{
     .practise .content img.mobile{
         display: block;
         width: 100%;
+        height: calc(100vw / 1.777756708068645);
     }
     .practise .head{
         padding: 32px 16px;
