@@ -1,8 +1,4 @@
-@media(max-width: 800px){
-    body{
-        /* margin-top: 63px; */
-    }
-}
+
 
 @media(max-width: 800px){
     .loader-wrapper{
@@ -18,7 +14,6 @@ nav.desktop{
     background-color: var(--primaryColor);
     overflow: hidden;
     padding: 66px 0 40px 0;
-    margin-top: 67px;
 }
 #coaches .content{
     display: flex;
