@@ -75,6 +75,7 @@ h3{
 
 
 
+
 /* KONIEC DOMYŚLNE */
 
 
@@ -956,7 +957,7 @@ footer .social-link{
         padding: var(--mobilePadding);
     }
     body{
-        margin-top: 0px;
+        margin-top: 64px;
     }
     h1{
         /* font-size: 2.13rem; */
