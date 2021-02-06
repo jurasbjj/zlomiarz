@@ -170,6 +170,9 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.webp");
     $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.webp");
     $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.webp");
+    $(".swiper-slide#s4 img").attr("src","img/about_us/onas4.webp");
+    $(".swiper-slide#s5 img").attr("src","img/about_us/onas5.webp");
+    $(".swiper-slide#s6 img").attr("src","img/about_us/onas6.webp");
 
     $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
     $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
