@@ -1,0 +1,321 @@
+/* ####################################################### GRAFIK ##########################################################   */
+#schedule h1,
+#schedule h2 {
+    text-align: left;
+}
+
+#schedule .content {
+    text-align: center;
+}
+
+#schedule .type-schedule {
+    margin: 44px 0px 16px 0;
+    text-align: left;
+}
+
+#schedule .type-schedule option:nth-of-type(2),
+#schedule .type-schedule option:nth-of-type(11) {
+    font-weight: bold;
+}
+
+#schedule .table-schedule {
+    width: 100%;
+}
+
+#schedule .table-schedule tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#schedule .table-schedule td {
+    flex-basis: 16%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondaryColor);
+}
+
+#schedule .table-schedule tr:nth-of-type(1) {
+    margin-bottom: 16px;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) {
+    text-align: left;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td {
+    padding: 16px 8px;
+    border: 1px solid white;
+    color: white;
+    justify-content: center;
+    /* centruj bloki */
+}
+
+#schedule .table-schedule tr:nth-of-type(1) span {
+    text-transform: uppercase;
+}
+
+#schedule .table-schedule tr:nth-of-type(1) span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td span {
+    font-size: 0.7rem;
+    letter-spacing: calc(1px/2);
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(2) {
+    font-weight: bold;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(1) {
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(3) {
+    font-weight: 200;
+    font-size: 0.6rem;
+}
+
+#schedule .table-schedule tr:nth-of-type(1) td {
+    background-color: transparent;
+}
+
+#schedule .table-schedule tr:nth-of-type(2) td:not(:last-child) {
+    background-color: #294e7b;
+}
+
+#schedule .table-schedule tr:nth-of-type(3) td:not(:nth-child(even)) {
+    background-color: #234263
+}
+
+#schedule .table-schedule tr:nth-of-type(3) td:last-child {
+    background-color: #090a0b;
+}
+
+#schedule .table-schedule tr:nth-of-type(4) td:last-child {
+    background-color: #5b9a9a;
+}
+
+#schedule .table-schedule tr:nth-of-type(5) td:nth-of-type(even) {
+    background-color: #ae763c;
+}
+
+#schedule .table-schedule tr:nth-of-type(5) td:nth-of-type(odd) {
+    background-color: #257d50;
+}
+
+#schedule .table-schedule tr:nth-of-type(5) td:last-child {
+    background-color: var(--secondaryColor);
+}
+
+#schedule .table-schedule tr:nth-of-type(6) td:nth-of-type(odd) {
+    background-color: #973b3c;
+}
+
+#schedule .table-schedule tr:nth-of-type(6) td:nth-of-type(4) {
+    background-color: #716c58;
+}
+
+#schedule .table-schedule tr:nth-of-type(6) td:nth-of-type(2) {
+    background-color: #939394;
+}
+
+#schedule .table-schedule tr:nth-of-type(7) td:first-of-type,
+#schedule .table-schedule tr:nth-of-type(7) td:nth-of-type(5) {
+    background-color: #393c3d;
+}
+
+#schedule .table-schedule tr:nth-of-type(7) td:nth-of-type(2),
+#schedule .table-schedule tr:nth-of-type(7) td:nth-of-type(4) {
+    background-color: #4a415b;
+}
+
+#schedule .table-schedule tr:nth-of-type(7) td:nth-of-type(3) {
+    background-color: #090a0b;
+}
+
+#schedule .table-schedule tr:nth-of-type(8) td:nth-of-type(1),
+#schedule .table-schedule tr:nth-of-type(8) td:nth-of-type(4) {
+    background-color: #386464;
+}
+
+#schedule .table-schedule tr:nth-of-type(8) td:nth-of-type(2),
+#schedule .table-schedule tr:nth-of-type(8) td:nth-of-type(5) {
+    background-color: #5b9a9a;
+}
+
+#schedule .table-schedule tr:nth-of-type(8) td:nth-of-type(3) {
+    background-color: #2a4a49;
+}
+
+#schedule .table-schedule tr:not(:nth-of-type(1)) td {
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+#schedule .table-schedule tr td.active {
+    opacity: 1;
+}
+
+
+
+
+/* ####################################################### KONIEC GRAFIK ######################################################   */
+/* schedule */
+@media (max-width: 800px) {
+    #schedule {
+        padding: 32px 16px;
+    }
+
+    #schedule .table-schedule {
+        margin-top: 24px;
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td span {
+        font-size: 1.05vw;
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(3) {
+        font-size: 1.05vw;
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(1) {
+        padding-bottom: 3px;
+        font-size: 1.5vw;
+        font-weight: 400;
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td {
+        padding: 8px 4px;
+    }
+
+    #schedule .table-schedule td span {
+        font-size: 0.4rem;
+    }
+}
+
+
+/* SELECT */ 
+
+.type-schedule{
+    display: flex;
+    align-items: center;
+}
+.type-schedule span{
+    margin-right: 16px;
+}
+
+.select{
+    background-color: var(--primaryColor);
+    width: 30%;
+    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+.select img{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.select.active img{
+    transform: translateY(-50%) rotate(180deg);
+}
+.select-selected{
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.select-type{
+    width: 100%;
+    position: absolute;
+    background-color: var(--primaryColor);
+    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    z-index: 1;
+}
+.select-type div{
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.select-type div:nth-of-type(2),
+.select-type div:nth-of-type(11){
+    font-weight: bold;
+}
+.select-type div:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.select.active .select-type{
+    visibility: visible;
+}
+.select-fade{
+    display: none;
+}
+
+@media(max-width: 800px){
+    .select{
+        width: 60%;
+    }
+    .select-type div{
+        padding: 16px;
+        position: relative;
+        font-size: 0.9rem;
+    }
+    .select-type .dot{
+        content: '';
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);      
+    }
+    .select-type .dot.active{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+    }
+    .select-type .dot.active::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .select.active{
+        z-index: 10;
+        position: fixed;
+        overflow: scroll;
+        top: 50%;
+        left: 50%;
+        width: 85vw;
+        height: 85vh;
+        transform: translate(-50%, -50%);
+    }
+
+    .select.active .select-selected{
+        display: none;
+    }
+    .select-fade.active{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);  
+    z-index: 10;    
+    }
+}
