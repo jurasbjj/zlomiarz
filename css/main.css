@@ -154,7 +154,6 @@ body {
     transform: translate(-50%, 40%);
 }
 
-@media(min-width: 800px){
     .bgC .bgLogo {
     position: absolute;
     opacity: 5%;
@@ -167,7 +166,7 @@ body {
     position: relative;
     overflow: hidden;
 }
-}
+
 @media(max-width: 800px){
     .bgC .bgLogo{
         display: none;
