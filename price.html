@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Złomiarz Team</title>
+
+  <!-- main css-->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/price.css">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap
+    " as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+  <style>
+    body {
+      font-family: 'Times'
+    }
+
+    .fonts-loaded body {
+      font-family: "Montserrat", serif;
+    }
+
+    /* PRELOADER */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(720deg)
+      }
+    }
+
+    /* loader */
+    @media(max-width: 800px) {
+      .loader-wrapper {
+        margin-top: -64px !important;
+      }
+
+      .loader-wrapper img {
+        width: 100px !important;
+        height: 100px !important;
+        top: calc(50% - 50px) !important;
+        left: calc(50% - 50px) !important;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- PRELOADER  -->
+  <div class="loader-wrapper"
+    style="z-index: 1000;background-color: #F8F8F8;width: 100vw; height: 100vh; position: fixed; margin-top: 72px;">
+    <img src="img/LOGO_ZT_MINI.png" alt=""
+      style="  width: 150px;height: 150px;position: fixed;top: calc(50% - 75px);left: calc(50% - 75px);animation: rotate 10s infinite both linear;transform: rotate(0deg);">
+  </div>
+
+  <!-- cień nawigacji mobilnej -->
+  <span class="fade"></span>
+
+  <nav class="mobile">
+
+    <div class="logo">
+      <a href="index.html" class="home"><img src="img/LOGO_ZT_MINI.png" alt=""></a>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.html#about_us">O nas</a></li>
+      <li><a href="practise.html">Co trenujemy?</a></li>
+      <li><a href="coaches.html">Trenerzy</a></li>
+      <li><a href="index.html#schedule">Grafik</a></li>
+      <li><a href="index.html#price">Cennik</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <nav class="desktop active">
+    <div class="content">
+      <a href="index.html" class="home"><img src="img/LOGO_ZT_MINI.png" alt=""></a>
+      <ul>
+        <li><a href="index.html#about_us">O nas</a></li>
+        <li><a href="practise.html">Co trenujemy?</a></li>
+        <li><a href="coaches.html">Trenerzy</a></li>
+        <li><a href="index.html#schedule">Grafik</a></li>
+        <li><a href="index.html#price">Cennik</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="bgC">
+    <img class="bgLogo" src="img/LOGO_ZT_BG.png" alt="">
+
+    <section id="price">
+        <img class="bg-logo" data-src="img/LOGO_ZT_BG.png" alt=""> <!-- bg zębatka -->
+        <div class="content">
+          <header>
+            <h1>Cennik</h1>
+            <h2>Składki członkowskie, czyli ile i za co.</h2>
+          </header>
+            <div class="wraper">
+              <div class="table">
+                <table>
+                  <tr>
+                    <td><b>Rodzaj</b></td>
+                    <td><b>Kobiety</b></td>
+                    <td><b>Mężczyźni</b></td>
+                  </tr>
+                  <tr>
+                    <td><b>Open</b></td>
+                    <td>179 PLN</td>
+                    <td>199 PLN</td>
+                  </tr>
+                  <tr>
+                    <td><b>15 wejść</b></td>
+                    <td>130 PLN</td>
+                    <td>150 PLN</td>
+                  </tr>
+                  <tr>
+                    <td><b>8 wejść</b></td>
+                    <td>110 PLN</td>
+                    <td>130 PLN</td>
+                  </tr>
+                  <tr>
+                    <td><b>4 wejścia</b></td>
+                    <td>90 PLN</td>
+                    <td>90 PLN</td>
+                  </tr>
+                  <tr>
+                    <td><b>1 wejście</b></td>
+                    <td>30 PLN</td>
+                    <td>30 PLN</td>
+                  </tr>
+                  <tr>
+                    <td><b>Młodziki 4-7 lat</b></td>
+                    <td><b>Młodziki 8-12 lat</b></td>
+                  </tr>
+                  <tr>
+                    <td>110 PLN</td>
+                    <td>120 PLN</td>
+                  </tr>
+                </table>
+                <span class="payment">
+                  <span>Dane do przelewu:</span>
+                  <span><b>84 1140 2004 0000 3602 7478 0836</b></span>
+                  <span>Tytuł: Imię i nazwisko, typ karnetu, miesiąc za który płacisz</span>
+                </span>
+              </div>
+              
+               <div class="text">
+                <span>Pierwszy trening jest darmowy</span>
+                <span>Płatności za karnet możesz dokonać przelewem bądź gotówką przed/po treningu</span>
+                <span>Zakupiony karnet ważny jest <b>dany miesiąc</b> (np. wrzesień)</span>
+                <span>W ramach jednego wejścia możesz skorzystać ze wszystkich treningów odbywających się tego dnia</span>
+                <span>Wejście na trening sparingowy BJJ jest darmowy dla <b>brązowych i czarnych pasów</b> z innych klubów</span>
+                <span><b>Honorujemy karty: Multisport Plus, Multisport Senior, Multisport Junior, FitProfit oraz FitSport</b></span>
+                <span><b>Zniżki rodzinne:</b><br>
+                  10% zniżki - 2 członków rodziny<br>
+                  15% zniżki - 3 członków rodziny<br>
+                  20% zniżki - 4 + członków rodziny</span>
+              </div> 
+            </div>
+        </div>
+      </section>
+
+    <footer>
+      <div class="social-link mobile">
+        <a href="https://www.facebook.com/zlomiarzteam"><img class="iconify" src="img/svg/facebook.svg" alt=""></a>
+        <a href="https://www.instagram.com/zlomiarz_team"><img class="iconify" src="img/svg/instagram.svg" alt=""></a>
+      </div>
+      <div class="content">
+        <span>Copyright &copy; Złomiarz Team Gdańsk</span>
+        <span>
+          <span>Follow us:</span>
+          <a href="https://www.facebook.com/zlomiarzteam" target="_blank"><img class="iconify"
+              src="img/svg/facebook.svg" alt=""></a>
+          <a href="https://www.instagram.com/zlomiarz_team" target="_blank"><img class="iconify"
+              src="img/svg/instagram.svg" alt=""></a>
+        </span>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- jquery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- main js -->
+  <script src="js/java.js"></script>
+
+</body>
+
+</html>

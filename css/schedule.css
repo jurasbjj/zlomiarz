@@ -303,6 +303,7 @@
         width: 85vw;
         height: 85vh;
         transform: translate(-50%, -50%);
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .select.active .select-selected{
