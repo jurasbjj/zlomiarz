@@ -259,8 +259,11 @@
 }
 
 @media(max-width: 800px){
+.type-schedule{
+flex-direction: column;
+}
     .select{
-        width: 60%;
+        width: 100%;
     }
     .select-type div{
         padding: 16px;
