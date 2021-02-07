@@ -432,9 +432,12 @@ footer .social-link {
         justify-content: center;
         align-items: center;
     }
-
-    nav.mobile img {
+    
+    nav.mobile .home{
         height: 70%;
+    }
+    nav.mobile img {
+        height: 100%;
         cursor: pointer;
     }
 
