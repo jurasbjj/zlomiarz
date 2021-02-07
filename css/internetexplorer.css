@@ -1,0 +1,48 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS here*/
+    .bg-logo{
+        display: none;
+    }
+    .swiper-container{
+        display: none !important;
+    }
+    button{
+        top: 0 !important;
+    }
+    #faq{
+        display: none !important;
+    }
+
+    nav.desktop{
+        width: 100%;
+        position: fixed;
+    }
+    nav.desktop img{
+        opacity: 1;
+    }
+    nav.desktop img{
+        height: 80%;
+    }
+    nav.desktop.active img{
+        height: 80%;
+    }
+
+    header.page-header{
+        background-image: url('../img/practise/bjj.jpg');
+        background-size: cover;
+    }
+    nav ul li:nth-child(3){
+        display: none;
+    }
+    nav ul li:nth-child(6){
+        display: none;
+    }
+    .clean{
+        display: none !important;
+    }
+    #map{
+        background-image: url('../img/ie-map.jpg');
+        background-position: center;
+    }
+
+}

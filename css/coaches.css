@@ -1,11 +1,3 @@
-
-
-@media(max-width: 800px){
-    .loader-wrapper{
-        /* margin-top: -63px; */
-    }
-}
-
 nav.desktop{
     z-index: 2;
 }
@@ -274,63 +266,8 @@ nav.desktop{
     #coaches .swiper-slide-duplicate-active img{
         opacity: 1;
     }
-
-
-
-
-
-}
-
-.bgC .bgLogo{
-    position: absolute;
-    opacity: 5%;
-    right: 0%;
-    bottom: 0%;
-    transform: translate(50%, 40%);
-
-}   
-.bgC{
-    position: relative;
-    overflow: hidden;
 }
 
 footer{
     padding: 0;
-}
-@media (max-width: 800px){
-    .bgLogo{
-        display: none;
-    }
-    footer{
-        padding: 16px 0 0 0;
-    }
-    footer .content{
-        border: none;
-        background-color: var(--secondaryColor);
-    }
-
-    footer .social-link{
-        padding: 0 16px 16px 16px;
-    }
-    footer .social-link::before{
-        display: block;
-        content: '';
-        height: 1px;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.1);
-        margin-bottom: 16px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    footer .social-link{
-        display: block;
-        margin-bottom: -4px;
-    }
-    footer .social-link img{
-        padding: 0 8px;
-    }
-    footer img.iconify:hover{
-        opacity: 50%;
-    }
 }
