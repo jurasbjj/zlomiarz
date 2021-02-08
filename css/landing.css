@@ -678,7 +678,8 @@
 
 }
 
-.review-overflow {
+@media(min-width: 800px){
+    .review-overflow {
     max-width: 1300px !important;
     position: relative;
     left: 50%;
@@ -736,7 +737,7 @@
 #review .swiper-slide-prev {
     opacity: 0;
 }
-
+}
 
 #review .star {
     margin-top: 16px;
