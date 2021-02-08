@@ -759,7 +759,9 @@
 
 
 @media(max-width: 800px) {
-
+    .review-overflow{
+        margin: 40px 0 32px 0;
+    }
     #review .swiper-container {
         width: 100%;
         display: flex;
