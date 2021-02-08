@@ -181,3 +181,5 @@ var swiper = new Swiper('.swiper-container-review', {
 });
 
 if(mediaQueryMobile.matches){swiper.snapGrid[swiper.snapGrid.length - 1] = swiper.slidesGrid[swiper.slidesGrid.length - 1];}
+
+
