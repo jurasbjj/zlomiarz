@@ -157,7 +157,7 @@ var swiper = new Swiper('.swiper-container-review', {
     speed: 800,
     effect: 'slide',
     slidesPerView: 'auto',
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     pagination: {
         el: '#review .slide-number',
