@@ -158,5 +158,26 @@ var swiper = new Swiper('.swiper-container-review', {
     effect: 'slide',
     slidesPerView: 'auto',
     loop: false,
-    spaceBetween: 20
+    spaceBetween: 20,
+    pagination: {
+        el: '#review .slide-number',
+       type: 'custom',
+       renderCustom: function (swiper, current, total) {
+       return ('0' + current).slice(-2) + ' / ' + ('0' + total).slice(-2);
+ }
+     },
+     navigation: {
+       nextEl: '#review .right',
+       prevEl: '#review .left',
+     },
+     breakpoints:{
+        800:{
+             slidesPerView: 2,
+             spaceBetween: 20,
+             loop: false,
+
+        }
+    }
 });
+
+if(mediaQueryMobile.matches){swiper.snapGrid[swiper.snapGrid.length - 1] = swiper.slidesGrid[swiper.slidesGrid.length - 1];}

@@ -226,23 +226,23 @@
 
 /* SLIDER ARROWS */
 
-#about_us .content .arrows{
+.content .arrows{
     display: flex;
     justify-content: center;
 }
 
-#about_us .arrows img.slider-arrow{
+.arrows img.slider-arrow{
     width: 32px;
     opacity: 0.4;
     outline: none;
     transition: 0.2s;
 }
-#about_us .arrows img.slider-arrow:hover{
+.arrows img.slider-arrow:hover{
    cursor: pointer;
    opacity: 0.6;
 }
 
-#about_us .arrows .slide-number{
+.arrows .slide-number{
     padding: 0px 16px;
     opacity: 0.6;
 }
@@ -589,9 +589,41 @@
     }
 
 }
+#review{
+    position: relative;
+}
+#review .content{
+    max-width: 100%;
+}
+#review header{
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+#review p{
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+ .review-overflow{
+    max-width: 1300px !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    margin: 69px 0 51px 0;
+
+}
 #review .swiper-container{
-    width: 100%;
+    max-width: 1000px !important;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+
     margin: 0;
+    overflow: visible;
+    
 }
 
 #review .swiper-slide{
@@ -599,7 +631,8 @@
     padding: 32px;
     background-color: rgba(255, 255, 255, 0.8);
     transition: 0.5s;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1)
+
 }
 #review .swiper-slide p,
 .star,
@@ -621,13 +654,33 @@
 #review .swiper-slide-next h3{
     opacity: 1;
 }
+#review .swiper-slide-prev{
+    opacity: 0;
+}
 
 
 #review .star{
     margin-top: 16px;
 }
 #review p{
-    margin-top: 24px;
+    margin-top: 51px;
     line-height: 30px;
     opacity: 0.8;
+}
+#review .content .arrows{
+    justify-content: flex-end;
+    margin-bottom: 22px;
+}
+@media(max-width: 800px){
+
+    #review .swiper-container{
+        width: 100%;
+        overflow: hidden;
+    }
+    #review .swiper-slide{
+        width: 80%;
+    }
+    #review .swiper-slide-prev{
+        opacity: 1;
+    }
 }
