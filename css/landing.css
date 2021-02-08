@@ -761,11 +761,21 @@
 @media(max-width: 800px) {
     .review-overflow{
         margin: 40px 0 32px 0;
+        
     }
+
+    #review{
+        padding: 32px 0;
+    }
+    #review header{
+        padding: 0 16px;
+    }
+    
     #review .swiper-container {
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
+        padding: 0 16px;
     }
     
     #review .swiper-slide {
@@ -790,5 +800,6 @@
     }
     #review p.text{
         margin-top: 32px;
+        padding: 0 16px;
     }
 }
