@@ -61,7 +61,7 @@
     --mobilePadding: 32px 16px;
 }
 
-@media(min-width: 800px) and (max-width: 1000px) {
+@media(min-width: 801px) and (max-width: 1000px) {
     :root {
         --maxWidth: 768px;
         --fontSize: 12px;
@@ -181,7 +181,7 @@ body {
 /* ############################################ NAWIGACJA ######################################################   */
 
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     nav.mobile {
         display: none;
     }

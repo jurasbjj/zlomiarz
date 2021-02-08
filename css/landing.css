@@ -1,8 +1,8 @@
 /* ####################################################### HEADER ##############################################################   */
 
-@media(min-width: 800px) {
+@media(min-width: 801px) {
     header.page-header {
-        height: 80vh;
+        height: 85vh;
     }
 
     header.page-header .bg {
@@ -75,7 +75,7 @@
 
 }
 
-@media(min-width: 800px) {
+@media(min-width: 801px) {
     #about_us .video-container {
         flex-basis: 42.5%;
     }
@@ -190,7 +190,7 @@
 
 
 /* SWIPER */
-@media(min-width: 800px) {
+@media(min-width: 801px) {
     .swiper-container {
         max-width: 1200px !important;
         width: 100%;
@@ -678,7 +678,11 @@
 
 }
 
-@media(min-width: 800px){
+@media(min-width: 801px){
+    #review header h2{
+        line-height: 30px;
+    }
+
     .review-overflow {
     max-width: 1300px !important;
     position: relative;
@@ -771,6 +775,7 @@
     #review header{
         padding: 0 16px;
     }
+
     
     #review .swiper-container {
         width: 100%;
@@ -805,4 +810,13 @@
         margin-top: 32px;
         padding: 0 16px;
     }
+}
+@media(min-width: 801px) and (max-width: 999px){
+    #review{
+        padding: 32px;
+    }
+}
+
+img.break{
+    width: 100%;
 }

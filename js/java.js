@@ -17,7 +17,7 @@ $(window).load(function() {
 
 // ###################################################### SCROLL  ######################################################
 const mediaQueryMobile = window.matchMedia('(max-width: 800px')
-const mediaQueryDesktop = window.matchMedia('(min-width: 800px')
+const mediaQueryDesktop = window.matchMedia('(min-width: 801px')
 // scroll sekcji 
 $(document).ready(function () {
     $('a[href^="#"]').on('click', function (e) {
@@ -27,7 +27,7 @@ $(document).ready(function () {
             $target = $(target);
   
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top - 72
+            'scrollTop': $target.offset().top
         }, 800, 'swing', function () { // czas scrolowania
             // window.location.hash = target;
         });

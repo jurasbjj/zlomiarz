@@ -48,7 +48,7 @@ const quests = document.querySelectorAll('.question')
          disableOnInteraction: false,
        },
        breakpoints:{
-           800:{
+           801:{
                 slidesPerView: 3,
                 spaceBetween: 0,
                 loop: true,
@@ -157,7 +157,7 @@ var swiper = new Swiper('.swiper-container-review', {
     speed: 800,
     effect: 'slide',
     slidesPerView: 'auto',
-    loop: true,
+    loop: false,
     spaceBetween: 20,
     pagination: {
         el: '#review .slide-number',
@@ -171,7 +171,7 @@ var swiper = new Swiper('.swiper-container-review', {
        prevEl: '#review .left',
      },
      breakpoints:{
-        800:{
+        801:{
              slidesPerView: 2,
              spaceBetween: 20,
              loop: false,
