@@ -590,8 +590,10 @@
 
 }
 #review .swiper-container{
-    /* overflow: visible; */
+    width: 100%;
+    margin: 0;
 }
+
 #review .swiper-slide{
     width: 40%;
     padding: 32px;
