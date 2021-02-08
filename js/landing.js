@@ -27,7 +27,7 @@ const quests = document.querySelectorAll('.question')
 
 // ###################################################### SLIDER ABOUT_US ######################################################
 // MOBILE 
-  var swiper = new Swiper('.swiper-container', {
+  var swiper = new Swiper('.swiper-container-gallery', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
@@ -81,12 +81,7 @@ const quests = document.querySelectorAll('.question')
 
 //  ###################################################### MOBILE TEXT CONTENT ###################################################
 if (mediaQueryMobile.matches){
-    // h2[0].textContent = "Kim jesteśmy? Kilka słów o klubie Złomiarz Team Gdańsk."
-    // h2[1].textContent = "Sprawdź aktualny rozkład treningów."
-    // h1[1].textContent = "Grafik zajęć"
-     h2[2].textContent = "Składki członkowskie"
-    // h2[3].textContent = 'Najczęściej zadawane pytania i nasze odpowiedzi.'
-     h2[4].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
+    h2[2].textContent = 'Masz jakiekolwiek pytania? Napisz do nas.'
     footerText[0].textContent = 'Copyright © Złomiarz Team Gdańsk'
     footerText[1].textContent = "";
 }
@@ -158,3 +153,10 @@ $('.left').click(function(){
 
 
 
+var swiper = new Swiper('.swiper-container-review', {
+    speed: 800,
+    effect: 'slide',
+    slidesPerView: 'auto',
+    loop: false,
+    spaceBetween: 20
+});

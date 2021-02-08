@@ -134,4 +134,7 @@ tbody{
     #price .wraper .text span::before{
         left: -39px;
 }
+    footer{
+        padding: 0;
+    }
 }

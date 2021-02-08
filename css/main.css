@@ -154,7 +154,7 @@ body {
     transform: translate(-50%, 40%);
 }
 
-    .bgC .bgLogo {
+.bgC .bgLogo {
     position: absolute;
     opacity: 5%;
     right: 0%;
@@ -162,13 +162,14 @@ body {
     transform: translate(50%, 40%);
 
 }
+
 .bgC {
     position: relative;
     overflow: hidden;
 }
 
-@media(max-width: 800px){
-    .bgC .bgLogo{
+@media(max-width: 800px) {
+    .bgC .bgLogo {
         display: none;
     }
 }
@@ -433,10 +434,11 @@ footer .social-link {
         justify-content: center;
         align-items: center;
     }
-    
-    nav.mobile .home{
+
+    nav.mobile .home {
         height: 70%;
     }
+
     nav.mobile img {
         height: 100%;
         cursor: pointer;
