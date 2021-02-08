@@ -94,11 +94,11 @@ if(mediaQueryDesktop.matches){
     $(".swiper-slide#s5 img").attr("src","img/about_us/onas5.webp");
     $(".swiper-slide#s6 img").attr("src","img/about_us/onas6.webp");
 
-    $(".page-header .kick").attr("src", $(".page-header .kick").data().src);
-    $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
     $(".bg-logo").attr("src", $(".bg-logo").data().src);
     $(".card .desktop").attr("src", $(".card .desktop").data().src);
     $(".break img").attr("src", $(".break img").data().src);
+    $(".page-header img:nth-of-type(1)").attr("src", $(".page-header img:nth-of-type(1)").data().src);
+    $(".page-header img:nth-of-type(2)").attr("src", $(".page-header img:nth-of-type(2)").data().src);
     
     
 }
@@ -108,50 +108,6 @@ if(mediaQueryDesktop.matches){
 
 
 // ###################################################### CONTACT ###############################################################
-
-
-
-// SLIDER HEADER PAGE
-i = 0
-
-// 
-// automatyczna zmiana
-setTimeout(
-    function()
-    {
-        $('header .bg img:nth-of-type(1)').addClass('active');
-
-    }, 100);
-setInterval(
-    function()
-    {
-        $('header img').toggleClass('active');
-        if(i == 0){
-            i++
-        }
-        else{
-            i--
-        }
-
-    }, 10000);
-  
-
-
-
-$('.right').click(function(){
-    if (i == 0){
-        $('header img').toggleClass('active')
-        i++
-    }
-})
-$('.left').click(function(){
-    if (i == 1){
-        $('header img').toggleClass('active')
-        i--
-    }
-})
-// KONIEC  SLIDER HEADER PAGE 
-
 
 
 var swiper = new Swiper('.swiper-container-review', {
