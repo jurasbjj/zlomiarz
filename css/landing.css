@@ -1,3 +1,11 @@
+/* scroll */
+#faq{
+    scroll-margin-top: 64px;
+}
+#contact{
+    scroll-margin-top: 50px;
+}
+
 /* ####################################################### HEADER ##############################################################   */
 
 @media(min-width: 801px) {
@@ -7,14 +15,18 @@
         overflow: hidden;
         position: relative;
     }
-    .page-header img:nth-of-type(1){
+
+    .page-header img:nth-of-type(1) {
         width: 100%;
         position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: zoom 60s linear infinite both;
+
     }
-    .page-header img:nth-of-type(2){
+
+    .page-header img:nth-of-type(2) {
         z-index: 2;
         position: absolute;
         top: 50%;
@@ -22,7 +34,18 @@
         transform: translate(-50%, -50%);
         width: 400px;
     }
-    .page-header span{
+
+    @keyframes zoom {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
+
+    .page-header span {
         position: absolute;
         top: 0;
         left: 0;
@@ -108,7 +131,8 @@
         transition: 0.2s;
         opacity: 0.8;
     }
-    #about_us .ratio-16-9 .play-btn:nth-of-type(2){
+
+    #about_us .ratio-16-9 .play-btn:nth-of-type(2) {
         opacity: 1;
     }
 
@@ -300,6 +324,8 @@
     margin-top: 16px;
 }
 
+
+
 #faq .wraper {
     flex-basis: 100%;
     background-color: var(--primaryColor);
@@ -365,6 +391,7 @@
 #contact .card.mobile {
     display: none;
 }
+
 
 #contact .info {
     display: flex;
@@ -553,7 +580,8 @@
         transition: 0.2s;
         opacity: 0.7;
     }
-    #about_us .ratio-16-9 .play-btn:nth-of-type(2){
+
+    #about_us .ratio-16-9 .play-btn:nth-of-type(2) {
         opacity: 1;
     }
 
@@ -670,7 +698,7 @@
 
 }
 
-/* OPINIE */ 
+/* OPINIE */
 #review {
     position: relative;
 }
@@ -691,69 +719,69 @@
 
 }
 
-@media(min-width: 801px){
-    #review header h2{
+@media(min-width: 801px) {
+    #review header h2 {
         line-height: 30px;
     }
 
     .review-overflow {
-    max-width: 1300px !important;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: hidden;
-    margin: 69px 0 0 0;
+        max-width: 1300px !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        margin: 69px 0 0 0;
 
-}
+    }
 
-#review .swiper-container {
-    max-width: 1000px !important;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    #review .swiper-container {
+        max-width: 1000px !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
 
 
-    margin: 0;
-    overflow: visible;
+        margin: 0;
+        overflow: visible;
 
-}
+    }
 
-#review .swiper-slide {
-    width: 40%;
-    padding: 32px;
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: 0.5s;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-    height: auto;
-}
+    #review .swiper-slide {
+        width: 40%;
+        padding: 32px;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 0.5s;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+        height: auto;
+    }
 
-#review .swiper-slide p,
-.star,
-#review h3 {
-    opacity: 0.2;
-    transition: 0.5s;
-}
+    #review .swiper-slide p,
+    .star,
+    #review h3 {
+        opacity: 0.2;
+        transition: 0.5s;
+    }
 
-#review .swiper-slide-active,
-#review .swiper-slide-next {
-    background-color: #fff;
-}
+    #review .swiper-slide-active,
+    #review .swiper-slide-next {
+        background-color: #fff;
+    }
 
-#review .swiper-slide-active p,
-#review .swiper-slide-active .star,
-#review .swiper-slide-next p,
-#review .swiper-slide-next .star {
-    opacity: 0.8;
-}
+    #review .swiper-slide-active p,
+    #review .swiper-slide-active .star,
+    #review .swiper-slide-next p,
+    #review .swiper-slide-next .star {
+        opacity: 0.8;
+    }
 
-#review .swiper-slide-active h3,
-#review .swiper-slide-next h3 {
-    opacity: 1;
-}
+    #review .swiper-slide-active h3,
+    #review .swiper-slide-next h3 {
+        opacity: 1;
+    }
 
-#review .swiper-slide-prev {
-    opacity: 0;
-}
+    #review .swiper-slide-prev {
+        opacity: 0;
+    }
 }
 
 #review .star {
@@ -766,7 +794,8 @@
     line-height: 30px;
     opacity: 0.8;
 }
-#review p.text{
+
+#review p.text {
     margin-top: 51px;
 }
 
@@ -777,26 +806,27 @@
 
 
 @media(max-width: 800px) {
-    .review-overflow{
+    .review-overflow {
         margin: 40px 0 32px 0;
-        
+
     }
 
-    #review{
+    #review {
         padding: 32px 0;
     }
-    #review header{
+
+    #review header {
         padding: 0 16px;
     }
 
-    
+
     #review .swiper-container {
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
         padding: 0 16px;
     }
-    
+
     #review .swiper-slide {
         width: 80%;
         padding: 16px;
@@ -810,45 +840,54 @@
     #review .swiper-slide-next h3 {
         opacity: 0.2;
     }
+
     #review .content .arrows {
         margin: 20px 0 0 0;
     }
-    #review .star{
+
+    #review .star {
         margin-top: 8px;
     }
-    #review p{
+
+    #review p {
         margin-top: 16px;
     }
-    #review p.text{
+
+    #review p.text {
         margin-top: 32px;
         padding: 0 16px;
     }
 }
-@media(min-width: 801px) and (max-width: 999px){
-    #review{
+
+@media(min-width: 801px) and (max-width: 999px) {
+    #review {
         padding: 32px;
     }
 }
 
-@media(min-width: 801px){
-    .break{
-    width: 100%;
-    height: 65vh;
-    overflow: hidden;
+@media(min-width: 801px) {
+    .break {
+        width: 100%;
+        height: 65vh;
+        overflow: hidden;
+    }
+
+    .break img {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
-.break img{
-    width: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-}
-@media(max-width: 800px){
-    .break{
+
+@media(max-width: 800px) {
+    .break {
         width: 100%;
     }
-    .break img{
+
+    .break img {
         width: 100%;
     }
+
 }

@@ -27,7 +27,7 @@ $(document).ready(function () {
             $target = $(target);
   
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
+            'scrollTop': $target.offset().top - 64
         }, 800, 'swing', function () { // czas scrolowania
             // window.location.hash = target;
         });
