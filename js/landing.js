@@ -98,7 +98,8 @@ if(mediaQueryDesktop.matches){
     $(".page-header .bjj").attr("src", $(".page-header .bjj").data().src);
     $(".bg-logo").attr("src", $(".bg-logo").data().src);
     $(".card .desktop").attr("src", $(".card .desktop").data().src);
-
+    $(".break img").attr("src", $(".break img").data().src);
+    
     
 }
 
