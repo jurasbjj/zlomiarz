@@ -689,7 +689,7 @@
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
-    margin: 69px 0 51px 0;
+    margin: 69px 0 0 0;
 
 }
 
@@ -822,8 +822,12 @@
     width: 100%;
     height: 65vh;
     overflow: hidden;
+    background-image: url('../img/03.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
 }
 .break img{
+    display: none;
     width: 100%;
     position: relative;
     top: 50%;
