@@ -782,7 +782,8 @@
     #review .swiper-slide {
         width: 80%;
         padding: 16px;
-
+        background-color: white;
+        height: auto;
     }
 
     #review .swiper-slide-next p,
