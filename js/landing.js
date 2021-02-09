@@ -1,4 +1,9 @@
- //desktop aktywacja nawigacji
+$(window).load(function(){
+    setTimeout(function(){
+        $('.page-header img:nth-of-type(2)').addClass('active');
+    }, 1000)
+})
+//desktop aktywacja nawigacji
  if(mediaQueryDesktop.matches){
   $(window).scroll(function () {
      if ($(window).scrollTop() > 64) {
@@ -86,30 +91,28 @@ if (mediaQueryMobile.matches){
     footerText[1].textContent = "";
 }
 
-if(mediaQueryDesktop.matches){
-    $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.webp");
-    $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.webp");
-    $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.webp");
-    $(".swiper-slide#s4 img").attr("src","img/about_us/onas4.webp");
-    $(".swiper-slide#s5 img").attr("src","img/about_us/onas5.webp");
-    $(".swiper-slide#s6 img").attr("src","img/about_us/onas6.webp");
+// if(mediaQueryDesktop.matches){
+//     $(".swiper-slide#s1 img").attr("src","img/about_us/onas1.webp");
+//     $(".swiper-slide#s2 img").attr("src","img/about_us/onas2.webp");
+//     $(".swiper-slide#s3 img").attr("src","img/about_us/onas3.webp");
+//     $(".swiper-slide#s4 img").attr("src","img/about_us/onas4.webp");
+//     $(".swiper-slide#s5 img").attr("src","img/about_us/onas5.webp");
+//     $(".swiper-slide#s6 img").attr("src","img/about_us/onas6.webp");
 
-    $(".bg-logo").attr("src", $(".bg-logo").data().src);
-    $(".card .desktop").attr("src", $(".card .desktop").data().src);
-    $(".break img").attr("src", $(".break img").data().src);
-    $(".page-header img:nth-of-type(1)").attr("src", $(".page-header img:nth-of-type(1)").data().src);
-    $(".page-header img:nth-of-type(2)").attr("src", $(".page-header img:nth-of-type(2)").data().src);
+//     $(".bg-logo").attr("src", $(".bg-logo").data().src);
+//     $(".card .desktop").attr("src", $(".card .desktop").data().src);
+//     $(".break img").attr("src", $(".break img").data().src);
+//     $(".page-header img:nth-of-type(1)").attr("src", $(".page-header img:nth-of-type(1)").data().src);
+//     $(".page-header img:nth-of-type(2)").attr("src", $(".page-header img:nth-of-type(2)").data().src);
     
     
-}
+// }
 
 
 //  ################################################### KONIEC MOBILE TEXT CONTENT ###############################################
 
 
 // ###################################################### CONTACT ###############################################################
-
-
 var swiper = new Swiper('.swiper-container-review', {
     speed: 800,
     effect: 'slide',
@@ -136,7 +139,7 @@ var swiper = new Swiper('.swiper-container-review', {
         }
     }
 });
-
+// fix mobile swiper 
 if(mediaQueryMobile.matches){swiper.snapGrid[swiper.snapGrid.length - 1] = swiper.slidesGrid[swiper.slidesGrid.length - 1];}
 
 
