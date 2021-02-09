@@ -33,6 +33,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 400px;
+        opacity: 0;
+        transition: 3s;
+    }
+    .page-header img.active{
+        opacity: 0.9;
     }
 
     @keyframes zoom {
@@ -41,7 +46,7 @@
         }
 
         100% {
-            transform: translate(-50%, -50%) scale(1.2);
+            transform: translate(-50%, -50%) scale(1.3);
         }
     }
 
@@ -270,6 +275,8 @@
         margin-top: 32px;
         transform: translateX(10.7%);
     }
+
+   
 }
 
 
@@ -891,3 +898,48 @@
     }
 
 }
+
+#s4{
+    background-image: url('../img/about_us/onas4.webp');
+}
+#s5{
+    background-image: url('../img/about_us/onas5.webp');
+}
+#s6{
+    background-image: url('../img/about_us/onas6.webp');
+}
+
+
+/* SAFARI */ 
+
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media (min-width: 800px) {
+    #about_us .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0.85);
+        transition: 1s;
+        height: calc(100vw / 1.33333333);
+        background-color: red;
+    }
+    #s1{
+        background-image: url('../img/about_us/onas1.webp');
+    }
+    #s2{
+        background-image: url('../img/about_us/onas2.webp');
+    }
+    #s3{
+        background-image: url('../img/about_us/onas3.webp');
+    }
+    #s4{
+        background-image: url('../img/about_us/onas4.webp');
+    }
+    #s5{
+        background-image: url('../img/about_us/onas5.webp');
+    }
+    #s6{
+        background-image: url('../img/about_us/onas6.webp');
+    }
+}}
