@@ -506,10 +506,13 @@
         width: 100% !important;
     }
 
-    #about_us .swiper-slide img {
+    #about_us .swiper-slide picture{
         width: 100%;
         height: calc(100vw / 1.3333333333);
-
+    }
+    #about_us .swiper-slide img {
+        width: 100%;
+        height: 100%;
         opacity: 1;
     }
 

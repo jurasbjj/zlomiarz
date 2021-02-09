@@ -119,6 +119,12 @@ body {
 
 /* KONIEC DOMYŚLNE */
 
+/* margin fix nav */
+@media(min-width: 801px){
+    #coaches, #price, #schedule{
+        margin-top: 72px;
+    }
+}
 /* ZĘBATKA TŁO */
 
 .bg,
