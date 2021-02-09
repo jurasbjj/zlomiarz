@@ -895,24 +895,3 @@
 
 }
 
-#s4{
-    background-image: url('../img/about_us/onas4.webp');
-}
-#s5{
-    background-image: url('../img/about_us/onas5.webp');
-}
-#s6{
-    background-image: url('../img/about_us/onas6.webp');
-}
-
-
-/* SAFARI */ 
-
-
-@media screen and (-webkit-min-device-pixel-ratio:0) 
-{
-::i-block-chrome, *{
-    background-color: red;
-}
-
-}

@@ -17,11 +17,11 @@
   <noscript>
     <link rel="stylesheet" href="css/main.css"></noscript>
 
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=fallback
     " as="style" onload="this.onload=null;this.rel='stylesheet'">
   <style>
     body {
-      font-family: 'Times'
+      font-family: 'Verdana'
     }
 
     .fonts-loaded body {
@@ -162,12 +162,45 @@
       <!-- Swiper -->
       <div class="swiper-container swiper-container-gallery">
         <div class="swiper-wrapper">
-          <div id="s1" data-id="0" class="swiper-slide"><img src="img/about_us/mobile/onas1.webp" alt=""></div>
-          <div id="s2" data-id="1" class="swiper-slide"><img src="img/about_us/mobile/onas2.webp" alt=""></div>
-          <div id="s3" data-id="2" class="swiper-slide lazylaod"><img src="img/about_us/mobile/onas3.webp" alt=""></div>
-          <div id="s4" data-id="2" class="swiper-slide lazylaod"><img src="" alt=""></div>
-          <div id="s5" data-id="2" class="swiper-slide lazylaod"><img src="" alt=""></div>
-          <div id="s6" data-id="2" class="swiper-slide lazylaod"><img src="" alt=""></div>
+          <div id="s1" data-id="0" class="swiper-slide">
+            <picture>
+              <source media="(max-width: 800px)" srcset="img/about_us/mobile/onas1.webp">
+              <source media="(min-width: 801px)" srcset="img/about_us/onas1.webp">
+              <img data-src="">
+            </picture>
+          </div>
+          <div id="s2" data-id="1" class="swiper-slide">
+            <picture>
+              <source media="(max-width: 800px)" srcset="img/about_us/mobile/onas2.webp">
+              <source media="(min-width: 801px)" srcset="img/about_us/onas2.webp">
+              <img data-src="">
+            </picture>
+          </div>
+          <div id="s3" data-id="2" class="swiper-slide lazylaod">
+            <picture>
+              <source media="(max-width: 800px)" srcset="img/about_us/mobile/onas3.webp">
+              <source media="(min-width: 801px)" srcset="img/about_us/onas3.webp">
+              <img data-src="">
+            </picture>
+          </div>
+          <div id="s4" data-id="2" class="swiper-slide lazylaod">
+            <picture>
+              <source media="(min-width: 801px)" srcset="img/about_us/onas4.webp">
+              <img data-src="">
+            </picture>
+          </div>
+          <div id="s5" data-id="2" class="swiper-slide lazylaod">
+            <picture>
+              <source media="(min-width: 801px)" srcset="img/about_us/onas5.webp">
+              <img data-src="">
+            </picture>
+          </div>
+          <div id="s6" data-id="2" class="swiper-slide lazylaod">
+            <picture>
+              <source media="(min-width: 801px)" srcset="img/about_us/onas6.webp">
+              <img data-src="">
+            </picture>
+          </div>
         </div>
         <div class="arrows">
           <img class="left slider-arrow" src="img/svg/arrow-left.svg" alt="">
@@ -183,7 +216,8 @@
     <div class="content">
       <header>
         <h1>Wasze opinie</h1>
-        <h2>Zdanie osób trenujących w naszym klubie jest dla nas bardzo ważne, a szczere opinie, którymi się dzielicie motywują nas do dalszego rozwoju</h2>
+        <h2>Zdanie osób trenujących w naszym klubie jest dla nas bardzo ważne, a szczere opinie, którymi się dzielicie
+          motywują nas do dalszego rozwoju</h2>
       </header>
       <div class="review-overflow">
 
@@ -219,7 +253,8 @@
                 <img src="img/svg/star.svg" alt="">
               </div>
               <p>
-                Idealne miejsce zarówno dla amatorów jak i zawodników :) przychodzisz raz i napewno zostajesz na dłużej. Kadra trenerska dbająca nie tylko o rozwój ale i zdrowie.
+                Idealne miejsce zarówno dla amatorów jak i zawodników :) przychodzisz raz i napewno zostajesz na dłużej.
+                Kadra trenerska dbająca nie tylko o rozwój ale i zdrowie.
               </p>
             </div>
             <div class="swiper-slide">
@@ -232,7 +267,8 @@
                 <img src="img/svg/star.svg" alt="">
               </div>
               <p>
-                Niesamowity poziom profesorów, dobre lekcje i techniki. Świetni partnerzy szkoleniowi zawsze dbają o siebie. Zdecydowanie polecam spróbować.
+                Niesamowity poziom profesorów, dobre lekcje i techniki. Świetni partnerzy szkoleniowi zawsze dbają o
+                siebie. Zdecydowanie polecam spróbować.
               </p>
             </div>
             <div class="swiper-slide">
@@ -245,7 +281,8 @@
                 <img src="img/svg/star.svg" alt="">
               </div>
               <p>
-                Trafiłam do Złomiarza po doświadczeniach w kilku innych klubach. Poziom, zaangażowanie trenerów, organizacja i klimat jest najwyższych lotów. ️
+                Trafiłam do Złomiarza po doświadczeniach w kilku innych klubach. Poziom, zaangażowanie trenerów,
+                organizacja i klimat jest najwyższych lotów. ️
               </p>
             </div>
             <div class="swiper-slide">
@@ -258,7 +295,8 @@
                 <img src="img/svg/star.svg" alt="">
               </div>
               <p>
-                Bardzo wysoki poziom jiu jitsu, trenerzy z dużą wiedzą i doświadczeniem oraz świetna atmosfera na treningach. Do tego ogromna mata i bogaty grafik zajęć. Polecam.
+                Bardzo wysoki poziom jiu jitsu, trenerzy z dużą wiedzą i doświadczeniem oraz świetna atmosfera na
+                treningach. Do tego ogromna mata i bogaty grafik zajęć. Polecam.
               </p>
             </div>
             <div class="swiper-slide">
@@ -271,7 +309,8 @@
                 <img src="img/svg/star.svg" alt="">
               </div>
               <p>
-                Świetne miejsce dla osób, które zaczynają i tych które szukają dalszego rozwoju. Trenerzy to najwyższa krajowa półka. Potrafią przygotować do zawodów krajowych i międzynarodowych. 
+                Świetne miejsce dla osób, które zaczynają i tych które szukają dalszego rozwoju. Trenerzy to najwyższa
+                krajowa półka. Potrafią przygotować do zawodów krajowych i międzynarodowych.
               </p>
             </div>
           </div>
@@ -285,9 +324,9 @@
     </div>
   </section>
 
-    <div class="break">
-      <img src="img/e03.webp" data-src="img/03.webp" alt="">
-    </div>
+  <div class="break">
+    <img src="img/e03.webp" data-src="img/03.webp" alt="">
+  </div>
   <section id="faq">
     <div class="content">
       <header>
