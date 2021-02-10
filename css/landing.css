@@ -510,8 +510,12 @@
         width: 100%;
         height: calc(100vw / 1.3333333333);
     }
-
-
+    #s2{
+        background-image: url('../img/about_us/mobile/onas2.webp');
+    }
+    #s3{
+        background-image: url('../img/about_us/mobile/onas3.webp');
+    }
     #about_us .swiper-slide:nth-of-type(4),
     #about_us .swiper-slide:nth-of-type(5),
     #about_us .swiper-slide:nth-of-type(6) {
