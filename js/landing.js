@@ -1,4 +1,9 @@
 $(window).load(function () {
+    if(mediaQueryMobile.matches){
+    $('#s1').css( "background-image", "url('../img/about_us/mobile/onas1.webp')" );
+    $('#s2').css( "background-image", "url('../img/about_us/mobile/onas2.webp')" );
+    $('#s3').css( "background-image", "url('../img/about_us/mobile/onas3.webp')" );
+}
     setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
