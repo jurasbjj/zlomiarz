@@ -505,7 +505,7 @@
 /* #about_us */
 @media (max-width: 800px) {
 
-    .swiper-lazy{
+    .swiper-lazy, .swiper-first{
         width: 100%;
         height: calc(100vw / 1.3333333333);
         background-size: contain ;

@@ -2,7 +2,14 @@
     --swiper-theme-color: #007aff
 }
 
-.swiper-lazy-preloader {
+/* Preloader */
+:root {
+    /*
+    --swiper-preloader-color: var(--swiper-theme-color);
+    */
+  }
+  .swiper-lazy-preloader {
+    --swiper-preloader-color: #000;
     width: 42px;
     height: 42px;
     position: absolute;
@@ -17,16 +24,13 @@
     border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
     border-radius: 50%;
     border-top-color: transparent;
-}
-.swiper-lazy-preloader-black {
-    --swiper-preloader-color: #000;
   }
+
   @keyframes swiper-preloader-spin {
     100% {
       transform: rotate(360deg);
     }
-}
-
+  }
 .swiper-container {
     margin-left: auto;
     margin-right: auto;

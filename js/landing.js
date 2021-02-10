@@ -1,5 +1,7 @@
 $(window).load(function () {
+
     setTimeout(function () {
+        $('.swiper-first').css('background-image', 'url("img/about_us/mobile/onas1.webp")')
         $('.page-header-logo').addClass('active');
     }, 1000)
 })
