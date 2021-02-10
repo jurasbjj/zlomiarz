@@ -1,11 +1,11 @@
 $(window).load(function () {
     setTimeout(function () {
+        $('#s1').css("background-image", "url('img/about_us/mobile/onas1.webp')");
         if (mediaQueryMobile.matches) {
-            $('#s1').css("background-image", "url('img/about_us/mobile/onas1.webp')");
             $('#s2').css("background-image", "url('img/about_us/mobile/onas2.webp')");
             $('#s3').css("background-image", "url('img/about_us/mobile/onas3.webp')");
         }
-    }, 3000);
+    }, 1000);
     setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
