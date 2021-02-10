@@ -236,6 +236,9 @@
 
 /* SWIPER */
 @media(min-width: 801px) {
+    .swiper-lazy{
+        display: none;
+    }
     .swiper-container {
         max-width: 1200px !important;
         width: 100%;
@@ -502,20 +505,12 @@
 /* #about_us */
 @media (max-width: 800px) {
 
-    #s1,
-    #s2,
-    #s3 {
-        background-size: contain;
-        background-position: center;
+    .swiper-lazy{
         width: 100%;
         height: calc(100vw / 1.3333333333);
+        background-size: contain ;
     }
-    #s2{
-        background-image: url('../img/about_us/mobile/onas2.webp');
-    }
-    #s3{
-        background-image: url('../img/about_us/mobile/onas3.webp');
-    }
+    
     #about_us .swiper-slide:nth-of-type(4),
     #about_us .swiper-slide:nth-of-type(5),
     #about_us .swiper-slide:nth-of-type(6) {

@@ -1,8 +1,5 @@
 $(window).load(function () {
     setTimeout(function () {
-        $('#s1').css("background-image", "url('img/about_us/mobile/onas1.webp')");
-    }, 1000);
-    setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
 })
@@ -42,6 +39,9 @@ var swiper = new Swiper('.swiper-container-gallery', {
     speed: 800,
     effect: 'slide',
     slidesPerView: '1',
+    preloadImages: false,
+    // Enable lazy loading
+    lazy: true,
     loop: false,
     pagination: {
         el: '.slide-number',
