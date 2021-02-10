@@ -43,7 +43,9 @@ var swiper = new Swiper('.swiper-container-gallery', {
     preloadImages: false,
     // Enable lazy loading
     lazy: true,
+    lazy: {
     loadPrevNext: true,
+  },
     loop: false,
     pagination: {
         el: '.slide-number',
