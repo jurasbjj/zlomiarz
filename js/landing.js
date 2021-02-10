@@ -1,13 +1,18 @@
 $(window).load(function () {
-    if (mediaQueryMobile.matches) {
-        $('#s1').css("background-image", "url('img/about_us/mobile/onas1.webp')");
-        $('#s2').css("background-image", "url('img/about_us/mobile/onas2.webp')");
-        $('#s3').css("background-image", "url('img/about_us/mobile/onas3.webp')");
-    }
+    setTimeout(function () {
+        if (mediaQueryMobile.matches) {
+            $('#s1').css("background-image", "url('img/about_us/mobile/onas1.webp')");
+            $('#s2').css("background-image", "url('img/about_us/mobile/onas2.webp')");
+            $('#s3').css("background-image", "url('img/about_us/mobile/onas3.webp')");
+        }
+    }, 3000);
     setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
 })
+
+
+
 //desktop aktywacja nawigacji
 if (mediaQueryDesktop.matches) {
     $(window).scroll(function () {
