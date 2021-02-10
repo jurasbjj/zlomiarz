@@ -5,7 +5,7 @@ $(window).load(function () {
             $('#s2').css("background-image", "url('img/about_us/mobile/onas2.webp')");
             $('#s3').css("background-image", "url('img/about_us/mobile/onas3.webp')");
         }
-    }, 3000);
+    }, 500);
     setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
