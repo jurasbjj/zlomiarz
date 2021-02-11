@@ -1,5 +1,5 @@
 $(window).load(function () {
-
+    $('.swiper-hold').addClass('swiper-lazy')
     setTimeout(function () {
         $('.page-header-logo').addClass('active');
     }, 1000)
@@ -44,8 +44,8 @@ var swiper = new Swiper('.swiper-container-gallery', {
     // Enable lazy loading
     lazy: true,
     lazy: {
-    loadPrevNext: true,
-  },
+        loadPrevNext: true,
+    },
     loop: false,
     pagination: {
         el: '.slide-number',
