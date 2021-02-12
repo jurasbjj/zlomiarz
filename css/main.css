@@ -625,3 +625,40 @@ footer .social-link {
         opacity: 50%;
     }
 }
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS here*/
+    .bg-logo{
+        display: none;
+    }
+    body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: white;
+    }
+    picture img{
+        display: none;
+    }
+
+    section{
+        display: none !important;
+    }
+    body::after{
+        content: 'Przeglądraka nieobsługiwana :(';
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        font-size: 2.3rem;
+        transform: translate(-50%, -50%);
+
+    }
+
+}

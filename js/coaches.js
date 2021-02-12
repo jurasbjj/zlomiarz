@@ -91,12 +91,7 @@ var mySwiper = new Swiper('.swiper-container', {
        }
       
        // mail
-       if($('.swiper-slide-active').data().id === 3){
-        $('#coaches .text span.coach-social:nth-of-type(2)').fadeIn(800)
-       }
-       else {
-        $('#coaches .text span.coach-social:nth-of-type(2)').hide()
-       }
+
 
   }, 0);
 
