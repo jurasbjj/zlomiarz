@@ -1,0 +1,140 @@
+/* ####################################################### CENNIK ######################################################   */
+#price .wraper{
+    display: flex;
+}
+#price .wraper .table{
+    margin-top: 42px;
+    flex-basis: 58%;
+    display: flex;
+    flex-direction: column;
+}
+#price table{
+    text-align: center;
+    display: block; /* mozzila fix */
+}
+tbody{
+    display: block; /* mozzila fix */
+}
+#price table tr{
+    display: flex;
+}
+#price table td{
+    flex-basis: 33%;
+    margin: 2px;
+    font-size: 0.9rem;
+    padding: 19px 0;
+    display: block; /* internet explorer fix*/
+}
+#price table td b{
+    font-size: 0.9rem;
+}
+#price table tr td{
+    background-color: var(--secondaryColor);
+}
+#price table tr:nth-of-type(1) td{
+    background-color: var(--thirdColor);
+}
+
+#price table tr:nth-last-of-type(2) td{
+    flex-basis: 50%;
+}
+#price table tr:nth-last-of-type(1) td{
+    flex-basis: 50%;
+}
+
+#price table tr:nth-last-of-type(2) td{
+    margin-top: var(--elementMargin);
+    background-color: var(--thirdColor);
+}
+
+#price .wraper .table span{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 24px;
+}
+#price .wraper .table span span:nth-of-type(1){
+    margin-top: 40px;
+}
+
+#price .wraper .text{
+    margin-left: var(--elementMargin);
+    flex-basis: 42%;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--elementMargin);
+
+}
+#price .wraper .text span{
+    padding: 13px 16px;
+    margin-left: 20px;
+}
+#price .wraper .text span, #price .wraper .text span b{
+    font-size: 0.95rem;
+    line-height: 20px;
+}
+#price .wraper .text span::before{
+    content: url('https://api.iconify.design/bx-bx-check.svg?color=%23808080&height=17');
+    vertical-align: -0.125em;
+    color: gray;
+    margin-right: -17px;
+    position: relative;
+    left: -24px;
+}
+
+
+
+
+
+/* ####################################################### KONIEC CENNIK ###################################################   */
+/* price */
+@media (max-width: 800px){
+    #price {
+        padding: 32px 0;
+    }
+    #price .wraper{
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    #price header{
+        padding: 0 16px;
+    }
+
+    #price table{
+        padding: 0 16px;
+    }
+
+    #price .wraper .table{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    
+
+    #price .wraper .text{
+        margin-left: 0;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        padding: 0 16px;
+}
+
+    #price .wraper .table span span:nth-of-type(1){
+        margin: 0;
+        line-height: 30px;
+
+    }
+    #price .wraper .table span.payment{
+        margin-top: 16px;
+        background-color: var(--secondaryColor);
+        padding: 16px 16px;
+        line-height: 30px;
+    }
+    #price .wraper .text span::before{
+        left: -39px;
+}
+    footer{
+        padding: 0;
+    }
+}
