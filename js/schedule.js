@@ -112,7 +112,7 @@ override fun onPageFinished(view: WebView, url: String) {
         var node = document.createElement('style');
 
         node.type = 'text/css';
-        node.innerHTML = #schedule .table-schedule tr:not(:nth-of-type(1)) td span {
+        node.innerHTML = '#schedule .table-schedule tr:not(:nth-of-type(1)) td span {
         font-size: 0.9vw
     }
 
