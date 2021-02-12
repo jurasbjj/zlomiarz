@@ -175,17 +175,20 @@
         margin-top: 24px;
     }
 
+    td{
+        font-size: 15px;
+    }
     #schedule .table-schedule tr:not(:nth-of-type(1)) td span {
-        font-size: 2px;
+        font-size: 0.1em;
     }
 
     #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(3) {
-        font-size: 2px;
+        font-size: 0.1em;
     }
 
     #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(1) {
         padding-bottom: 3px;
-        font-size: 2px;
+        font-size: 1.5vw;
         font-weight: 400;
     }
 
@@ -194,7 +197,7 @@
     }
 
     #schedule .table-schedule td span {
-        font-size: 2px;
+        font-size: 0.4rem;
     }
 }
 
