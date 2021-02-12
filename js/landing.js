@@ -8,15 +8,13 @@ $(window).load(function () {
 
 
 //desktop aktywacja nawigacji
-if (mediaQueryDesktop.matches) {
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 64) {
-            $('nav').addClass('active');
-        } else {
-            $('nav').removeClass('active');
-        }
-    });
-}
+   $(window).scroll(function () {
+    if ($(window).scrollTop() > 64) {
+       $('nav.desktop').addClass('active');
+    } else {
+       $('nav.desktop').removeClass('active');
+    }
+});
 if (mediaQueryMobile.matches) {
   $('nav a:nth-of-type(1),nav a:nth-of-type(6), nav a:nth-of-type(7)').click(function(){
      $('nav, .fade').removeClass('active')
