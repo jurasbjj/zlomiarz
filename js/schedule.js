@@ -104,3 +104,40 @@ if(!$('.select').is(e.target) && $('.select').has(e.target).length === 0){// if 
   $('.select, .select-fade').removeClass('active');
 }
 });
+
+
+override fun onPageFinished(view: WebView, url: String) {
+    val code = """javascript:(function() { 
+    
+        var node = document.createElement('style');
+
+        node.type = 'text/css';
+        node.innerHTML = #schedule .table-schedule tr:not(:nth-of-type(1)) td span {
+        font-size: 0.9vw
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(3) {
+        font-size: 0.9vw
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td span:nth-of-type(1) {
+        padding-bottom: 3px;
+        font-size: 0.9vw;
+        font-weight: 400;
+    }
+
+    #schedule .table-schedule tr:not(:nth-of-type(1)) td {
+        padding: 8px 4px;
+    }
+
+    #schedule .table-schedule td span {
+        font-size: 0.2rem;
+    
+        }';
+
+        document.head.appendChild(node);
+     
+    })()""".trimIndent()
+
+    loadUrl(code)
+}
