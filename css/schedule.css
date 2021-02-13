@@ -176,10 +176,6 @@ tbody{overflow-x: scroll}
 overflow-x: scroll;
 
     }
-#schedule .table-schedule td {
-    flex-basis: 25%;
-}
-
     #schedule .table-schedule tr:not(:nth-of-type(1)) td span {
         font-size: 1.05vw
     }
