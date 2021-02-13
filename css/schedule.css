@@ -166,7 +166,13 @@
 
 /* ####################################################### KONIEC GRAFIK ######################################################   */
 /* schedule */
+.table{
+width: 100%;}
+
+
 @media (max-width: 800px) {
+.table{
+overflow-x: scroll;}
     #schedule {
         padding: 32px 16px;
     }
