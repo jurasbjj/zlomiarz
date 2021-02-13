@@ -170,7 +170,7 @@
     #schedule {
         padding: 32px 16px;
     }
-
+tbody{overflow-x: scroll}
     #schedule .table-schedule {
         margin-top: 24px;
 overflow-x: scroll;
