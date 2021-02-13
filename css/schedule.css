@@ -30,7 +30,7 @@
 }
 
 #schedule .table-schedule td {
-    flex-basis: 16%;
+    min-width: 16%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -173,7 +173,7 @@
 
     #schedule .table-schedule {
         margin-top: 24px;
-overflow: scroll;
+overflow-x: scroll;
 
     }
 
@@ -207,6 +207,7 @@ overflow: scroll;
 .type-schedule{
     display: flex;
     align-items: center;
+
 }
 .type-schedule span{
     margin-right: 16px;
