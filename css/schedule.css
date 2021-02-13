@@ -173,6 +173,8 @@
 
     #schedule .table-schedule {
         margin-top: 24px;
+overflow: scroll;
+
     }
 
 
